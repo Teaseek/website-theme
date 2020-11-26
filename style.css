@@ -3,26 +3,26 @@
     /* color & background */
     --font-color: #111;
     --entry-background: #fff;
-    --badge-color: 		#fff;
+    --badge-color:      #fff;
     --badge-background: #1a1a1a69;
     /*
-    --subheadline-background: 	#5a5a5a;
+    --subheadline-background:   #5a5a5a;
     --subheadline-a-icon-color: #fff;
-    --subheadline-a-color: 		#fff;
+    --subheadline-a-color:      #fff;
     */
     --subheadline-background:   var(--headline-background-color);
-    --subheadline-a-color: 	    var(--link-color);
+    --subheadline-a-color:      var(--link-color);
     --subheadline-a-icon-color: var(--headline-arrow-color);
     --anime-stat-text-color: #4682b4;
     --manga-stat-text-color: #9f6fb1;
     --anime-stat-text-background: #ddedfb;
     --manga-stat-text-background: #ffe1f4;
-    --bar-stat-third-background:  		#d4d4d4;
+    --bar-stat-third-background:  #d4d4d4;
     --bar-anime-stat-second-background: #a3c2db;
     --bar-background: #f45151;
-    --main-border-color: 		 var(--headline-background-color);
+    --main-border-color:         var(--headline-background-color);
     --main-border-color-hover:   transparent;
-    --main-container-background: 	   transparent;
+    --main-container-background:        transparent;
     --main-container-background-hover: #ececec;
     --linear-gradient-background: linear-gradient(to right,
         #b347bb 0%,     #9a5fbe 6.25%,  #9b5ebe 12.5%,
@@ -35,29 +35,29 @@
     --main-container-transition:  all 1s cubic-bezier(0.26, 0.01, 0, 0.99),
                                   background-color 0.7s cubic-bezier(0.31, 0, 0, 0.96),
                                   border 0.4s linear;
-    --shadow-transition: 		  all 0.3s cubic-bezier(.25,.8,.25,1);
+    --shadow-transition:          all 0.3s cubic-bezier(.25,.8,.25,1);
     --history-entry-transition:   all 0.3s cubic-bezier(.25,.8,.25,1);
     /* animation */
     --bar-lifetime-first-animation-time: 50s;
     --text-animation-time: 4s;
     /* box-shadow */
     --main-elements-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
-    --secondary-elements-shadow: 	   2px 1px 3px 0px rgba(154, 147, 140, 0.5);
+    --secondary-elements-shadow:       2px 1px 3px 0px rgba(154, 147, 140, 0.5);
     --secondary-elements-shadow-hover: 5px 4px 8px 0px rgba(0,0,0,0.25), 2px 5px 8px rgba(0,0,0,0.22);
     --bar-lifetime-first-box-shadow: inset 1px 1px 2px 1px rgba(255, 255, 255, 0.33);
     --bar-third-shadow: inset -2px 5px 5px rgba(154, 147, 140, 0.5);
-    --stat-names-shadow-hover:  5px 4px 8px 0px rgba(0,0,0,0.25), 2px 9px 8px rgba(0,0,0,0.22);
+    --stat-names-shadow-hover: 5px 4px 8px 0px rgba(0,0,0,0.25), 2px 9px 8px rgba(0,0,0,0.22);
     --page-shadow-start:  0px 0px 20px 15px #8a35af40;
     --page-shadow-middle: 0px 0px 20px 18px #b951e640;
     --page-shadow-end:    0px 0px 20px 20px #8427ad40;
     /* border */
     --main-border-radius: 5px;
-  	/* padding */
-  	--main-padding: 15px;
+    /* padding */
+    --main-padding: 15px;
 }
 
 /* ----------------------------
-		font-size
+        font-size
 ----------------------------  */
 .p-profiles-show .b-stats_bar .title,
 .profile-content .activity .title,
@@ -73,11 +73,11 @@
     font-size: 13px;
 }
 /* ----------------------------
-		color & background
+        color & background
 ----------------------------  */
 /* .profile-head    .head.misc h1,
 .profile-head    .c-mobile-actions a,
-.profile-head    .b-stats_bar  	   .title,
+.profile-head    .b-stats_bar         .title,
 .profile-head    .b-stats_bar     a.title,
 .profile-head    .c-mobile-actions span,
 .profile-head    .c-history .entry .title,
@@ -87,7 +87,7 @@
 .profile-content .achievements .header .size,
 .profile-content .achievements .header .title,
 .profile-content .lifetime .times .time.checked:before {
-   color: var(--font-color) !important;
+    color: var(--font-color) !important;
 } */
 .profile-head .subheadline,
 .profile-content .subheadline,
@@ -129,7 +129,7 @@
     color: var(--badge-color);
 }
 /* ----------------------------
-		Box-shadow
+        Box-shadow
 ----------------------------  */
 
 .profile-head    .b-stats_bar.manga .stat_names .stat_name a,
@@ -163,7 +163,7 @@
 }
 
 /* ----------------------------
-		Hover & Animation
+        Hover & Animation
 ----------------------------  */
 .p-profiles .profile-head .c-history .entry:hover {
     background-color: var(--entry-background);
@@ -177,10 +177,10 @@
 
 .profile-head    .b-stats_bar,
 .profile-head    .c-additionals,
-.profile-head 	 .c-brief header,
-.profile-head 	 .c-mobile-actions,
-.profile-head 	 .c-history .b-block_list,
-.profile-head 	 .c-brief .avatar .profile-actions,
+.profile-head      .c-brief header,
+.profile-head      .c-mobile-actions,
+.profile-head      .c-history .b-block_list,
+.profile-head      .c-brief .avatar .profile-actions,
 .profile-content .lifetime,
 .profile-content .activity,
 .profile-content .cc-favourites,
@@ -196,12 +196,12 @@
     box-shadow: none;
 }
 
-.profile-head 	 .b-stats_bar:hover,
+.profile-head    .b-stats_bar:hover,
 .profile-head    .c-additionals:hover,
-.profile-head 	 .c-brief header:hover,
-.profile-head 	 .c-mobile-actions:hover,
-.profile-head 	 .c-history .b-block_list:hover,
-.profile-head 	 .c-brief .avatar .profile-actions:hover,
+.profile-head    .c-brief header:hover,
+.profile-head    .c-mobile-actions:hover,
+.profile-head    .c-history .b-block_list:hover,
+.profile-head    .c-brief .avatar .profile-actions:hover,
 .profile-content .lifetime:hover,
 .profile-content .activity:hover,
 .profile-content .cc-favourites:hover,
@@ -223,9 +223,9 @@
     -webkit-animation: backslide var(--bar-lifetime-first-animation-time) linear infinite;
 */
 }
-.profile-head 	 .c-brief header:hover h1,
-.profile-head 	 .b-stats_bar:hover .title,
-.profile-head 	 .c-brief .avatar .profile-actions a:hover::before,
+.profile-head    .c-brief header:hover h1,
+.profile-head    .b-stats_bar:hover .title,
+.profile-head    .c-brief .avatar .profile-actions a:hover::before,
 .profile-content .lifetime:hover .label,
 .profile-content .activity:hover .title,
 .profile-content .block.achievements .cc-3 .c-column:hover .title {
@@ -248,9 +248,8 @@
     to { background-position-x: 400%; }
 }
 
-
 /* ----------------------------
-		Borders
+        Borders
 ----------------------------  */
 
 .profile-head .subheadline,
@@ -267,16 +266,16 @@
 .profile-content .cc-2a.m30 > .c-column.m0 .cc-friends {
     border-top: none !important;
 }
-.profile-head 	 .b-stats_bar,
+.profile-head    .b-stats_bar,
 .profile-head    .c-additionals,
-.profile-head 	 .c-brief header,
-.profile-head 	 .c-mobile-actions,
-.profile-head 	 .c-history .entry,
-.profile-head 	 .c-brief .avatar img,
-.profile-head 	 .c-history .entry .image-name,
-.profile-head 	 .c-history .entry .image-name img,
-.profile-head 	 .c-brief .avatar .profile-actions,
-.profile-head 	 .b-stats_bar.manga .stat_names .stat_name a,
+.profile-head    .c-brief header,
+.profile-head    .c-mobile-actions,
+.profile-head    .c-history .entry,
+.profile-head    .c-brief .avatar img,
+.profile-head    .c-history .entry .image-name,
+.profile-head    .c-history .entry .image-name img,
+.profile-head    .c-brief .avatar .profile-actions,
+.profile-head    .b-stats_bar.manga .stat_names .stat_name a,
 .profile-head    .b-stats_bar.anime .stat_names .stat_name a,
 .profile-content .b-stats_bar,
 .profile-content .about.block,
@@ -303,7 +302,7 @@
     border-top-right-radius: var(--main-border-radius);
     -webkit-border-top-right-radius: var(--main-border-radius);
 }
-.profile-head .c-history .b-block_list,
+.profile-head    .c-history .b-block_list,
 .profile-content .b-badge::before,
 .profile-content .block:last-child .b-topic,
 .profile-content .block.achievements .cc-3,
@@ -323,17 +322,17 @@
     border-bottom-left-radius: var(--main-border-radius);
     -webkit-border-bottom-left-radius: var(--main-border-radius);
 }
-.profile-head 	 .b-stats_bar.anime .bar :last-child,
+.profile-head    .b-stats_bar.anime .bar :last-child,
 .profile-head    .b-stats_bar.manga .bar :last-child,
 .profile-content .lifetime.b-stats_bar .bar .third {
     border-top-right-radius:    var(--main-border-radius);
-    -webkit-border-top-right-radius: 	var(--main-border-radius);
+    -webkit-border-top-right-radius:     var(--main-border-radius);
     border-bottom-right-radius: var(--main-border-radius);
     -webkit-border-bottom-right-radius: var(--main-border-radius);
 }
 
 /* ----------------------------
-		Margin Padding
+        Margin Padding
 ----------------------------  */
 .profile-content .c-column.c-right .c-column.m0 .b-clubs img {
     padding: 1px;
@@ -344,8 +343,8 @@
 }
 .profile-head    .b-stats_bar,
 .profile-head    .c-additionals,
-.profile-head 	 .c-brief header,
-.profile-head 	 .c-history .b-block_list,
+.profile-head    .c-brief header,
+.profile-head    .c-history .b-block_list,
 .profile-content .activity,
 .profile-content .b-stats_bar,
 .profile-content .cc-friends,
@@ -358,14 +357,14 @@
 .profile-content .about.block{
     padding: 0px 10px;
 }
-.profile-head 	 .c-brief .avatar .profile-actions a {
+.profile-head    .c-brief .avatar .profile-actions a {
     padding: 5px 0px;
 }
 .profile-content .about.block .subheadline {
     margin: 0px -10px;
 }
-.profile-head 	 .b-stats_bar.manga .stat_names .stat_name a,
-.profile-head 	 .b-stats_bar.anime .stat_names .stat_name a {
+.profile-head    .b-stats_bar.manga .stat_names .stat_name a,
+.profile-head    .b-stats_bar.anime .stat_names .stat_name a {
     padding: 5px 10px 5px 10px;
 }
 .profile-head    .b-stats_bar .title,
@@ -424,7 +423,7 @@
     margin-bottom: var(--main-padding) !important; 
 }
 /* ----------------------------
-		Profile-show
+        Profile-show
 ----------------------------  */
 .p-profiles-show .b-stats_bar .bar {
     height: 30px;
@@ -438,7 +437,7 @@
 }
 
 /* ----------------------------
-		Profile-head
+        Profile-head
 ----------------------------  */
 .profile-head .c-history .b-block_list .entry a {
     min-width: 200px;
@@ -449,7 +448,7 @@
     grid-gap: 1%;
 }
 
-.profile-head 	 .c-brief .avatar .profile-actions {
+.profile-head      .c-brief .avatar .profile-actions {
     height: 100%;
 }
 .profile-head .c-history .entry a {
@@ -491,7 +490,7 @@
 }
 
 /* ----------------------------
-		Profile-content
+        Profile-content
 ----------------------------  */
 .profile-content .lifetime .bar {
     height: 10px;
@@ -630,7 +629,7 @@
     left: 0;   right:  0;
 }
 /* ----------------------------
-		media
+        media
 ----------------------------  */
 @media screen and (max-width: 767px) {
     .profile-head .c-lists-info {
@@ -797,7 +796,7 @@
 }
 @media only screen and (min-width: 1210px) {
     
-  	.profile-content .c-column.c-right .c-column.m0 .b-clubs {
+      .profile-content .c-column.c-right .c-column.m0 .b-clubs {
         margin: 12px;
     }
     .profile-head .c-lists-info {
