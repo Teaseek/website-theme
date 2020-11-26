@@ -316,6 +316,7 @@
       background: var(--linear-gradient-background);
       background-clip: text;
       -webkit-background-clip: text;
+      text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
       animation: slide var(--text-animation-time) linear 0s infinite forwards;
       -o-animation: slide var(--text-animation-time) linear 0s infinite forwards;
@@ -329,6 +330,7 @@
       background: var(--linear-gradient-background);
       background-clip: text;
       -webkit-background-clip: text;
+      text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
       animation: slide var(--text-animation-time) linear 0s infinite forwards;
       -o-animation: slide var(--text-animation-time) linear 0s infinite forwards;
