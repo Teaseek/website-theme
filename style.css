@@ -75,7 +75,7 @@
 /* ----------------------------
 		color & background
 ----------------------------  */
-.profile-head    .head.misc h1,
+/* .profile-head    .head.misc h1,
 .profile-head    .c-mobile-actions a,
 .profile-head    .b-stats_bar  	   .title,
 .profile-head    .b-stats_bar     a.title,
@@ -87,8 +87,8 @@
 .profile-content .achievements .header .size,
 .profile-content .achievements .header .title,
 .profile-content .lifetime .times .time.checked:before {
-/*    color: var(--font-color) !important; */
-}
+   color: var(--font-color) !important;
+} */
 .profile-head .subheadline,
 .profile-content .subheadline,
 .profile-content .editor-container .subheadline {
@@ -762,9 +762,9 @@
     .profile-head .avatar {
         border-radius: var(--main-border-radius);
     }
-    .profile-head .avatar img {
+    /* .profile-head .avatar img {
       
-    }
+    } */
     .profile-head .avatar .profile-actions {
         height: 30px;
         width: 100%;
@@ -781,9 +781,9 @@
     .profile-head .avatar {
         border-radius: var(--main-border-radius);
     }
-    .profile-head .avatar img {
+    /* .profile-head .avatar img {
        
-    }
+    } */
     .profile-head .avatar .profile-actions {
         height: 30px;
         width: 100%;
