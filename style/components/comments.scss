@@ -1,0 +1,14 @@
+.block {
+    &:last-child {
+        .subheadline {
+            margin: 0 !important;
+        }
+
+        .b-topic {
+            @extend %block-style;
+            @extend %border-radius-bottom;
+            padding: $padding;
+            border-top: none !important;
+        }
+    }
+}

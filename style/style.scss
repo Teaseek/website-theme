@@ -1,0 +1,211 @@
+@import 'components/colors';
+
+@import 'components/data';
+
+%headline-arrow a {
+    color: $subheadline-a-color;
+
+    &::before {
+        color: $subheadline-a-icon-color;
+    }
+}
+
+%small-shadows {
+    box-shadow: $secondary-elements-shadow;
+    transition: $shadow-transition;
+}
+
+%small-shadows-hover {
+    &:hover {
+        box-shadow: $secondary-elements-shadow-hover !important;
+        z-index: 1000;
+    }
+}
+
+%stat-names-shadows-hover {
+    box-shadow: $stat-names-shadow-hover;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+%block-style {
+    background-color: $main-container-background;
+    border: 1px $main-border-color solid;
+}
+
+%block-style-hover {
+    -webkit-transition: $main-container-transition;
+    -moz-transition: $main-container-transition;
+    -o-transition: $main-container-transition;
+    transition: $main-container-transition;
+    @extend %block-style;
+    box-shadow: none;
+
+    &:hover {
+        box-shadow: $main-elements-shadow;
+        background-color: $main-container-background-hover;
+        border: 1px $main-border-color-hover solid;
+    }
+}
+
+%caption-text-hover {
+    background: $linear-gradient-background;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @keyframes slide {
+        to {
+            background-position-x: 400%;
+        }
+    }
+
+    $animation: slide $text-animation-time linear 0s infinite forwards;
+    animation: $animation;
+    -o-animation: $animation;
+    -moz-animation: $animation;
+    -webkit-animation: $animation;
+}
+
+@mixin border-radius($top-left, $top-right, $bottom-right, $bottom-left) {
+    border-radius: $top-left $top-right $bottom-right $bottom-left;
+    -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+    -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+%border-radius-left {
+    @include border-radius($main-border-radius, 0px, 0px, $main-border-radius);
+}
+
+%border-radius-right {
+    @include border-radius(0px, $main-border-radius, $main-border-radius, 0px);
+}
+
+%border-radius-bottom {
+    @include border-radius(0px, 0px, $main-border-radius, $main-border-radius);
+}
+
+%border-radius-top {
+    @include border-radius($main-border-radius, $main-border-radius, 0px, 0px);
+}
+
+%border-radius {
+    @include border-radius($main-border-radius, $main-border-radius, $main-border-radius, $main-border-radius)
+}
+
+%item-align {
+    width: 100% !important;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%remove-sub-elements {
+    &::after {
+        display: none !important;
+    }
+
+    &::before {
+        display: none !important;
+    }
+}
+
+%subline {
+    .subheadline {
+        background: $subheadline-background;
+        border: 0;
+        margin-bottom: 0 !important;
+        @extend %headline-arrow;
+    }
+}
+
+%third-bar {
+    .bar {
+        .third {
+            background: $bar-stat-third-background;
+            box-shadow: $bar-third-shadow;
+        }
+    }
+}
+
+.profile-head {
+    @import 'components/history';
+
+    @import 'components/brief';
+
+    @extend %remove-sub-elements;
+    @extend %third-bar;
+    @extend %subline;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr;
+    grid-gap: $main-padding;
+    margin-bottom: $main-padding;
+
+    @media screen and (max-width: 767px) {
+        grid-template-columns: auto;
+    }
+
+    .c-mobile-actions {
+        @extend %block-style-hover;
+        @extend %border-radius;
+        display: grid;
+        grid-template-columns: minmax(100px, 1fr);
+        margin-bottom: 0 !important;
+        text-align: center;
+
+        %highlight {
+            padding: $padding;
+            font-weight: bold;
+        }
+
+        a {
+            @extend %highlight;
+        }
+
+        span {
+            @extend %highlight;
+        }
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    @import 'components/info';
+}
+
+.profile-content {
+    @extend %subline;
+    @extend %third-bar;
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: $main-padding;
+
+    .cc-2.block {
+        @extend %remove-sub-elements;
+        margin-bottom: $main-padding !important;
+        display: grid;
+        grid-gap: $main-padding;
+        grid-template-columns: 0.6fr 0.4fr;
+        margin: 0 !important;
+
+        @media screen and (max-width: 767px) {
+            grid-template-columns: auto;
+        }
+
+        @import 'components/stats';
+
+        @import 'components/lists';
+    }
+
+    @import 'components/achievements';
+
+    @import 'components/about';
+
+    @import 'components/comments';
+}

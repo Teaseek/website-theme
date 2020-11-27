@@ -1,0 +1,97 @@
+.c-info {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: $main-padding;
+
+    .c-lists-info {
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: $main-padding;
+
+        .b-stats_bar {
+            @extend %block-style-hover;
+            @extend %border-radius;
+            margin: 0 !important;
+            padding: $padding;
+
+            .title {
+                padding-bottom: $padding;
+            }
+
+            .stat_names {
+                padding: $padding 0px;
+                font-size: 14px;
+
+                .stat_name {
+                    margin: 0px $padding $small-padding 0px;
+                    display: inline-grid;
+
+                    a {
+                        @extend %border-radius;
+                        @extend %small-shadows;
+                        padding: $small-padding $padding;
+
+                        &:hover {
+                            @extend %stat-names-shadows-hover;
+                        }
+                    }
+
+                    &::after {
+                        content: ' ';
+                    }
+                }
+            }
+
+            .bar {
+                height: 30px;
+                overflow: visible;
+
+                * {
+                    vertical-align: middle;
+                    line-height: 30px;
+                }
+
+                & :first-child {
+                    @extend %border-radius-left;
+                }
+
+                & :last-child {
+                    @extend %border-radius-right;
+                }
+            }
+
+            &.anime {
+                .bar {
+                    .second {
+                        background: $bar-anime-stat-second-background;
+                    }
+                }
+
+                .stat_name a {
+                    color: $anime-stat-text-color;
+                    background-color: $anime-stat-text-background;
+                }
+            }
+
+            &.manga {
+                .stat_name a {
+                    color: $manga-stat-text-color;
+                    background-color: $manga-stat-text-background;
+                }
+            }
+
+            &:hover {
+                .title {
+                    @extend %caption-text-hover;
+                }
+            }
+        }
+    }
+
+    .c-additionals {
+        @extend %block-style-hover;
+        @extend %border-radius;
+        padding: $padding;
+        margin-bottom: 0 !important;
+    }
+}

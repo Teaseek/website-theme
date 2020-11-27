@@ -1,0 +1,73 @@
+.c-left {
+    margin: 0 !important;
+    width: 100% !important;
+    display: grid;
+    grid-gap: $main-padding;
+
+    .lifetime {
+        @extend %block-style-hover;
+        @extend %border-radius;
+        padding: $padding;
+        margin: 0 !important;
+        display: grid;
+        grid-template-rows: 1fr auto 1fr;
+        grid-gap: 5px;
+        align-content: center;
+
+        .bar {
+            height: 10px;
+            line-height: 10px;
+            padding: 1px;
+
+            .first {
+                @extend %border-radius-left;
+                background: $bar-background;
+                box-shadow: $bar-lifetime-first-box-shadow;
+            }
+
+            .third {
+                @extend %border-radius-right;
+            }
+        }
+
+        .cuts .cut {
+            height: 0;
+            margin: 1px;
+        }
+
+        .times {
+            padding-top: 2px;
+        }
+
+        &:hover {
+            .label {
+                @extend %caption-text-hover;
+            }
+        }
+    }
+
+    .activity {
+        @extend %block-style-hover;
+        @extend %border-radius;
+        padding: $padding;
+        display: grid;
+        grid-template-rows: auto minmax(100px, 1fr);
+        margin: 0 !important;
+
+        .bar {
+            @extend %border-radius-top;
+            align-self: end;
+            height: 200px;
+        }
+
+        &:hover {
+            .title {
+                @extend %caption-text-hover;
+            }
+        }
+
+        &:last-child {
+            padding-bottom: 20px;
+        }
+    }
+}

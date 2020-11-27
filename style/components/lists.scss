@@ -1,0 +1,97 @@
+.c-right {
+    width: 100% !important;
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: $main-padding;
+
+    .cc-2a {
+        @extend %remove-sub-elements;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $main-padding;
+        padding: 0 !important;
+        margin: 0 !important;
+
+        >.c-column {
+            margin-right: 0;
+        }
+
+        .c-column {
+            width: 100%;
+        }
+    }
+
+    img {
+        @extend %border-radius;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0;
+        background: $entry-background;
+    }
+
+    %links {
+        a {
+            @extend %border-radius;
+            @extend %small-shadows;
+            @extend %small-shadows-hover;
+        }
+    }
+
+    .cc-friends {
+        @extend %block-style-hover;
+        @extend %border-radius-bottom;
+        @extend %links;
+        padding: $padding;
+        border-top: none !important;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(25px, 1fr));
+        grid-gap: 5px;
+        min-height: 150px;
+        height: 175px;
+
+        .b-user {
+            @extend %item-align;
+            padding: $small-padding/2;
+        }
+
+        @extend %remove-sub-elements;
+    }
+
+    .b-clubs {
+        @extend %block-style-hover;
+        @extend %border-radius-bottom;
+        @extend %links;
+        border-top: none !important;
+        padding: $padding;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 12px;
+        margin: 0;
+        min-height: 150px;
+        height: 175px;
+
+        .b-club {
+            @extend %item-align;
+        }
+
+        @extend %remove-sub-elements;
+    }
+
+    .cc-favourites {
+        @extend %block-style-hover;
+        @extend %border-radius-bottom;
+        @extend %links;
+        border-top: none !important;
+        padding: $padding;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+
+        .b-catalog_entry {
+            @extend %item-align;
+            width: 100% !important;
+        }
+
+        @extend %remove-sub-elements;
+    }
+}

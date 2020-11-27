@@ -1,0 +1,75 @@
+.block.achievements {
+    margin-bottom: 0 !important;
+
+    .cc-3 {
+        @extend %block-style-hover;
+        @extend %border-radius-bottom;
+        border-top: none !important;
+        padding: $padding;
+
+        .c-column {
+            margin-bottom: 0px;
+
+            &:hover {
+                .title {
+                    @extend %caption-text-hover;
+                }
+            }
+        }
+    }
+
+    .border {
+        display: none;
+    }
+
+    img {
+        @extend %border-radius;
+    }
+
+    .cc-achievements {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: stretch;
+
+        .b-achievement {
+            @extend %border-radius;
+            @extend %small-shadows;
+            @extend %small-shadows-hover;
+
+            &::before {
+                bottom: 0;
+            }
+            &:only-child {
+                min-width: 48.5%;
+                max-width: 100%;
+                width: auto !important;
+                flex: 1;
+            }
+        }
+    }
+
+    .cc-franchises {
+        a {
+            @extend %border-radius;
+            @extend %small-shadows;
+            @extend %small-shadows-hover;
+        }
+
+        .b-badge {
+            &::before {
+                @extend %border-radius-bottom;
+                background: $badge-background;
+                color: $badge-color;
+                width: 100% !important;
+                display: block !important;
+                content: attr(data-progress) "%";
+                position: absolute;
+                text-align: center;
+                top: auto;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}

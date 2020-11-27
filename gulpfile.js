@@ -1,37 +1,31 @@
 // Sass configuration
-var gulp = require('gulp');
-const cleanCSS = require('gulp-clean-css');
-var rename = require('gulp-rename');
-var sass = require('gulp-sass');
+const gulp = require('gulp'),
+      rename = require('gulp-rename'),
+      sass = require('gulp-sass'),
+      cssbeautify = require('gulp-cssbeautify');
 
-gulp.task('sass',  () => {
+gulp.task('sass', () => {
   return gulp
-    .src('*.scss')
+    .src('./style/style.scss')
     .pipe(sass())
-    .pipe(
-      gulp.dest(function(f) {
-        return f.base;
-      })
-    );
+    .pipe(cssbeautify({
+      indent: '  '
+    }))
+    .pipe(gulp.dest('./style/css/'));
 });
 
-gulp.task('minify-css', () => {
+gulp.task('sass-min', () => {
   return gulp
-    .src('theme.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .src('./style/style.scss')
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(
-      gulp.dest(function(f) {
-        return f.base;
-      })
-    );
+    .pipe(gulp.dest('./style/css/'));
 });
 
 gulp.task(
   'default',
-  gulp.series('sass', function(cb) {
-    gulp.watch('*.scss', gulp.series('sass'));
-    gulp.watch('theme.css', gulp.series('minify-css'));
+  gulp.series('sass', 'sass-min', (cb) => {
+    gulp.watch('./style/*.scss', gulp.series('sass', 'sass-min'));
     cb();
   })
 );
