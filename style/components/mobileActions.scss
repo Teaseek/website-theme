@@ -1,0 +1,32 @@
+@media screen and (max-width: 767px) {
+    .c-mobile-actions {
+        display: grid !important;
+        grid-auto-flow: column;
+        margin-bottom: 0 !important;
+        text-align: center;
+    }
+}
+
+.c-mobile-actions {
+    @extend %block-style-hover;
+    @extend %border-radius;
+
+    %highlight {
+        padding: $padding;
+        font-weight: bold;
+    }
+
+    a {
+        @extend %highlight;
+        @extend %border-radius;
+        @extend %remove-sub-elements;
+
+        &:hover {
+            @extend %caption-text-hover;
+        }
+    }
+
+    span {
+        @extend %highlight;
+    }
+}

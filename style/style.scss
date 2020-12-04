@@ -29,7 +29,7 @@
 }
 
 %block-style {
-    background-color: $main-container-background;
+    background: $main-container-background;
     border: 1px $main-border-color solid;
 }
 
@@ -43,7 +43,7 @@
 
     &:hover {
         box-shadow: $main-elements-shadow;
-        background-color: $main-container-background-hover;
+        background: $main-container-background-hover;
         border: 1px $main-border-color-hover solid;
     }
 }
@@ -133,10 +133,6 @@
 }
 
 .profile-head {
-    @import 'components/history';
-
-    @import 'components/brief';
-
     @extend %remove-sub-elements;
     @extend %third-bar;
     @extend %subline;
@@ -146,35 +142,15 @@
     grid-gap: $main-padding;
     margin-bottom: $main-padding;
 
+    @import 'components/history';
+
+    @import 'components/brief';
+
     @media screen and (max-width: 767px) {
         grid-template-columns: auto;
     }
 
-    .c-mobile-actions {
-        @extend %block-style-hover;
-        @extend %border-radius;
-        display: grid;
-        grid-template-columns: minmax(100px, 1fr);
-        margin-bottom: 0 !important;
-        text-align: center;
-
-        %highlight {
-            padding: $padding;
-            font-weight: bold;
-        }
-
-        a {
-            @extend %highlight;
-        }
-
-        span {
-            @extend %highlight;
-        }
-
-        &:empty {
-            display: none;
-        }
-    }
+    @import 'components/mobileActions';
 
     @import 'components/info';
 }
