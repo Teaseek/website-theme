@@ -1,9 +1,9 @@
 .about.block {
     @extend %block-style;
     @extend %border-radius;
-    border-top: none !important;
-    margin-bottom: 0 !important;
-    padding: 0px $padding;
+    @extend %remove-margin-bottom;
+    @extend %subline-item;
+    padding: 0px $padding !important;
 
     .subheadline {
         margin: 0px (-$padding);

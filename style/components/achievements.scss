@@ -1,14 +1,13 @@
 .block.achievements {
-    margin-bottom: 0 !important;
+    @extend %remove-margin-bottom;
 
     .cc-3 {
         @extend %block-style-hover;
         @extend %border-radius-bottom;
-        border-top: none !important;
-        padding: $padding;
+        @extend %subline-item;
 
         .c-column {
-            margin-bottom: 0px;
+            @extend %remove-margin-bottom;
 
             &:hover {
                 .title {
@@ -39,6 +38,7 @@
             &::before {
                 bottom: 0;
             }
+
             &:only-child {
                 min-width: 48.5%;
                 max-width: 100%;
