@@ -33,7 +33,9 @@
 }
 .profile-content .about.block,
 .profile-content .block.achievements .cc-3,
+.profile-content .block:last-child .b-comments,
 .profile-content .block:last-child .b-topic,
+.profile-content .block:last-child > * > .editor-container > .b-form,
 .profile-content .cc-2.block .c-left .activity,
 .profile-content .cc-2.block .c-left .lifetime,
 .profile-content .cc-2.block .c-right .b-clubs,
@@ -109,7 +111,10 @@
 .profile-content .block.achievements .cc-franchises .b-badge::before,
 .profile-content .block.achievements .cc-franchises a,
 .profile-content .block.achievements img,
+.profile-content .block:last-child .b-comments,
+.profile-content .block:last-child .b-comments .b-comment img,
 .profile-content .block:last-child .b-topic,
+.profile-content .block:last-child > * > .editor-container > .b-form,
 .profile-content .cc-2.block .c-left .activity,
 .profile-content .cc-2.block .c-left .activity .bar,
 .profile-content .cc-2.block .c-left .lifetime,
@@ -147,9 +152,11 @@
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :last-child {
   border-radius: 0 5px 5px 0
 }
+.profile-content .about.block,
 .profile-content .block.achievements .cc-3,
 .profile-content .block.achievements .cc-franchises .b-badge::before,
-.profile-content .block:last-child .b-topic,
+.profile-content .block:last-child .b-comments,
+.profile-content .block:last-child > * > .editor-container > .b-form,
 .profile-content .cc-2.block .c-right .b-clubs,
 .profile-content .cc-2.block .c-right .cc-favourites,
 .profile-content .cc-2.block .c-right .cc-friends,
@@ -159,10 +166,11 @@
 .profile-content .cc-2.block .c-left .activity .bar {
   border-radius: 5px 5px 0 0
 }
-.profile-content .about.block,
 .profile-content .block.achievements .cc-achievements .b-achievement,
 .profile-content .block.achievements .cc-franchises a,
 .profile-content .block.achievements img,
+.profile-content .block:last-child .b-comments .b-comment img,
+.profile-content .block:last-child .b-topic,
 .profile-content .cc-2.block .c-left .activity,
 .profile-content .cc-2.block .c-left .lifetime,
 .profile-content .cc-2.block .c-right .b-clubs a,
@@ -214,6 +222,8 @@
 .profile-head::before {
   display: none!important
 }
+.profile-content .block:last-child .b-comments .b-comment,
+.profile-content .block:last-child .b-comments .b-comment img,
 .profile-content .block:last-child .subheadline,
 .profile-content .cc-2.block,
 .profile-content .cc-2.block .c-left,
@@ -249,7 +259,9 @@
 }
 .profile-content .about.block,
 .profile-content .block.achievements .cc-3,
+.profile-content .block:last-child .b-comments,
 .profile-content .block:last-child .b-topic,
+.profile-content .block:last-child > * > .editor-container > .b-form,
 .profile-content .cc-2.block .c-right .b-clubs,
 .profile-content .cc-2.block .c-right .cc-favourites,
 .profile-content .cc-2.block .c-right .cc-friends,
@@ -446,7 +458,6 @@
   grid-gap: 15px
 }
 .profile-content .cc-2.block {
-  margin-bottom: 15px!important;
   display: grid;
   grid-gap: 15px;
   grid-template-columns: .6fr .4fr
@@ -582,4 +593,7 @@
 }
 .profile-content .about.block .subheadline {
   margin: 0 -10px
+}
+.profile-content .block:last-child > * > .editor-container {
+  margin-top: 15px
 }

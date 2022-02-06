@@ -1,6 +1,6 @@
 .about.block {
     @extend %block-style;
-    @extend %border-radius;
+    @extend %border-radius-bottom;
     @extend %remove-margin-bottom;
     @extend %subline-item;
     padding: 0px $padding !important;

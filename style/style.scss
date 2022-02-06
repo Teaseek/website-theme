@@ -167,8 +167,6 @@
     .cc-2.block {
         @extend %remove-sub-elements;
         @extend %remove-margin;
-        @extend %remove-margin;
-        margin-bottom: $main-padding !important;
         display: grid;
         grid-gap: $main-padding;
         grid-template-columns: 0.6fr 0.4fr;

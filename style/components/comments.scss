@@ -4,10 +4,35 @@
             @extend %remove-margin;
         }
 
-        .b-topic {
+        .b-comments {
             @extend %block-style;
             @extend %border-radius-bottom;
             @extend %subline-item;
+
+            .b-comment {
+                @extend %remove-margin;
+                
+                img {
+                    @extend %border-radius;
+                    @extend %remove-margin;
+                } 
+            }
+        }
+
+        .b-topic {
+            @extend %block-style;
+            @extend %border-radius;
+            @extend %subline-item;
+        }
+
+        > * > .editor-container {
+            margin-top: $main-padding;
+
+            > .b-form {
+                @extend %block-style;
+                @extend %border-radius-bottom;
+                @extend %subline-item;
+            }
         }
     }
 }
