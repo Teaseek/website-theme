@@ -1,5 +1,5 @@
 .c-left {
-    margin: 0 !important;
+    @extend %remove-margin;
     width: 100% !important;
     display: grid;
     grid-gap: $main-padding;
@@ -7,8 +7,8 @@
     .lifetime {
         @extend %block-style-hover;
         @extend %border-radius;
+        @extend %remove-margin;
         padding: $padding;
-        margin: 0 !important;
         display: grid;
         grid-template-rows: 1fr auto 1fr;
         grid-gap: 5px;
@@ -49,10 +49,10 @@
     .activity {
         @extend %block-style-hover;
         @extend %border-radius;
+        @extend %remove-margin;
         padding: $padding;
         display: grid;
         grid-template-rows: auto minmax(100px, 1fr);
-        margin: 0 !important;
 
         .bar {
             @extend %border-radius-top;

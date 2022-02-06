@@ -6,11 +6,11 @@
 
     .cc-2a {
         @extend %remove-sub-elements;
+        @extend %remove-margin;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: $main-padding;
-        padding: 0 !important;
-        margin: 0 !important;
+        padding: 0;
 
         >.c-column {
             margin-right: 0;
@@ -23,9 +23,9 @@
 
     img {
         @extend %border-radius;
+        @extend %remove-margin;
         width: 100% !important;
         max-width: none !important;
-        margin: 0;
         background: $entry-background;
     }
 
@@ -41,8 +41,7 @@
         @extend %block-style-hover;
         @extend %border-radius-bottom;
         @extend %links;
-        padding: $padding;
-        border-top: none !important;
+        @extend %subline-item;
         display: grid;
         grid-template-columns: repeat(4, minmax(25px, 1fr));
         grid-gap: 5px;
@@ -61,17 +60,18 @@
         @extend %block-style-hover;
         @extend %border-radius-bottom;
         @extend %links;
-        border-top: none !important;
-        padding: $padding;
+        @extend %remove-margin;
+        @extend %subline-item;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 12px;
-        margin: 0;
         min-height: 150px;
         height: 175px;
 
         .b-club {
             @extend %item-align;
+            @extend %remove-margin;
+            width: 100% !important;
         }
 
         @extend %remove-sub-elements;
@@ -81,8 +81,7 @@
         @extend %block-style-hover;
         @extend %border-radius-bottom;
         @extend %links;
-        border-top: none !important;
-        padding: $padding;
+        @extend %subline-item;
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));

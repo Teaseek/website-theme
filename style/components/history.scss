@@ -1,7 +1,7 @@
 .c-history {
+    @extend %remove-margin;
     width: 100% !important;
     grid-column: 1 / 3;
-    margin: 0px !important;
 
     @media screen and (max-width: 767px) {
         margin-bottom: $main-padding !important;
@@ -16,8 +16,7 @@
     .b-block_list {
         @extend %block-style-hover;
         @extend %border-radius-bottom;
-        border-top: none !important;
-        padding: $padding;
+        @extend %subline-item;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         grid-gap: 1%;
@@ -30,7 +29,9 @@
         .entry {
             @extend %small-shadows-hover;
             @extend %border-radius;
-            @extend %item-align; //
+            @extend %item-align;
+            @extend %remove-margin;
+            width: 100% !important;
             transition: $history-entry-transition;
             padding: 0 $small-padding !important;
             justify-content: left !important;
@@ -47,10 +48,10 @@
                 @extend %border-radius;
 
                 img {
+                    @extend %border-radius;
                     margin: $small-padding/2 $small-padding $small-padding/2 0;
                     max-height: 75px !important;
                     max-width: 48px !important;
-                    @extend %border-radius;
                 }
             }
 

@@ -1,5 +1,5 @@
 .c-brief {
-    margin: 0 !important;
+    @extend %remove-margin;
     display: grid;
     grid-auto-flow: row dense;
     grid-gap: $main-padding;
@@ -7,18 +7,14 @@
     @media screen and (max-width: 767px) {
         grid-template-columns: auto 1fr;
         align-items: center;
-
-        .head.misc {
-            margin: 0px !important;
-        }
     }
 
     .avatar {
+        @extend %remove-margin;
         grid-row: 2;
         display: grid;
         grid-auto-flow: row;
         grid-gap: $main-padding;
-        margin: 0px !important;
 
         @media screen and (max-width: 767px) {
             grid-row: 1;
@@ -32,7 +28,7 @@
         .profile-actions {
             @extend %block-style-hover;
             @extend %border-radius;
-            margin: 0 !important;
+            @extend %remove-margin;
             padding: $small-padding 0px;
             display: grid;
             grid-auto-flow: column;
@@ -41,7 +37,7 @@
 
             a {
                 @extend %border-radius;
-                margin: 0px !important;
+                @extend %remove-margin;
 
                 &::before {
                     font-size: 20px;
@@ -57,8 +53,8 @@
     .head {
         @extend %block-style-hover;
         @extend %border-radius;
+        @extend %remove-margin;
         padding: $padding;
-        margin-bottom: 0px !important;
         display: grid;
         grid-auto-flow: row;
         grid-gap: 1px;

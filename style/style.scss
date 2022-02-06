@@ -34,11 +34,8 @@
 }
 
 %block-style-hover {
-    -webkit-transition: $main-container-transition;
-    -moz-transition: $main-container-transition;
-    -o-transition: $main-container-transition;
-    transition: $main-container-transition;
     @extend %block-style;
+    transition: $main-container-transition;
     box-shadow: none;
 
     &:hover {
@@ -51,7 +48,6 @@
 %caption-text-hover {
     background: $linear-gradient-background;
     background-clip: text;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     @keyframes slide {
@@ -62,18 +58,15 @@
 
     $animation: slide $text-animation-time linear 0s infinite forwards;
     animation: $animation;
-    -o-animation: $animation;
-    -moz-animation: $animation;
-    -webkit-animation: $animation;
+}
+
+%border-radius-fix {
+    background-clip: padding-box;
 }
 
 @mixin border-radius($top-left, $top-right, $bottom-right, $bottom-left) {
+    @extend %border-radius-fix;
     border-radius: $top-left $top-right $bottom-right $bottom-left;
-    -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
-    -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
 }
 
 %border-radius-left {
@@ -97,30 +90,39 @@
 }
 
 %item-align {
-    width: 100% !important;
-    margin: 0 !important;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 %remove-sub-elements {
-    &::after {
-        display: none !important;
-    }
 
+    &::after,
     &::before {
         display: none !important;
     }
 }
 
+%remove-margin {
+    margin: 0 !important;
+}
+
+%remove-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
 %subline {
     .subheadline {
+        @extend %remove-margin-bottom;
+        @extend %headline-arrow;
         background: $subheadline-background;
         border: 0;
-        margin-bottom: 0 !important;
-        @extend %headline-arrow;
     }
+}
+
+%subline-item {
+    border-top: none !important;
+    padding: $padding;
 }
 
 %third-bar {
@@ -142,13 +144,13 @@
     grid-gap: $main-padding;
     margin-bottom: $main-padding;
 
-    @import 'components/history';
-
-    @import 'components/brief';
-
     @media screen and (max-width: 767px) {
         grid-template-columns: auto;
     }
+
+    @import 'components/history';
+
+    @import 'components/brief';
 
     @import 'components/mobileActions';
 
@@ -164,11 +166,12 @@
 
     .cc-2.block {
         @extend %remove-sub-elements;
+        @extend %remove-margin;
+        @extend %remove-margin;
         margin-bottom: $main-padding !important;
         display: grid;
         grid-gap: $main-padding;
         grid-template-columns: 0.6fr 0.4fr;
-        margin: 0 !important;
 
         @media screen and (max-width: 767px) {
             grid-template-columns: auto;

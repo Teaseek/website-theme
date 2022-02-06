@@ -2,7 +2,6 @@
     .c-mobile-actions {
         display: grid !important;
         grid-auto-flow: column;
-        margin-bottom: 0 !important;
         text-align: center;
     }
 }
@@ -10,6 +9,7 @@
 .c-mobile-actions {
     @extend %block-style-hover;
     @extend %border-radius;
+    @extend %remove-margin-bottom;
 
     %highlight {
         padding: $padding;

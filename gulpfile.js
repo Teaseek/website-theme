@@ -1,34 +1,44 @@
 // Sass configuration
-const gulp = require('gulp'),
-      rename = require('gulp-rename'),
-      sass = require('gulp-sass'),
-      cssbeautify = require('gulp-cssbeautify');
+const { task, dest, src, series, watch } = require('gulp'),
+  sass = require('gulp-sass'),
+  rename = require('gulp-rename'),
+  cleanCSS = require('gulp-clean-css'),
+  autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('sass', () => {
-  return gulp
-    .src('style/style.scss')
+var path = {
+  scss: {
+    src: {
+      main: 'style/style.scss',
+      components: 'style/components/*.scss',
+    },
+    dest: 'style/css/'
+  },
+  css: {
+    src: 'style/css/style.css',
+    dest: 'style/css/'
+  }
+};
+
+task('sass', () => {
+  return src(path.scss.src.main)
     .pipe(sass())
-    .pipe(cssbeautify({ indent: '  ' }))
-    .pipe(gulp.dest('style/css/'));
+    .pipe(autoprefixer())
+    .pipe(cleanCSS({ format: 'beautify' }))
+    .pipe(dest(path.scss.dest));
 });
 
-gulp.task('sass-min', () => {
-  return gulp
-    .src('style/style.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
+task('css-min', () => {
+  return src(path.css.src)
+    .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('style/css/'));
+    .pipe(dest(path.css.dest));
 });
 
-gulp.task('build', 
-  gulp.series('sass', 'sass-min')
-);
+const build = series('sass', 'css-min');
 
-gulp.task('watch', () => {
-  gulp.watch(['style/*.scss'], gulp.series('build'));
-  gulp.watch(['style/components/*.scss'], {delay: 500}, gulp.series('build'));
+task('watch', () => {
+  watch(path.scss.src.main, build);
+  watch(path.scss.src.components, { delay: 500 }, build);
 });
 
-gulp.task('default',
-  gulp.series('build', 'watch')
-);
+task('default', series(build, 'watch'));
