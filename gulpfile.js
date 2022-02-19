@@ -1,6 +1,5 @@
-// Sass configuration
 const { task, dest, src, series, watch } = require('gulp'),
-  sass = require('gulp-sass'),
+  sass = require('gulp-sass')(require('sass')),
   rename = require('gulp-rename'),
   cleanCSS = require('gulp-clean-css'),
   autoprefixer = require('gulp-autoprefixer');
@@ -21,7 +20,7 @@ var path = {
 
 task('sass', () => {
   return src(path.scss.src.main)
-    .pipe(sass())
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(cleanCSS({ format: 'beautify' }))
     .pipe(dest(path.scss.dest));

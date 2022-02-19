@@ -50,7 +50,7 @@
 
         .b-user {
             @extend %item-align;
-            padding: $small-padding/2;
+            padding: calc($small-padding / 2);
         }
 
         @extend %remove-sub-elements;

@@ -8,14 +8,27 @@
             @extend %block-style;
             @extend %border-radius-bottom;
             @extend %subline-item;
+            @extend %block-style-hover;
 
             .b-comment {
-                @extend %remove-margin;
+                @extend %border-radius;
+                @extend %small-shadows-hover;
+                transition: $history-entry-transition;
+                padding: $small-padding;
+                margin-bottom: $padding !important;
+                border: 0;
                 
                 img {
                     @extend %border-radius;
                     @extend %remove-margin;
                 } 
+
+                &:last-child {
+                    margin-bottom: 0 !important;
+                }
+                &:hover {
+                    background: $entry-background;
+                }
             }
         }
 

@@ -19,6 +19,7 @@
 }
 .profile-content .block.achievements .cc-achievements .b-achievement:hover,
 .profile-content .block.achievements .cc-franchises a:hover,
+.profile-content .block:last-child .b-comments .b-comment:hover,
 .profile-content .cc-2.block .c-right .b-clubs a:hover,
 .profile-content .cc-2.block .c-right .cc-favourites a:hover,
 .profile-content .cc-2.block .c-right .cc-friends a:hover,
@@ -51,6 +52,7 @@
   border: 1px var(--headline-background-color) solid
 }
 .profile-content .block.achievements .cc-3,
+.profile-content .block:last-child .b-comments,
 .profile-content .cc-2.block .c-left .activity,
 .profile-content .cc-2.block .c-left .lifetime,
 .profile-content .cc-2.block .c-right .b-clubs,
@@ -66,6 +68,7 @@
   box-shadow: none
 }
 .profile-content .block.achievements .cc-3:hover,
+.profile-content .block:last-child .b-comments:hover,
 .profile-content .cc-2.block .c-left .activity:hover,
 .profile-content .cc-2.block .c-left .lifetime:hover,
 .profile-content .cc-2.block .c-right .b-clubs:hover,
@@ -112,6 +115,7 @@
 .profile-content .block.achievements .cc-franchises a,
 .profile-content .block.achievements img,
 .profile-content .block:last-child .b-comments,
+.profile-content .block:last-child .b-comments .b-comment,
 .profile-content .block:last-child .b-comments .b-comment img,
 .profile-content .block:last-child .b-topic,
 .profile-content .block:last-child > * > .editor-container > .b-form,
@@ -169,6 +173,7 @@
 .profile-content .block.achievements .cc-achievements .b-achievement,
 .profile-content .block.achievements .cc-franchises a,
 .profile-content .block.achievements img,
+.profile-content .block:last-child .b-comments .b-comment,
 .profile-content .block:last-child .b-comments .b-comment img,
 .profile-content .block:last-child .b-topic,
 .profile-content .cc-2.block .c-left .activity,
@@ -222,7 +227,6 @@
 .profile-head::before {
   display: none!important
 }
-.profile-content .block:last-child .b-comments .b-comment,
 .profile-content .block:last-child .b-comments .b-comment img,
 .profile-content .block:last-child .subheadline,
 .profile-content .cc-2.block,
@@ -593,6 +597,18 @@
 }
 .profile-content .about.block .subheadline {
   margin: 0 -10px
+}
+.profile-content .block:last-child .b-comments .b-comment {
+  transition: all .3s cubic-bezier(.25,.8,.25,1);
+  padding: 5px;
+  margin-bottom: 10px!important;
+  border: 0
+}
+.profile-content .block:last-child .b-comments .b-comment:last-child {
+  margin-bottom: 0!important
+}
+.profile-content .block:last-child .b-comments .b-comment:hover {
+  background: #fff
 }
 .profile-content .block:last-child > * > .editor-container {
   margin-top: 15px
