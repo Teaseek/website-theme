@@ -131,7 +131,8 @@
 .profile-content .block:last-child .b-topic,
 .profile-content .block:last-child > * > .editor-container > .b-form,
 .profile-content .cc-2.block .c-left .activity,
-.profile-content .cc-2.block .c-left .activity .bar,
+.profile-content .cc-2.block .c-left .activity .graph,
+.profile-content .cc-2.block .c-left .activity .graph .bar,
 .profile-content .cc-2.block .c-left .lifetime,
 .profile-content .cc-2.block .c-left .lifetime .bar .first,
 .profile-content .cc-2.block .c-left .lifetime .bar .third,
@@ -178,7 +179,8 @@
 .profile-head .c-history .b-block_list {
   border-radius: 0 0 5px 5px
 }
-.profile-content .cc-2.block .c-left .activity .bar {
+.profile-content .cc-2.block .c-left .activity .graph,
+.profile-content .cc-2.block .c-left .activity .graph .bar {
   border-radius: 5px 5px 0 0
 }
 .profile-content .block.achievements .cc-achievements .b-achievement,
@@ -456,6 +458,7 @@
 .profile-content .cc-2.block .c-left {
   width: 100%!important;
   display: grid;
+  grid-template-rows: minmax(95px,.25fr) 1fr;
   grid-gap: 15px
 }
 .profile-content .cc-2.block .c-left .lifetime {
@@ -488,10 +491,16 @@
   display: grid;
   grid-template-rows: auto minmax(100px,1fr)
 }
-.profile-content .cc-2.block .c-left .activity .bar {
-  -ms-flex-item-align: end;
-  align-self: end;
-  height: 200px
+.profile-content .cc-2.block .c-left .activity .graph {
+  height: auto
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 {
+  display: none
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
 }
 .profile-content .cc-2.block .c-left .activity:last-child {
   padding-bottom: 20px
@@ -607,6 +616,16 @@
 }
 .profile-content .block:last-child > * > .editor-container {
   margin-top: 15px
+}
+@media screen and (min-width:1200px) {
+  .profile-content .cc-2.block .c-left .activity .graph.x34 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+  .profile-content .cc-2.block .c-left .activity .graph.x26 {
+    display: none
+  }
 }
 @media screen and (max-width:767px) {
   .profile-head {

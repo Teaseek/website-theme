@@ -2,6 +2,7 @@
     @extend %remove-margin;
     width: 100% !important;
     display: grid;
+    grid-template-rows: minmax(95px, 0.25fr) 1fr;
     grid-gap: $main-padding;
 
     .lifetime {
@@ -54,10 +55,28 @@
         display: grid;
         grid-template-rows: auto minmax(100px, 1fr);
 
-        .bar {
+        @media screen and (min-width: 1200px) {
+            .graph.x34 {
+                display: flex;
+            }
+            .graph.x26 {
+                display: none;
+            }
+        }
+
+        .graph {
             @extend %border-radius-top;
-            align-self: end;
-            height: 200px;
+            height: auto;
+
+            .bar {
+                @extend %border-radius-top;
+            }
+            &.x34 {
+                display: none;
+            }
+            &.x26 {
+                display: flex;
+            }
         }
 
         &:hover {
