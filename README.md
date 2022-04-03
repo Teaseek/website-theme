@@ -1,4 +1,6 @@
 # website-theme
+[![NodeJS with Gulp](https://github.com/Teaseek/website-theme/actions/workflows/npm-gulp.yml/badge.svg?event=push)](https://github.com/Teaseek/website-theme/actions/workflows/npm-gulp.yml)
+
 @import url(https://raw.githubusercontent.com/Teaseek/website-theme/main/style/css/style.min.css);
 
 update cache on website https://shikimori.one/tests/reset_styles_cache / 
