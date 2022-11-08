@@ -9,6 +9,9 @@
   color: var(--headline-arrow-color)
 }
 .profile-content .block.achievements .cc-achievements .b-achievement,
+.profile-content .block.achievements .cc-achievements .b-achievement::after,
+.profile-content .block.achievements .cc-authors .b-achievement,
+.profile-content .block.achievements .cc-authors .b-achievement::after,
 .profile-content .block.achievements .cc-franchises a,
 .profile-content .cc-2.block .c-right .b-clubs a,
 .profile-content .cc-2.block .c-right .cc-favourites a,
@@ -21,6 +24,9 @@
   transition: all .3s cubic-bezier(.25,.8,.25,1)
 }
 .profile-content .block.achievements .cc-achievements .b-achievement:hover,
+.profile-content .block.achievements .cc-achievements .b-achievement:hover::after,
+.profile-content .block.achievements .cc-authors .b-achievement:hover,
+.profile-content .block.achievements .cc-authors .b-achievement:hover::after,
 .profile-content .block.achievements .cc-franchises a:hover,
 .profile-content .block:last-child .b-comments .b-comment:hover,
 .profile-content .cc-2.block .c-right .b-clubs a:hover,
@@ -38,7 +44,7 @@
   z-index: 1000
 }
 .profile-content .about.block,
-.profile-content .block.achievements .cc-3,
+.profile-content .block.achievements .cc-2,
 .profile-content .block:last-child .b-comments,
 .profile-content .block:last-child .b-topic,
 .profile-content .block:last-child > * > .editor-container > .b-form,
@@ -56,7 +62,7 @@
   background: 0 0;
   border: 1px var(--headline-background-color) solid
 }
-.profile-content .block.achievements .cc-3,
+.profile-content .block.achievements .cc-2,
 .profile-content .block:last-child .b-comments,
 .profile-content .cc-2.block .c-left .activity,
 .profile-content .cc-2.block .c-left .lifetime,
@@ -75,7 +81,7 @@
   -webkit-box-shadow: none;
   box-shadow: none
 }
-.profile-content .block.achievements .cc-3:hover,
+.profile-content .block.achievements .cc-2:hover,
 .profile-content .block:last-child .b-comments:hover,
 .profile-content .cc-2.block .c-left .activity:hover,
 .profile-content .cc-2.block .c-left .lifetime:hover,
@@ -93,7 +99,7 @@
   background: #ececec;
   border: 1px transparent solid
 }
-.profile-content .block.achievements .cc-3 .c-column:hover .title,
+.profile-content .block.achievements .cc-2 .c-column:hover .title,
 .profile-content .cc-2.block .c-left .activity:hover .title,
 .profile-content .cc-2.block .c-left .lifetime:hover .label,
 .profile-head .c-brief .avatar .profile-actions a:hover::before,
@@ -120,8 +126,11 @@
   }
 }
 .profile-content .about.block,
-.profile-content .block.achievements .cc-3,
+.profile-content .block.achievements .cc-2,
 .profile-content .block.achievements .cc-achievements .b-achievement,
+.profile-content .block.achievements .cc-achievements .b-achievement::after,
+.profile-content .block.achievements .cc-authors .b-achievement,
+.profile-content .block.achievements .cc-authors .b-achievement::after,
 .profile-content .block.achievements .cc-franchises .b-badge::before,
 .profile-content .block.achievements .cc-franchises a,
 .profile-content .block.achievements img,
@@ -169,7 +178,7 @@
   border-radius: 0 5px 5px 0
 }
 .profile-content .about.block,
-.profile-content .block.achievements .cc-3,
+.profile-content .block.achievements .cc-2,
 .profile-content .block.achievements .cc-franchises .b-badge::before,
 .profile-content .block:last-child .b-comments,
 .profile-content .block:last-child > * > .editor-container > .b-form,
@@ -184,6 +193,9 @@
   border-radius: 5px 5px 0 0
 }
 .profile-content .block.achievements .cc-achievements .b-achievement,
+.profile-content .block.achievements .cc-achievements .b-achievement::after,
+.profile-content .block.achievements .cc-authors .b-achievement,
+.profile-content .block.achievements .cc-authors .b-achievement::after,
 .profile-content .block.achievements .cc-franchises a,
 .profile-content .block.achievements img,
 .profile-content .block:last-child .b-comments .b-comment,
@@ -268,7 +280,7 @@
 }
 .profile-content .about.block,
 .profile-content .block.achievements,
-.profile-content .block.achievements .cc-3 .c-column,
+.profile-content .block.achievements .cc-2 .c-column,
 .profile-content .subheadline,
 .profile-head .c-info .c-additionals,
 .profile-head .c-mobile-actions,
@@ -281,7 +293,7 @@
   border: 0
 }
 .profile-content .about.block,
-.profile-content .block.achievements .cc-3,
+.profile-content .block.achievements .cc-2,
 .profile-content .block:last-child .b-comments,
 .profile-content .block:last-child .b-topic,
 .profile-content .block:last-child > * > .editor-container > .b-form,
@@ -559,7 +571,8 @@
 .profile-content .block.achievements .border {
   display: none
 }
-.profile-content .block.achievements .cc-achievements {
+.profile-content .block.achievements .cc-achievements,
+.profile-content .block.achievements .cc-authors {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,10 +583,20 @@
   -ms-flex-line-pack: stretch;
   align-content: stretch
 }
-.profile-content .block.achievements .cc-achievements .b-achievement::before {
+.profile-content .block.achievements .cc-achievements .b-achievement::before,
+.profile-content .block.achievements .cc-authors .b-achievement::before {
   bottom: 0
 }
-.profile-content .block.achievements .cc-achievements .b-achievement:only-child {
+.profile-content .block.achievements .cc-achievements .b-achievement::after,
+.profile-content .block.achievements .cc-authors .b-achievement::after {
+  top: 10px;
+  right: 10px;
+  opacity: 1;
+  color: #000;
+  background: #fff
+}
+.profile-content .block.achievements .cc-achievements .b-achievement:only-child,
+.profile-content .block.achievements .cc-authors .b-achievement:only-child {
   min-width: 48.5%;
   max-width: 100%;
   width: auto!important;

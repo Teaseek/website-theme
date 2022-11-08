@@ -19,6 +19,7 @@ const path = {
     css: {
         src: "style/css/style.css",
         dest: "style/css/",
+        dest2: "dest/",
     },
 };
 
@@ -36,7 +37,8 @@ const cssMin = () => {
         .pipe(shorthand())
         .pipe(csso())
         .pipe(rename({ suffix: ".min" }))
-        .pipe(dest(path.css.dest));
+        .pipe(dest(path.css.dest))
+        .pipe(dest(path.css.dest2));
 };
 
 const clear = () => {
