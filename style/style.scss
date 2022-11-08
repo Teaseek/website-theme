@@ -1,6 +1,6 @@
-@import 'components/colors';
+@import "components/colors";
 
-@import 'components/data';
+@import "components/data";
 
 %headline-arrow a {
     color: $subheadline-a-color;
@@ -86,7 +86,12 @@
 }
 
 %border-radius {
-    @include border-radius($main-border-radius, $main-border-radius, $main-border-radius, $main-border-radius)
+    @include border-radius(
+        $main-border-radius,
+        $main-border-radius,
+        $main-border-radius,
+        $main-border-radius
+    );
 }
 
 %item-align {
@@ -96,7 +101,6 @@
 }
 
 %remove-sub-elements {
-
     &::after,
     &::before {
         display: none !important;
@@ -148,13 +152,13 @@
         grid-template-columns: auto;
     }
 
-    @import 'components/history';
+    @import "components/history";
 
-    @import 'components/brief';
+    @import "components/brief";
 
-    @import 'components/mobileActions';
+    @import "components/mobileActions";
 
-    @import 'components/info';
+    @import "components/info";
 }
 
 .profile-content {
@@ -175,14 +179,14 @@
             grid-template-columns: auto;
         }
 
-        @import 'components/stats';
+        @import "components/stats";
 
-        @import 'components/lists';
+        @import "components/lists";
     }
 
-    @import 'components/achievements';
+    @import "components/achievements";
 
-    @import 'components/about';
+    @import "components/about";
 
-    @import 'components/comments';
+    @import "components/comments";
 }

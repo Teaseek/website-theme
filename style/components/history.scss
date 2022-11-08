@@ -49,7 +49,8 @@
 
                 img {
                     @extend %border-radius;
-                    margin: calc($small-padding / 2) $small-padding calc($small-padding / 2) 0;
+                    margin: calc($small-padding / 2) $small-padding
+                        calc($small-padding / 2) 0;
                     max-height: 75px !important;
                     max-width: 48px !important;
                 }

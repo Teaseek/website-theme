@@ -17,11 +17,11 @@
                 padding: $small-padding;
                 margin-bottom: $padding !important;
                 border: 0;
-                
+
                 img {
                     @extend %border-radius;
                     @extend %remove-margin;
-                } 
+                }
 
                 &:last-child {
                     margin-bottom: 0 !important;

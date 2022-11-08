@@ -1,25 +1,38 @@
-$font-color:#112;
-$entry-background:#fff;
-$badge-color:#fff;
-$badge-background:#1a1a1a69;
-$subheadline-background:var(--headline-background-color);
-$subheadline-a-color:var(--link-color);
-$subheadline-a-icon-color:var(--headline-arrow-color);
-$anime-stat-text-color:#4682b4;
-$manga-stat-text-color:#9f6fb1;
-$anime-stat-text-background:#ddedfb;
-$manga-stat-text-background:#ffe1f4;
-$bar-stat-third-background:#d4d4d4;
-$bar-anime-stat-second-background:#a3c2db;
-$bar-background:#f45151;
-$main-border-color:var(--headline-background-color);
-$main-border-color-hover:transparent;
-$main-container-background:transparent;
-$main-container-background-hover:#ececec;
-$linear-gradient-background: linear-gradient(to right,
-    #b347bb 0%, #9a5fbe 6.25%, #9b5ebe 12.5%,
-    #688ec4 18.75%, #5c9cc8 25%, #51a8ca 31.25%,
-    #44b5cb 37.5%, #32c8cf 43.75%, #32c8cf 50%,
-    #44b5cb 56.25%, #51a8ca 62.5%, #5c9cc8 68.75%,
-    #688ec4 75%, #9b5ebe 81.25%, #9a5fbe 87.5%,
-    #b347bb 100%) 0% center / 400% auto;
+$font-color: #112;
+$entry-background: #fff;
+$badge-color: #fff;
+$badge-background: #1a1a1a69;
+$subheadline-background: var(--headline-background-color);
+$subheadline-a-color: var(--link-color);
+$subheadline-a-icon-color: var(--headline-arrow-color);
+$anime-stat-text-color: #4682b4;
+$manga-stat-text-color: #9f6fb1;
+$anime-stat-text-background: #ddedfb;
+$manga-stat-text-background: #ffe1f4;
+$bar-stat-third-background: #d4d4d4;
+$bar-anime-stat-second-background: #a3c2db;
+$bar-background: #f45151;
+$main-border-color: var(--headline-background-color);
+$main-border-color-hover: transparent;
+$main-container-background: transparent;
+$main-container-background-hover: #ececec;
+$linear-gradient-background: linear-gradient(
+        to right,
+        #b347bb 0%,
+        #9a5fbe 6.25%,
+        #9b5ebe 12.5%,
+        #688ec4 18.75%,
+        #5c9cc8 25%,
+        #51a8ca 31.25%,
+        #44b5cb 37.5%,
+        #32c8cf 43.75%,
+        #32c8cf 50%,
+        #44b5cb 56.25%,
+        #51a8ca 62.5%,
+        #5c9cc8 68.75%,
+        #688ec4 75%,
+        #9b5ebe 81.25%,
+        #9a5fbe 87.5%,
+        #b347bb 100%
+    )
+    0% center / 400% auto;
