@@ -13,6 +13,7 @@
         }
     }
 
+    & > div:has(> .entry),
     .b-block_list {
         @extend %block-style-hover;
         @extend %border-radius-bottom;
