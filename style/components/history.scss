@@ -13,6 +13,7 @@
         }
     }
 
+    & > div:last-child,
     & > div:has(> .entry),
     .b-block_list {
         @extend %block-style-hover;
