@@ -380,7 +380,8 @@
 .profile-head .c-brief {
   display: grid;
   grid-auto-flow: row dense;
-  grid-gap: 15px
+  grid-gap: 15px;
+  max-width: 160px
 }
 .profile-head .c-brief .avatar {
   grid-row: 2;
@@ -390,7 +391,8 @@
 }
 .profile-head .c-brief .avatar img {
   -ms-flex-item-align: end;
-  align-self: end
+  align-self: end;
+  border: 1px var(--headline-background-color) solid
 }
 .profile-head .c-brief .avatar .profile-actions {
   padding: 5px 0;
@@ -670,7 +672,8 @@
     grid-template-columns: auto 1fr;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    max-width: unset
   }
   .profile-head .c-brief .avatar {
     grid-row: 1

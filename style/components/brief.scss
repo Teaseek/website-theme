@@ -6,10 +6,13 @@
         display: grid;
         grid-auto-flow: row dense;
         grid-gap: $main-padding;
+        max-width: 160px;
+
 
         @media screen and (max-width: 767px) {
             grid-template-columns: auto 1fr;
             align-items: center;
+            max-width: unset;
         }
 
         .avatar {
@@ -26,6 +29,7 @@
             img {
                 @extend %border-radius;
                 align-self: end;
+                border: 1px $main-border-color solid;
             }
 
             .profile-actions {
