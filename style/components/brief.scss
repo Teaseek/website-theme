@@ -10,7 +10,7 @@
         @media screen and (max-width: 767px) {
             grid-template-columns: auto 1fr;
             align-items: center;
-            max-width: unset;
+            max-width: unset !important;
         }
 
         .avatar {
@@ -19,7 +19,7 @@
             display: grid;
             grid-auto-flow: row;
             grid-gap: $main-padding;
-            max-width: unset;
+            max-width: unset !important;
             width: 100%;
             align-items: center;
             justify-content: normal;

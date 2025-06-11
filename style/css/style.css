@@ -389,7 +389,7 @@
   display: grid;
   grid-auto-flow: row;
   grid-gap: 15px;
-  max-width: unset;
+  max-width: unset!important;
   width: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -692,7 +692,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    max-width: unset
+    max-width: unset!important
   }
   .profile-head .c-brief .avatar {
     grid-row: 1
