@@ -412,7 +412,12 @@
   grid-gap: 1px
 }
 .profile-head .c-brief .head .misc {
-  padding: 0
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
 }
 .profile-head .c-brief .head .notice {
   padding: 0;
