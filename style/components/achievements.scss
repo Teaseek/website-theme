@@ -1,89 +1,93 @@
-.block.achievements {
-    @extend %remove-margin-bottom;
+@use "../common" as *;
 
-    .cc-2 {
-        @extend %block-style-hover;
-        @extend %border-radius-bottom;
-        @extend %subline-item;
+.profile-content {
+    .block.achievements {
+        @extend %remove-margin-bottom;
 
-        .c-column {
-            @extend %remove-margin-bottom;
+        .cc-2 {
+            @extend %block-style-hover;
+            @extend %border-radius-bottom;
+            @extend %subline-item;
 
-            &:hover {
-                .title {
-                    @extend %caption-text-hover;
+            .c-column {
+                @extend %remove-margin-bottom;
+
+                &:hover {
+                    .title {
+                        @extend %caption-text-hover;
+                    }
                 }
             }
         }
-    }
 
-    .border {
-        display: none;
-    }
+        .border {
+            display: none;
+        }
 
-    img {
-        @extend %border-radius;
-    }
-
-    .cc-authors,
-    .cc-achievements {
-        display: flex;
-        flex-flow: row wrap;
-        align-content: stretch;
-
-        .b-achievement {
+        img {
             @extend %border-radius;
-            @extend %small-shadows;
-            @extend %small-shadows-hover;
+        }
 
-            &::before {
-                bottom: 0;
-            }
+        .cc-authors,
+        .cc-achievements {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: stretch;
 
-            &::after {
+            .b-achievement {
                 @extend %border-radius;
                 @extend %small-shadows;
                 @extend %small-shadows-hover;
 
-                top: $padding;
-                right: $padding;
+                &::before {
+                    bottom: 0;
+                }
 
-                opacity: 1;
+                &::after {
+                    @extend %border-radius;
+                    @extend %small-shadows;
+                    @extend %small-shadows-hover;
 
-                color: black;
-                background: white;
-            }
+                    top: $padding;
+                    right: $padding;
 
-            &:only-child {
-                min-width: 48.5%;
-                max-width: 100%;
-                width: auto !important;
-                flex: 1;
+                    opacity: 1;
+
+                    color: black;
+                    background: white;
+                }
+
+                &:only-child {
+                    min-width: 48.5%;
+                    max-width: 100%;
+                    width: auto !important;
+                    flex: 1;
+                }
             }
         }
-    }
 
-    .cc-franchises {
-        a {
-            @extend %border-radius;
-            @extend %small-shadows;
-            @extend %small-shadows-hover;
-        }
+        .cc-franchises {
+            a {
+                @extend %border-radius;
+                @extend %small-shadows;
+                @extend %small-shadows-hover;
+            }
 
-        .b-badge {
-            &::before {
-                @extend %border-radius-bottom;
-                background: $badge-background;
-                color: $badge-color;
-                width: 100% !important;
-                display: block !important;
-                content: attr(data-progress) "%";
-                position: absolute;
-                text-align: center;
-                top: auto;
-                bottom: 0;
-                left: 0;
-                right: 0;
+            .b-badge {
+                &::before {
+                    @extend %border-radius-bottom;
+                    background: $badge-background;
+                    color: $badge-color;
+                    width: 100% !important;
+                    display: block !important;
+                    content: attr(data-progress) "%";
+                    position: absolute;
+                    text-align: center;
+                    top: auto;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
             }
         }
     }

@@ -1,15 +1,19 @@
-.about.block {
-    @extend %block-style;
-    @extend %border-radius-bottom;
-    @extend %remove-margin-bottom;
-    @extend %subline-item;
-    padding: 0px $padding !important;
+@use "../common" as *;
 
-    .subheadline {
-        margin: 0px (-$padding);
-    }
+.profile-content {
+    .about.block {
+        @extend %block-style;
+        @extend %border-radius-bottom;
+        @extend %remove-margin-bottom;
+        @extend %subline-item;
+        padding: 0px $padding !important;
 
-    .subheadline-buttons {
-        @extend %headline-arrow;
+        .subheadline {
+            margin: 0px (-$padding);
+        }
+
+        .subheadline-buttons {
+            @extend %headline-arrow;
+        }
     }
 }

@@ -1,81 +1,85 @@
-.c-brief {
-    @extend %remove-margin;
-    display: grid;
-    grid-auto-flow: row dense;
-    grid-gap: $main-padding;
+@use "../common" as *;
 
-    @media screen and (max-width: 767px) {
-        grid-template-columns: auto 1fr;
-        align-items: center;
-    }
-
-    .avatar {
+.profile-head {
+    .c-brief {
         @extend %remove-margin;
-        grid-row: 2;
         display: grid;
-        grid-auto-flow: row;
+        grid-auto-flow: row dense;
         grid-gap: $main-padding;
 
         @media screen and (max-width: 767px) {
-            grid-row: 1;
+            grid-template-columns: auto 1fr;
+            align-items: center;
         }
 
-        img {
-            @extend %border-radius;
-            align-self: end;
+        .avatar {
+            @extend %remove-margin;
+            grid-row: 2;
+            display: grid;
+            grid-auto-flow: row;
+            grid-gap: $main-padding;
+
+            @media screen and (max-width: 767px) {
+                grid-row: 1;
+            }
+
+            img {
+                @extend %border-radius;
+                align-self: end;
+            }
+
+            .profile-actions {
+                @extend %block-style-hover;
+                @extend %border-radius;
+                @extend %remove-margin;
+                padding: $small-padding 0px;
+                display: grid;
+                grid-auto-flow: column;
+                align-content: center;
+                align-self: end;
+
+                a {
+                    @extend %border-radius;
+                    @extend %remove-margin;
+
+                    &::before {
+                        font-size: 20px;
+                    }
+
+                    &:hover::before {
+                        @extend %caption-text-hover;
+                    }
+                }
+            }
         }
 
-        .profile-actions {
+        .head {
             @extend %block-style-hover;
             @extend %border-radius;
             @extend %remove-margin;
-            padding: $small-padding 0px;
-            display: grid;
-            grid-auto-flow: column;
-            align-content: center;
-            align-self: end;
-
-            a {
-                @extend %border-radius;
-                @extend %remove-margin;
-
-                &::before {
-                    font-size: 20px;
-                }
-
-                &:hover::before {
-                    @extend %caption-text-hover;
-                }
-            }
-        }
-    }
-
-    .head {
-        @extend %block-style-hover;
-        @extend %border-radius;
-        @extend %remove-margin;
-        padding: $padding;
-        display: grid;
-        grid-auto-flow: row;
-        grid-gap: 1px;
-
-        .misc {
-            padding: 0px;
-        }
-
-        .notice {
-            padding: 0px;
+            padding: $padding;
             display: grid;
             grid-auto-flow: row;
+            grid-gap: 1px;
 
-            span {
-                @extend %remove-sub-elements;
+            .misc {
+                padding: 0px;
             }
-        }
 
-        &:hover {
-            h1 {
-                @extend %caption-text-hover;
+            .notice {
+                padding: 0px;
+                display: grid;
+                grid-auto-flow: row;
+
+                span {
+                    @extend %remove-sub-elements;
+                }
+            }
+
+            &:hover {
+                h1 {
+                    @extend %caption-text-hover;
+                }
             }
         }
     }

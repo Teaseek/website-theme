@@ -1,109 +1,113 @@
-.c-info {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-gap: $main-padding;
+@use "../common" as *;
 
-    .c-lists-info {
+.profile-head {
+    .c-info {
         display: grid;
-        grid-auto-flow: row;
+        grid-template-rows: 1fr auto;
         grid-gap: $main-padding;
 
-        .b-stats_bar {
-            @extend %block-style-hover;
-            @extend %border-radius;
-            @extend %remove-sub-elements;
-            @extend %remove-margin;
-            padding: $padding;
+        .c-lists-info {
             display: grid;
-            grid-template-areas:
-                "left right"
-                "bar bar"
-                "stat stat";
-            grid-gap: 5px;
+            grid-auto-flow: row;
+            grid-gap: $main-padding;
 
-            .compatibility {
-                grid-area: right;
-            }
+            .b-stats_bar {
+                @extend %block-style-hover;
+                @extend %border-radius;
+                @extend %remove-sub-elements;
+                @extend %remove-margin;
+                padding: $padding;
+                display: grid;
+                grid-template-areas:
+                    "left right"
+                    "bar bar"
+                    "stat stat";
+                grid-gap: 5px;
 
-            .title {
-                grid-area: left;
-            }
-
-            .bar {
-                display: flex;
-                grid-area: bar;
-                height: 30px;
-                overflow: visible;
-
-                * {
-                    @extend %item-align;
-                    vertical-align: middle;
-                    line-height: 100%;
+                .compatibility {
+                    grid-area: right;
                 }
 
-                & :first-child {
-                    @extend %border-radius-left;
+                .title {
+                    grid-area: left;
                 }
 
-                & :last-child {
-                    @extend %border-radius-right;
+                .bar {
+                    display: flex;
+                    grid-area: bar;
+                    height: 30px;
+                    overflow: visible;
+
+                    * {
+                        @extend %item-align;
+                        vertical-align: middle;
+                        line-height: 100%;
+                    }
+
+                    & :first-child {
+                        @extend %border-radius-left;
+                    }
+
+                    & :last-child {
+                        @extend %border-radius-right;
+                    }
                 }
-            }
 
-            .stat_names {
-                grid-area: stat;
-                font-size: 14px;
-                margin-bottom: -$small-padding;
+                .stat_names {
+                    grid-area: stat;
+                    font-size: 14px;
+                    margin-bottom: -$small-padding;
 
-                .stat_name {
-                    @extend %remove-sub-elements;
-                    margin: 0px $padding $small-padding 0px;
-                    display: inline-grid;
+                    .stat_name {
+                        @extend %remove-sub-elements;
+                        margin: 0px $padding $small-padding 0px;
+                        display: inline-grid;
 
-                    a {
-                        @extend %border-radius;
-                        @extend %small-shadows;
-                        padding: $small-padding $padding;
+                        a {
+                            @extend %border-radius;
+                            @extend %small-shadows;
+                            padding: $small-padding $padding;
 
-                        &:hover {
-                            @extend %stat-names-shadows-hover;
+                            &:hover {
+                                @extend %stat-names-shadows-hover;
+                            }
                         }
                     }
                 }
-            }
 
-            &.anime {
-                .bar {
-                    .second {
-                        background: $bar-anime-stat-second-background;
+                &.anime {
+                    .bar {
+                        .second {
+                            background: $bar-anime-stat-second-background;
+                        }
+                    }
+
+                    .stat_name a {
+                        color: $anime-stat-text-color;
+                        background-color: $anime-stat-text-background;
                     }
                 }
 
-                .stat_name a {
-                    color: $anime-stat-text-color;
-                    background-color: $anime-stat-text-background;
+                &.manga {
+                    .stat_name a {
+                        color: $manga-stat-text-color;
+                        background-color: $manga-stat-text-background;
+                    }
                 }
-            }
 
-            &.manga {
-                .stat_name a {
-                    color: $manga-stat-text-color;
-                    background-color: $manga-stat-text-background;
-                }
-            }
-
-            &:hover {
-                .title {
-                    @extend %caption-text-hover;
+                &:hover {
+                    .title {
+                        @extend %caption-text-hover;
+                    }
                 }
             }
         }
-    }
 
-    .c-additionals {
-        @extend %block-style-hover;
-        @extend %border-radius;
-        @extend %remove-margin-bottom;
-        padding: $padding;
+        .c-additionals {
+            @extend %block-style-hover;
+            @extend %border-radius;
+            @extend %remove-margin-bottom;
+            padding: $padding;
+        }
     }
 }

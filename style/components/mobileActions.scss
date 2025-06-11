@@ -1,32 +1,36 @@
-@media screen and (max-width: 767px) {
-    .c-mobile-actions {
-        display: grid !important;
-        grid-auto-flow: column;
-        text-align: center;
-    }
-}
+@use "../common" as *;
 
-.c-mobile-actions {
-    @extend %block-style-hover;
-    @extend %border-radius;
-    @extend %remove-margin-bottom;
-
-    %highlight {
-        padding: $padding;
-        font-weight: bold;
-    }
-
-    a {
-        @extend %highlight;
-        @extend %border-radius;
-        @extend %remove-sub-elements;
-
-        &:hover {
-            @extend %caption-text-hover;
+.profile-head {
+    @media screen and (max-width: 767px) {
+        .c-mobile-actions {
+            display: grid !important;
+            grid-auto-flow: column;
+            text-align: center;
         }
     }
 
-    span {
-        @extend %highlight;
+    .c-mobile-actions {
+        @extend %block-style-hover;
+        @extend %border-radius;
+        @extend %remove-margin-bottom;
+
+        %highlight {
+            padding: $padding;
+            font-weight: bold;
+        }
+
+        a {
+            @extend %highlight;
+            @extend %border-radius;
+            @extend %remove-sub-elements;
+
+            &:hover {
+                @extend %caption-text-hover;
+            }
+        }
+
+        span {
+            @extend %highlight;
+        }
     }
 }

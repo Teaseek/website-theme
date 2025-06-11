@@ -1,50 +1,55 @@
-.block {
-    &:last-child {
-        .subheadline {
-            @extend %remove-margin;
-        }
+@use "../common" as *;
 
-        .b-comments {
-            @extend %block-style;
-            @extend %border-radius-bottom;
-            @extend %subline-item;
-            @extend %block-style-hover;
-
-            .b-comment {
-                @extend %border-radius;
-                @extend %small-shadows-hover;
-                transition: $history-entry-transition;
-                padding: $small-padding;
-                margin-bottom: $padding !important;
-                border: 0;
-
-                img {
-                    @extend %border-radius;
-                    @extend %remove-margin;
-                }
-
-                &:last-child {
-                    margin-bottom: 0 !important;
-                }
-                &:hover {
-                    background: $entry-background;
-                }
+.profile-content {
+    .block {
+        &:last-child {
+            .subheadline {
+                @extend %remove-margin;
             }
-        }
 
-        .b-topic {
-            @extend %block-style;
-            @extend %border-radius;
-            @extend %subline-item;
-        }
-
-        > * > .editor-container {
-            margin-top: $main-padding;
-
-            > .b-form {
-                @extend %block-style;
+            .b-comments {
+                @extend %block-style !optional;
                 @extend %border-radius-bottom;
                 @extend %subline-item;
+                @extend %block-style-hover;
+
+                .b-comment {
+                    @extend %border-radius;
+                    @extend %small-shadows-hover;
+                    transition: $history-entry-transition;
+                    padding: $small-padding;
+                    margin-bottom: $padding !important;
+                    border: 0;
+
+                    img {
+                        @extend %border-radius;
+                        @extend %remove-margin;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0 !important;
+                    }
+
+                    &:hover {
+                        background: $entry-background;
+                    }
+                }
+            }
+
+            .b-topic {
+                @extend %block-style;
+                @extend %border-radius;
+                @extend %subline-item;
+            }
+
+            >*>.editor-container {
+                margin-top: $main-padding;
+
+                >.b-form {
+                    @extend %block-style;
+                    @extend %border-radius-bottom;
+                    @extend %subline-item;
+                }
             }
         }
     }
