@@ -3,8 +3,14 @@
 .profile-head {
     .c-info {
         display: grid;
-        grid-template-rows: 1fr auto;
+        grid-template-rows: 1fr;
         grid-gap: $main-padding;
+
+        @supports selector(:has(*)) {
+            .grid:has(> *:nth-child(2)) {
+                grid-template-rows: 1fr auto;
+            }
+        }
 
         .c-lists-info {
             display: grid;

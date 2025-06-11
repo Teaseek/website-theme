@@ -6,8 +6,6 @@
         display: grid;
         grid-auto-flow: row dense;
         grid-gap: $main-padding;
-        max-width: 160px;
-
 
         @media screen and (max-width: 767px) {
             grid-template-columns: auto 1fr;
@@ -21,6 +19,10 @@
             display: grid;
             grid-auto-flow: row;
             grid-gap: $main-padding;
+            max-width: unset;
+            width: 100%;
+            align-items: center;
+            justify-content: normal;
 
             @media screen and (max-width: 767px) {
                 grid-row: 1;
@@ -28,7 +30,7 @@
 
             img {
                 @extend %border-radius;
-                align-self: end;
+                align-self: center;
                 border: 1px $main-border-color solid;
             }
 

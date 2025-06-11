@@ -169,6 +169,7 @@
 .profile-head .c-info .c-lists-info .b-stats_bar,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :last-child,
+.profile-head .c-info .c-lists-info .b-stats_bar .bar:first-child:last-child,
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name a,
 .profile-head .c-mobile-actions,
 .profile-head .c-mobile-actions a {
@@ -225,6 +226,7 @@
 .profile-head .c-history > div:last-child .entry .image-name img,
 .profile-head .c-info .c-additionals,
 .profile-head .c-info .c-lists-info .b-stats_bar,
+.profile-head .c-info .c-lists-info .b-stats_bar .bar:first-child:last-child,
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name a,
 .profile-head .c-mobile-actions,
 .profile-head .c-mobile-actions a {
@@ -380,18 +382,25 @@
 .profile-head .c-brief {
   display: grid;
   grid-auto-flow: row dense;
-  grid-gap: 15px;
-  max-width: 160px
+  grid-gap: 15px
 }
 .profile-head .c-brief .avatar {
   grid-row: 2;
   display: grid;
   grid-auto-flow: row;
-  grid-gap: 15px
+  grid-gap: 15px;
+  max-width: unset;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  justify-content: normal
 }
 .profile-head .c-brief .avatar img {
-  -ms-flex-item-align: end;
-  align-self: end;
+  -ms-flex-item-align: center;
+  align-self: center;
   border: 1px var(--headline-background-color) solid
 }
 .profile-head .c-brief .avatar .profile-actions {
@@ -481,8 +490,13 @@
 }
 .profile-head .c-info {
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr;
   grid-gap: 15px
+}
+@supports selector(:has(*)) {
+  .profile-head .c-info .grid:has(>:nth-child(2)) {
+    grid-template-rows: 1fr auto
+  }
 }
 .profile-head .c-info .c-lists-info {
   display: grid;
