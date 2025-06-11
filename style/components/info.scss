@@ -51,6 +51,10 @@
                     & :last-child {
                         @extend %border-radius-right;
                     }
+
+                    &:first-child:last-child {
+                        @extend %border-radius;
+                    }
                 }
 
                 .stat_names {
