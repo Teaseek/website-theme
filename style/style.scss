@@ -1,141 +1,5 @@
-@import "colors";
-@import "data";
-
-%headline-arrow a {
-    color: $subheadline-a-color;
-
-    &::before {
-        color: $subheadline-a-icon-color;
-    }
-}
-
-%small-shadows {
-    box-shadow: $secondary-elements-shadow;
-    transition: $shadow-transition;
-}
-
-%small-shadows-hover {
-    &:hover {
-        box-shadow: $secondary-elements-shadow-hover !important;
-        z-index: 1000;
-    }
-}
-
-%stat-names-shadows-hover {
-    box-shadow: $stat-names-shadow-hover;
-    text-decoration: none;
-    z-index: 1000;
-}
-
-%block-style {
-    background: $main-container-background;
-    border: 1px $main-border-color solid;
-}
-
-%block-style-hover {
-    @extend %block-style;
-    transition: $main-container-transition;
-    box-shadow: none;
-
-    &:hover {
-        box-shadow: $main-elements-shadow;
-        background: $main-container-background-hover;
-        border: 1px $main-border-color-hover solid;
-    }
-}
-
-%caption-text-hover {
-    background: $linear-gradient-background;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    @keyframes slide {
-        to {
-            background-position-x: 400%;
-        }
-    }
-
-    $animation: slide $text-animation-time linear 0s infinite forwards;
-    animation: $animation;
-}
-
-%border-radius-fix {
-    background-clip: padding-box;
-}
-
-@mixin border-radius($top-left, $top-right, $bottom-right, $bottom-left) {
-    @extend %border-radius-fix;
-    border-radius: $top-left $top-right $bottom-right $bottom-left;
-}
-
-%border-radius-left {
-    @include border-radius($main-border-radius, 0px, 0px, $main-border-radius);
-}
-
-%border-radius-right {
-    @include border-radius(0px, $main-border-radius, $main-border-radius, 0px);
-}
-
-%border-radius-bottom {
-    @include border-radius(0px, 0px, $main-border-radius, $main-border-radius);
-}
-
-%border-radius-top {
-    @include border-radius($main-border-radius, $main-border-radius, 0px, 0px);
-}
-
-%border-radius {
-    @include border-radius(
-        $main-border-radius,
-        $main-border-radius,
-        $main-border-radius,
-        $main-border-radius
-    );
-}
-
-%item-align {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-%remove-sub-elements {
-    &::after,
-    &::before {
-        display: none !important;
-    }
-}
-
-%remove-margin {
-    margin: 0 !important;
-}
-
-%remove-margin-bottom {
-    margin-bottom: 0 !important;
-}
-
-%subline {
-    .subheadline {
-        @extend %remove-margin-bottom;
-        @extend %headline-arrow;
-        background: $subheadline-background;
-        border: 0;
-    }
-}
-
-%subline-item {
-    border-top: none !important;
-    padding: $padding;
-}
-
-%third-bar {
-    .bar {
-        .third {
-            background: $bar-stat-third-background;
-            box-shadow: $bar-third-shadow;
-        }
-    }
-}
+@use "common" as *;
+@use "components" as *;
 
 .profile-head {
     @extend %remove-sub-elements;
@@ -150,14 +14,6 @@
     @media screen and (max-width: 767px) {
         grid-template-columns: auto;
     }
-
-    @import "components/history";
-
-    @import "components/brief";
-
-    @import "components/mobileActions";
-
-    @import "components/info";
 }
 
 .profile-content {
@@ -177,15 +33,5 @@
         @media screen and (max-width: 767px) {
             grid-template-columns: auto;
         }
-
-        @import "components/stats";
-
-        @import "components/lists";
     }
-
-    @import "components/achievements";
-
-    @import "components/about";
-
-    @import "components/comments";
 }

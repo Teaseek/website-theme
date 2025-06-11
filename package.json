@@ -2,17 +2,19 @@
     "name": "website-theme",
     "version": "1.0.0",
     "main": "gulpfile.js",
+    "type": "module",
     "devDependencies": {
-        "del": "6.0.0",
-        "gulp": "4.0.2",
-        "gulp-autoprefixer": "8.0.0",
+        "del": "8.0.0",
+        "gulp": "5.0.1",
+        "gulp-autoprefixer": "9.0.0",
         "gulp-clean-css": "4.3.0",
         "gulp-csso": "4.0.1",
-        "gulp-group-css-media-queries": "1.2.2",
+        "gulp-postcss": "9.0.1",
         "gulp-rename": "2.0.0",
-        "gulp-sass": "5.1.0",
-        "gulp-shorthand": "1.1.0",
-        "sass": "1.49.8"
+        "gulp-sass": "6.0.1",
+        "postcss": "8.5.5",
+        "postcss-sort-media-queries": "4.0.0",
+        "sass": "1.89.2"
     },
     "scripts": {
         "build": "gulp build",
@@ -23,5 +25,6 @@
         "> 1%",
         "last 3 versions",
         "not ie <= 8"
-    ]
+    ],
+    "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
 }

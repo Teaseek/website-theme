@@ -1,92 +1,101 @@
-.c-left {
-    @extend %remove-margin;
-    width: 100% !important;
-    display: grid;
-    grid-template-rows: minmax(95px, 0.25fr) 1fr;
-    grid-gap: $main-padding;
+@use "../common" as *;
 
-    .lifetime {
-        @extend %block-style-hover;
-        @extend %border-radius;
-        @extend %remove-margin;
-        padding: $padding;
-        display: grid;
-        grid-template-rows: 1fr auto 1fr;
-        grid-gap: 5px;
-        align-content: center;
+.profile-content {
+    .cc-2.block {
+        .c-left {
+            @extend %remove-margin;
+            width: 100% !important;
+            display: grid;
+            grid-template-rows: minmax(95px, 0.25fr) 1fr;
+            grid-gap: $main-padding;
 
-        .bar {
-            height: 100%;
-            line-height: 100%;
-            padding: 1px;
+            .lifetime {
+                @extend %block-style-hover;
+                @extend %border-radius;
+                @extend %remove-margin;
+                padding: $padding;
+                display: grid;
+                grid-template-rows: 1fr auto 1fr;
+                grid-gap: 5px;
+                align-content: center;
 
-            .first {
-                @extend %border-radius-left;
-                background: $bar-background;
-                box-shadow: $bar-lifetime-first-box-shadow;
+                .bar {
+                    height: 100%;
+                    line-height: 100%;
+                    padding: 1px;
+
+                    .first {
+                        @extend %border-radius-left;
+                        background: $bar-background;
+                        box-shadow: $bar-lifetime-first-box-shadow;
+                    }
+
+                    .third {
+                        @extend %border-radius-right;
+                    }
+                }
+
+                .cuts .cut {
+                    height: 0;
+                    margin: 1px;
+                }
+
+                .times {
+                    padding-top: 2px;
+                }
+
+                &:hover {
+                    .label {
+                        @extend %caption-text-hover;
+                    }
+                }
             }
 
-            .third {
-                @extend %border-radius-right;
+            .activity {
+                @extend %block-style-hover;
+                @extend %border-radius;
+                @extend %remove-margin;
+                padding: $padding;
+                display: grid;
+                grid-template-rows: auto minmax(100px, 1fr);
+
+                @media screen and (min-width: 1200px) {
+                    .graph.x34 {
+                        display: flex;
+                    }
+
+                    .graph.x26 {
+                        display: none;
+                    }
+                }
+
+                .graph {
+                    @extend %border-radius-top;
+                    height: auto;
+
+                    .bar {
+                        @extend %border-radius-top;
+                    }
+
+                    &.x34 {
+                        display: none;
+                    }
+
+                    &.x26 {
+                        display: flex;
+                    }
+                }
+
+                &:hover {
+                    .title {
+                        @extend %caption-text-hover;
+                    }
+                }
+
+                &:last-child {
+                    padding-bottom: 20px;
+                }
             }
-        }
-
-        .cuts .cut {
-            height: 0;
-            margin: 1px;
-        }
-
-        .times {
-            padding-top: 2px;
-        }
-
-        &:hover {
-            .label {
-                @extend %caption-text-hover;
-            }
-        }
-    }
-
-    .activity {
-        @extend %block-style-hover;
-        @extend %border-radius;
-        @extend %remove-margin;
-        padding: $padding;
-        display: grid;
-        grid-template-rows: auto minmax(100px, 1fr);
-
-        @media screen and (min-width: 1200px) {
-            .graph.x34 {
-                display: flex;
-            }
-            .graph.x26 {
-                display: none;
-            }
-        }
-
-        .graph {
-            @extend %border-radius-top;
-            height: auto;
-
-            .bar {
-                @extend %border-radius-top;
-            }
-            &.x34 {
-                display: none;
-            }
-            &.x26 {
-                display: flex;
-            }
-        }
-
-        &:hover {
-            .title {
-                @extend %caption-text-hover;
-            }
-        }
-
-        &:last-child {
-            padding-bottom: 20px;
         }
     }
 }
