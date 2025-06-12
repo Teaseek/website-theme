@@ -554,6 +554,7 @@
 }
 .profile-content .cc-2.block .c-right {
   width: 100%!important;
+  height: 100%;
   display: grid;
   grid-auto-flow: row;
   grid-gap: 15px
@@ -568,7 +569,18 @@
   margin-right: 0
 }
 .profile-content .cc-2.block .c-right .cc-2a .c-column {
-  width: 100%
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.profile-content .cc-2.block .c-right .cc-2a .c-column .subheadline {
+  height: 30px;
+  overflow: unset!important
 }
 .profile-content .cc-2.block .c-right img {
   width: 100%!important;
@@ -579,8 +591,7 @@
   display: grid;
   grid-template-columns: repeat(4,minmax(25px,1fr));
   grid-gap: 5px;
-  min-height: 150px;
-  height: 175px
+  height: 100%
 }
 .profile-content .cc-2.block .c-right .cc-friends .b-user {
   padding: 2.5px
@@ -589,16 +600,30 @@
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 12px;
-  min-height: 150px;
-  height: 175px
+  height: 100%
 }
 .profile-content .cc-2.block .c-right .b-clubs .b-club {
   width: 100%!important
 }
+.profile-content .cc-2.block .c-right > .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%
+}
+.profile-content .cc-2.block .c-right > .block .subheadline {
+  height: 30px;
+  overflow: unset!important
+}
 .profile-content .cc-2.block .c-right .cc-favourites {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit,minmax(70px,1fr))
+  grid-template-columns: repeat(auto-fit,minmax(70px,1fr));
+  height: 100%
 }
 .profile-content .cc-2.block .c-right .cc-favourites .b-catalog_entry {
   width: 100%!important
