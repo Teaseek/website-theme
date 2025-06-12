@@ -605,6 +605,9 @@
 .profile-content .cc-2.block .c-right .b-clubs .b-club {
   width: 100%!important
 }
+.profile-content .cc-2.block .c-right .b-clubs .b-nothing_here {
+  grid-column: 1/3
+}
 .profile-content .cc-2.block .c-right > .block {
   display: -webkit-box;
   display: -ms-flexbox;
