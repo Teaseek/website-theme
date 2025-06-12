@@ -684,47 +684,44 @@
   -ms-transform: translateX(-50%);
   transform: translateX(-50%)
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar.s0::after {
-  width: 85%;
-  background: #4682b4
+.profile-content .cc-2.block .c-left .activity .graph .bar {
+  background: 0 0!important
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar.s0 .value {
   width: 85%
 }
+.profile-content .cc-2.block .c-left .activity .graph .bar.s0::after {
+  width: 85%;
+  background: #4682b4
+}
 .profile-content .cc-2.block .c-left .activity .graph .bar.s0:hover::after {
   background: #6295bd
-}
-.profile-content .cc-2.block .c-left .activity .graph .bar.s1 {
-  width: 80%
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar.s1 .value {
   width: 80%
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar.s1::after {
+  width: 80%;
   background: #6295bd
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar.s1:hover::after {
   background: #79a9cf
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar.s2 {
-  width: 75%
-}
 .profile-content .cc-2.block .c-left .activity .graph .bar.s2 .value {
   width: 75%
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar.s2::after {
+  width: 75%;
   background: #79a9cf
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar.s2:hover::after {
   background: #98c2e3
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar.s3 {
-  width: 70%
-}
 .profile-content .cc-2.block .c-left .activity .graph .bar.s3 .value {
   width: 70%
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar.s3::after {
+  width: 70%;
   background: #98c2e3
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar.s3:hover::after {

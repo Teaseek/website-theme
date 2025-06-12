@@ -95,14 +95,16 @@
                     .bar {
                         @extend %border-radius-top;
 
+                        background: none !important;
+
                         &.s0 {
+                            .value {
+                                width: 85%;
+                            }
+                            
                             &::after {
                                 width: 85%;
                                 background: #4682b4;
-                            }
-
-                            .value {
-                                width: 85%;
                             }
 
                             &:hover {
@@ -113,13 +115,12 @@
                         }
 
                         &.s1 {
-                            width: 80%;
-
                             .value {
                                 width: 80%;
                             }
 
                             &::after {
+                                width: 80%;
                                 background: #6295bd;
                             }
 
@@ -131,13 +132,12 @@
                         }
 
                         &.s2 {
-                            width: 75%;
-
                             .value {
                                 width: 75%;
                             }
 
                             &::after {
+                                width: 75%;
                                 background: #79a9cf;
                             }
 
@@ -149,13 +149,12 @@
                         }
 
                         &.s3 {
-                            width: 70%;
-
                             .value {
                                 width: 70%;
                             }
 
                             &::after {
+                                width: 70%;
                                 background: #98c2e3;
                             }
 
