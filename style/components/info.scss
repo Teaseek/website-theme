@@ -58,7 +58,7 @@
                         @extend %border-radius-right;
                     }
 
-                    &:first-child:last-child {
+                    & :first-child:last-child {
                         @extend %border-radius;
                     }
                 }

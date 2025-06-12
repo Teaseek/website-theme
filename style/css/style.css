@@ -168,8 +168,8 @@
 .profile-head .c-info .c-additionals,
 .profile-head .c-info .c-lists-info .b-stats_bar,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child,
+.profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child:last-child,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :last-child,
-.profile-head .c-info .c-lists-info .b-stats_bar .bar:first-child:last-child,
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name a,
 .profile-head .c-mobile-actions,
 .profile-head .c-mobile-actions a {
@@ -226,7 +226,7 @@
 .profile-head .c-history > div:last-child .entry .image-name img,
 .profile-head .c-info .c-additionals,
 .profile-head .c-info .c-lists-info .b-stats_bar,
-.profile-head .c-info .c-lists-info .b-stats_bar .bar:first-child:last-child,
+.profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child:last-child,
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name a,
 .profile-head .c-mobile-actions,
 .profile-head .c-mobile-actions a {
