@@ -687,6 +687,11 @@
 .profile-content .cc-2.block .c-left .activity .graph .bar {
   background: 0 0!important
 }
+.profile-content .cc-2.block .c-left .activity .graph .bar:hover .value {
+  display: -webkit-box!important;
+  display: -ms-flexbox!important;
+  display: flex!important
+}
 .profile-content .cc-2.block .c-left .activity .graph .bar .value {
   position: absolute!important;
   left: 50%;
@@ -699,9 +704,6 @@
   width: 100%!important;
   height: auto;
   aspect-ratio: 1/1;
-  display: -webkit-box!important;
-  display: -ms-flexbox!important;
-  display: flex!important;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
