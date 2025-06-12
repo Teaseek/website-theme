@@ -77,9 +77,128 @@
                     @extend %border-radius-top;
 
                     height: auto;
+                    border: none !important;
+
+                    .bar-container {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            bottom: 0;
+                            width: 1px;
+                            height: 100%;
+                            background: #d4d4d4;
+                            transform: translateX(-50%);
+                        }
+                    }
 
                     .bar {
                         @extend %border-radius-top;
+
+                        &.s0 {
+                            &::after {
+                                width: 85%;
+                                background: #4682b4;
+                            }
+
+                            .value {
+                                width: 85%;
+                            }
+
+                            &:hover {
+                                &::after {
+                                    background: #6295bd;
+                                }
+                            }
+                        }
+
+                        &.s1 {
+                            width: 80%;
+
+                            .value {
+                                width: 80%;
+                            }
+
+                            &::after {
+                                background: #6295bd;
+                            }
+
+                            &:hover {
+                                &::after {
+                                    background: #79a9cf;
+                                }
+                            }
+                        }
+
+                        &.s2 {
+                            width: 75%;
+
+                            .value {
+                                width: 75%;
+                            }
+
+                            &::after {
+                                background: #79a9cf;
+                            }
+
+                            &:hover {
+                                &::after {
+                                    background: #98c2e3;
+                                }
+                            }
+                        }
+
+                        &.s3 {
+                            width: 70%;
+
+                            .value {
+                                width: 70%;
+                            }
+
+                            &::after {
+                                background: #98c2e3;
+                            }
+
+                            &:hover {
+                                &::after {
+                                    background: #b3d7f2;
+                                }
+                            }
+                        }
+
+                        .value {
+                            position: absolute !important;
+                            left: 50%;
+                            top: 0;
+                            bottom: unset !important;
+                            z-index: 2;
+                            transform: translateX(-50%);
+                            width: 70% !important;
+                            height: auto;
+                            aspect-ratio: 1 / 1;
+                            display: flex !important;
+                            align-items: center;
+                            justify-content: center;
+                            color: #fff !important;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            top: 0;
+                            width: 70%;
+                            aspect-ratio: 1/1;
+                            background: #98c2e3;
+                            border-radius: 100%;
+                            transform: translateX(-50%);
+                        }
+
+                        &:hover {
+                            &::after {
+                                background: #b3d7f2;
+                            }
+                        }
                     }
 
                     &.x34 {
@@ -98,7 +217,7 @@
                 }
 
                 &:last-child {
-                    padding-bottom: 20px;
+                    padding-bottom: 25px;
                 }
             }
         }
