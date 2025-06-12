@@ -30,7 +30,7 @@
 
             img {
                 @extend %border-radius;
-                align-self: center;
+                justify-self: center;
                 border: 1px $main-border-color solid;
             }
 

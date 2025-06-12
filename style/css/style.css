@@ -399,8 +399,7 @@
   justify-content: normal
 }
 .profile-head .c-brief .avatar img {
-  -ms-flex-item-align: center;
-  align-self: center;
+  justify-self: center;
   border: 1px var(--headline-background-color) solid
 }
 .profile-head .c-brief .avatar .profile-actions {
