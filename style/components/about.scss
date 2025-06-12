@@ -6,10 +6,11 @@
         @extend %border-radius-bottom;
         @extend %remove-margin-bottom;
         @extend %subline-item;
-        padding: 0px $padding !important;
+
+        padding: 0 $padding !important;
 
         .subheadline {
-            margin: 0px (-$padding);
+            margin: 0 (-$padding);
         }
 
         .subheadline-buttons {

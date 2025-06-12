@@ -1,4 +1,4 @@
-import { task, dest, src, series, watch as gulpWatch } from "gulp";
+import { dest, src, series, watch as gulpWatch } from "gulp";
 import gulpSass from "gulp-sass";
 import * as dartSass from "sass";
 import rename from "gulp-rename";

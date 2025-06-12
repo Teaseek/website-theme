@@ -374,10 +374,7 @@
   content: attr(data-progress) "%";
   position: absolute;
   text-align: center;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  right: 0
+  inset: auto 0 0
 }
 .profile-head .c-brief {
   display: grid;
@@ -468,8 +465,7 @@
   -ms-flex-pack: left!important;
   justify-content: left!important;
   border-top: 0!important;
-  border: 0;
-  padding: 0
+  border: 0
 }
 .profile-head .c-history .b-block_list .entry a,
 .profile-head .c-history > div:last-child .entry a {

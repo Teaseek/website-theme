@@ -3,6 +3,7 @@
 .profile-head {
     .c-history {
         @extend %remove-margin;
+
         width: 100% !important;
         grid-column: 1 / 3;
 
@@ -21,6 +22,7 @@
             @extend %block-style-hover;
             @extend %border-radius-bottom;
             @extend %subline-item;
+
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             grid-gap: 1%;
@@ -35,13 +37,13 @@
                 @extend %border-radius;
                 @extend %item-align;
                 @extend %remove-margin;
+
                 width: 100% !important;
                 transition: $history-entry-transition;
                 padding: 0 $small-padding !important;
                 justify-content: left !important;
                 border-top: 0 !important;
                 border: 0;
-                padding: 0;
 
                 a {
                     min-width: 200px;
@@ -53,6 +55,7 @@
 
                     img {
                         @extend %border-radius;
+
                         margin: calc($small-padding / 2) $small-padding calc($small-padding / 2) 0;
                         max-height: 75px !important;
                         max-width: 48px !important;

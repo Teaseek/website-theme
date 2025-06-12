@@ -3,6 +3,7 @@
 .profile-head {
     .c-brief {
         @extend %remove-margin;
+
         display: grid;
         grid-auto-flow: row dense;
         grid-gap: $main-padding;
@@ -15,6 +16,7 @@
 
         .avatar {
             @extend %remove-margin;
+
             grid-row: 2;
             display: grid;
             grid-auto-flow: row;
@@ -30,6 +32,7 @@
 
             img {
                 @extend %border-radius;
+
                 justify-self: center;
                 border: 1px $main-border-color solid;
             }
@@ -38,7 +41,8 @@
                 @extend %block-style-hover;
                 @extend %border-radius;
                 @extend %remove-margin;
-                padding: $small-padding 0px;
+
+                padding: $small-padding 0;
                 display: grid;
                 grid-auto-flow: column;
                 align-content: center;
@@ -63,19 +67,20 @@
             @extend %block-style-hover;
             @extend %border-radius;
             @extend %remove-margin;
+
             padding: $padding;
             display: grid;
             grid-auto-flow: row;
             grid-gap: 1px;
 
             .misc {
-                padding: 0px;
+                padding: 0;
                 display: flex;
                 flex-wrap: wrap;
             }
 
             .notice {
-                padding: 0px;
+                padding: 0;
                 display: grid;
                 grid-auto-flow: row;
 

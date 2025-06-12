@@ -16,6 +16,7 @@
                 .b-comment {
                     @extend %border-radius;
                     @extend %small-shadows-hover;
+
                     transition: $history-entry-transition;
                     padding: $small-padding;
                     margin-bottom: $padding !important;

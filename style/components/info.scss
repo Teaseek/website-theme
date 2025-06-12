@@ -22,6 +22,7 @@
                 @extend %border-radius;
                 @extend %remove-sub-elements;
                 @extend %remove-margin;
+
                 padding: $padding;
                 display: grid;
                 grid-template-areas:
@@ -46,6 +47,7 @@
 
                     * {
                         @extend %item-align;
+
                         vertical-align: middle;
                         line-height: 100%;
                     }
@@ -70,12 +72,14 @@
 
                     .stat_name {
                         @extend %remove-sub-elements;
-                        margin: 0px $padding $small-padding 0px;
+
+                        margin: 0 $padding $small-padding 0;
                         display: inline-grid;
 
                         a {
                             @extend %border-radius;
                             @extend %small-shadows;
+
                             padding: $small-padding $padding;
 
                             &:hover {
@@ -117,6 +121,7 @@
             @extend %block-style-hover;
             @extend %border-radius;
             @extend %remove-margin-bottom;
+
             padding: $padding;
         }
     }

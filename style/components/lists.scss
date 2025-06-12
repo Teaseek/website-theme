@@ -12,6 +12,7 @@
             .cc-2a {
                 @extend %remove-sub-elements;
                 @extend %remove-margin;
+
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-gap: $main-padding;
@@ -36,6 +37,7 @@
             img {
                 @extend %border-radius;
                 @extend %remove-margin;
+
                 width: 100% !important;
                 max-width: none !important;
                 background: $entry-background;
@@ -54,6 +56,7 @@
                 @extend %border-radius-bottom;
                 @extend %links;
                 @extend %subline-item;
+
                 display: grid;
                 grid-template-columns: repeat(4, minmax(25px, 1fr));
                 grid-gap: 5px;
@@ -61,6 +64,7 @@
 
                 .b-user {
                     @extend %item-align;
+
                     padding: calc($small-padding / 2);
                 }
 
@@ -73,6 +77,7 @@
                 @extend %links;
                 @extend %remove-margin;
                 @extend %subline-item;
+
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 12px;
@@ -81,6 +86,7 @@
                 .b-club {
                     @extend %item-align;
                     @extend %remove-margin;
+
                     width: 100% !important;
                 }
 
@@ -107,6 +113,7 @@
                 @extend %border-radius-bottom;
                 @extend %links;
                 @extend %subline-item;
+
                 display: grid;
                 grid-gap: 10px;
                 grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
@@ -114,6 +121,7 @@
 
                 .b-catalog_entry {
                     @extend %item-align;
+
                     width: 100% !important;
                 }
 

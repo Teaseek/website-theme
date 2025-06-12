@@ -40,6 +40,7 @@
 
 %block-style-hover {
     @extend %block-style;
+
     transition: $main-container-transition;
     box-shadow: none;
 
@@ -54,7 +55,6 @@
     background: $linear-gradient-background;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
     animation: slide $text-animation-time linear 0s infinite forwards;
 }
 
@@ -64,23 +64,24 @@
 
 @mixin border-radius($top-left, $top-right, $bottom-right, $bottom-left) {
     @extend %border-radius-fix;
+
     border-radius: $top-left $top-right $bottom-right $bottom-left;
 }
 
 %border-radius-left {
-    @include border-radius($main-border-radius, 0px, 0px, $main-border-radius);
+    @include border-radius($main-border-radius, 0, 0, $main-border-radius);
 }
 
 %border-radius-right {
-    @include border-radius(0px, $main-border-radius, $main-border-radius, 0px);
+    @include border-radius(0, $main-border-radius, $main-border-radius, 0);
 }
 
 %border-radius-bottom {
-    @include border-radius(0px, 0px, $main-border-radius, $main-border-radius);
+    @include border-radius(0, 0, $main-border-radius, $main-border-radius);
 }
 
 %border-radius-top {
-    @include border-radius($main-border-radius, $main-border-radius, 0px, 0px);
+    @include border-radius($main-border-radius, $main-border-radius, 0, 0);
 }
 
 %border-radius {
@@ -117,6 +118,7 @@
     .subheadline {
         @extend %remove-margin-bottom;
         @extend %headline-arrow;
+
         background: $subheadline-background;
         border: 0;
     }

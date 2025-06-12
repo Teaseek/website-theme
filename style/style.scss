@@ -5,6 +5,7 @@
     @extend %remove-sub-elements;
     @extend %third-bar;
     @extend %subline;
+
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto 1fr;
@@ -19,6 +20,7 @@
 .profile-content {
     @extend %subline;
     @extend %third-bar;
+
     display: grid;
     grid-auto-flow: row;
     grid-gap: $main-padding;
@@ -26,6 +28,7 @@
     .cc-2.block {
         @extend %remove-sub-elements;
         @extend %remove-margin;
+
         display: grid;
         grid-gap: $main-padding;
         grid-template-columns: 0.6fr 0.4fr;
