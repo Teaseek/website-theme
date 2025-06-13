@@ -707,8 +707,11 @@
   justify-content: center;
   color: #fff!important;
   opacity: 0;
-  -webkit-transition: opacity .2s ease-in-out .2s;
-  transition: opacity .2s ease-in-out .2s
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: none;
+  transition: none
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar::after {
   content: "";
@@ -731,7 +734,9 @@
   display: -webkit-box!important;
   display: -ms-flexbox!important;
   display: flex!important;
-  opacity: 1
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in-out .2s;
+  transition: opacity .2s ease-in-out .2s
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar:hover::after {
   background: #b3d7f2;
