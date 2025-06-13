@@ -111,6 +111,7 @@
                             justify-content: center;
                             color: #fff !important;
                             opacity: 0;
+                            transition: opacity 0.2s ease-in-out 0.2s;
                         }
 
                         &::after {
@@ -130,7 +131,6 @@
                             .value {
                                 display: flex !important;
                                 opacity: 1;
-                                transition: opacity 0.2s ease-in-out 0.2s;
                             }
 
                             &::after {
