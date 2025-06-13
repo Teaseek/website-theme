@@ -687,11 +687,6 @@
 .profile-content .cc-2.block .c-left .activity .graph .bar {
   background: 0 0!important
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar:hover .value {
-  display: -webkit-box!important;
-  display: -ms-flexbox!important;
-  display: flex!important
-}
 .profile-content .cc-2.block .c-left .activity .graph .bar .value {
   position: absolute!important;
   left: 50%;
@@ -701,7 +696,7 @@
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 100%!important;
+  width: 95%!important;
   height: auto;
   aspect-ratio: 1/1;
   -webkit-box-align: center;
@@ -710,23 +705,39 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #fff!important
+  color: #fff!important;
+  opacity: 0
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar::after {
   content: "";
   position: absolute;
   left: 50%;
   top: 0;
-  width: 100%;
+  width: 95%;
   aspect-ratio: 1/1;
   background: #98c2e3;
   border-radius: 100%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%)
+  -webkit-transform: translateX(-50%) scale(.5);
+  -ms-transform: translateX(-50%) scale(.5);
+  transform: translateX(-50%) scale(.5);
+  -webkit-transition: background .2s ease-in-out,-webkit-transform .2s ease-in-out;
+  transition: background .2s ease-in-out,-webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out,background .2s ease-in-out;
+  transition: transform .2s ease-in-out,background .2s ease-in-out,-webkit-transform .2s ease-in-out
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar:hover .value {
+  display: -webkit-box!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar:hover::after {
-  background: #b3d7f2
+  background: #b3d7f2;
+  -webkit-transform: translateX(-50%) scale(1);
+  -ms-transform: translateX(-50%) scale(1);
+  transform: translateX(-50%) scale(1)
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar.s0::after {
   background: #4682b4
