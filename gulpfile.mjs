@@ -8,6 +8,7 @@ import postcss from "gulp-postcss";
 import sortMediaQueries from "postcss-sort-media-queries";
 import fs from "fs/promises";
 import autoprefixer from "gulp-autoprefixer";
+import { join } from "path";
 
 const sass = gulpSass(dartSass);
 
@@ -23,6 +24,10 @@ const path = {
         src: "style/css/style.css",
         dest: "style/css/",
         dest2: "dest/",
+    },
+    html: {
+        src: "resources",
+        dest: "dest/website",
     },
 };
 
@@ -54,7 +59,36 @@ const cssMin = () => {
         .pipe(dest(path.css.dest2));
 };
 
-const build = series(clear, sassBuild, cssMin);
+const injectCssToHtml = async () => {
+    const cssPath = join(path.css.dest2, "style.min.css");
+    const styleTagId = "custom_css";
+
+    try {
+        await fs.mkdir(path.html.dest, { recursive: true });
+        await fs.cp(path.html.src, path.html.dest, { recursive: true, force: true });
+
+        const css = await fs.readFile(cssPath, "utf8");
+        const htmlFileName = await fs.readdir(path.html.dest)
+            .then(files => files.find(file => file.endsWith(".html")));
+        if (!htmlFileName) {
+            throw new Error(`HTML file not found in ${path.html.dest}`);
+        }
+
+        const htmlFilePath = join(path.html.dest, htmlFileName);
+        let html = await fs.readFile(htmlFilePath, "utf8");
+        
+        html = html.replace(
+            new RegExp(`<style id="${styleTagId}" type="text/css">[\\s\\S]*?</style>`, "g"),
+            `<style id="${styleTagId}" type="text/css">${css}</style>`
+        );
+
+        await fs.writeFile(htmlFilePath, html, "utf8");
+    } catch (e) {
+        console.error("Error injecting CSS into HTML:", e);
+    }
+};
+
+const build = series(clear, sassBuild, cssMin, injectCssToHtml);
 
 const watchFiles = () => {
     gulpWatch(path.scss.src.main, build);

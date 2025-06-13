@@ -14,6 +14,7 @@
         "postcss": "8.5.5",
         "postcss-sort-media-queries": "4.0.0",
         "sass": "1.89.2",
+        "serve": "^14.2.4",
         "stylelint": "^16.20.0",
         "stylelint-config-standard-scss": "^15.0.1",
         "stylelint-scss": "^6.12.1"
@@ -21,6 +22,7 @@
     "scripts": {
         "build": "gulp build",
         "watch": "gulp watch",
+        "open": "serve dest/website",
         "clear css": "gulp clear",
         "lint": "stylelint ./style/**/*.scss --fix"
     },

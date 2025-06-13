@@ -74,21 +74,70 @@
                 }
 
                 .graph {
-                    @extend %border-radius-top;
+                    @extend %border-radius;
 
                     height: auto;
                     border: none !important;
+                    padding: 10px 0;
+                    background: white;
+
+                    .line {
+                        overflow: visible;
+                    }
 
                     .bar-container {
                         &::before {
                             content: '';
                             position: absolute;
                             left: 50%;
-                            bottom: 0;
+                            bottom: -10px;
                             width: 1px;
-                            height: 100%;
+                            height: calc(100% + 20px);
                             background: #d4d4d4;
                             transform: translateX(-50%);
+                        }
+
+                        &:hover {
+                            &::before {
+                                background: #a3c2db;
+                            }
+                            
+                            .bar {
+                                .value {
+                                    display: flex !important;
+                                    opacity: 1;
+                                    transition: opacity 0.2s ease-in-out 0.2s;
+                                }
+
+                                &::after {
+                                    background: #b3d7f2;
+                                    transform: translate(-50%, -50%) scale(1);
+                                }
+
+                                &.s0 {
+                                    &::after {
+                                        background: #6295bd;
+                                    }
+                                }
+
+                                &.s1 {
+                                    &::after {
+                                        background: #79a9cf;
+                                    }
+                                }
+
+                                &.s2 {
+                                    &::after {
+                                        background: #98c2e3;
+                                    }
+                                }
+
+                                &.s3 {
+                                    &::after {
+                                        background: #b3d7f2;
+                                    }
+                                }
+                            }
                         }
                     }
 
@@ -103,7 +152,7 @@
                             top: 0;
                             bottom: unset !important;
                             z-index: 2;
-                            transform: translateX(-50%);
+                            transform: translate(-50%, -50%);
                             width: 95% !important;
                             height: auto;
                             aspect-ratio: 1 / 1;
@@ -124,32 +173,13 @@
                             aspect-ratio: 1/1;
                             background: #98c2e3;
                             border-radius: 100%;
-                            transform: translateX(-50%) scale(.5);
+                            transform: translate(-50%, -50%) scale(.5);
                             transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-                        }
-
-                        &:hover {
-                            .value {
-                                display: flex !important;
-                                opacity: 1;
-                                transition: opacity 0.2s ease-in-out 0.2s;
-                            }
-
-                            &::after {
-                                background: #b3d7f2;
-                                transform: translateX(-50%) scale(1);
-                            }
                         }
 
                         &.s0 {
                             &::after {
                                 background: #4682b4;
-                            }
-
-                            &:hover {
-                                &::after {
-                                    background: #6295bd;
-                                }
                             }
                         }
 
@@ -157,35 +187,17 @@
                             &::after {
                                 background: #6295bd;
                             }
-
-                            &:hover {
-                                &::after {
-                                    background: #79a9cf;
-                                }
-                            }
                         }
 
                         &.s2 {
                             &::after {
                                 background: #79a9cf;
                             }
-
-                            &:hover {
-                                &::after {
-                                    background: #98c2e3;
-                                }
-                            }
                         }
 
                         &.s3 {
                             &::after {
                                 background: #98c2e3;
-                            }
-
-                            &:hover {
-                                &::after {
-                                    background: #b3d7f2;
-                                }
                             }
                         }
                     }

@@ -195,7 +195,6 @@
 .profile-head .c-history > div:last-child {
   border-radius: 0 0 5px 5px
 }
-.profile-content .cc-2.block .c-left .activity .graph,
 .profile-content .cc-2.block .c-left .activity .graph .bar {
   border-radius: 5px 5px 0 0
 }
@@ -209,6 +208,7 @@
 .profile-content .block:last-child .b-comments .b-comment img,
 .profile-content .block:last-child .b-topic,
 .profile-content .cc-2.block .c-left .activity,
+.profile-content .cc-2.block .c-left .activity .graph,
 .profile-content .cc-2.block .c-left .lifetime,
 .profile-content .cc-2.block .c-right .b-clubs a,
 .profile-content .cc-2.block .c-right .cc-favourites a,
@@ -670,19 +670,53 @@
 }
 .profile-content .cc-2.block .c-left .activity .graph {
   height: auto;
-  border: none!important
+  border: none!important;
+  padding: 10px 0;
+  background: #fff
+}
+.profile-content .cc-2.block .c-left .activity .graph .line {
+  overflow: visible
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar-container::before {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -10px;
   width: 1px;
-  height: 100%;
+  height: calc(100% + 20px);
   background: #d4d4d4;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%)
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover::before {
+  background: #a3c2db
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar .value {
+  display: -webkit-box!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in-out .2s;
+  transition: opacity .2s ease-in-out .2s
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar::after {
+  background: #b3d7f2;
+  -webkit-transform: translate(-50%,-50%) scale(1);
+  -ms-transform: translate(-50%,-50%) scale(1);
+  transform: translate(-50%,-50%) scale(1)
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s0::after {
+  background: #6295bd
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s1::after {
+  background: #79a9cf
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s2::after {
+  background: #98c2e3
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s3::after {
+  background: #b3d7f2
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar {
   background: 0 0!important
@@ -693,9 +727,9 @@
   top: 0;
   bottom: unset!important;
   z-index: 2;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
   width: 95%!important;
   height: auto;
   aspect-ratio: 1/1;
@@ -722,51 +756,25 @@
   aspect-ratio: 1/1;
   background: #98c2e3;
   border-radius: 100%;
-  -webkit-transform: translateX(-50%) scale(.5);
-  -ms-transform: translateX(-50%) scale(.5);
-  transform: translateX(-50%) scale(.5);
+  -webkit-transform: translate(-50%,-50%) scale(.5);
+  -ms-transform: translate(-50%,-50%) scale(.5);
+  transform: translate(-50%,-50%) scale(.5);
   -webkit-transition: background .2s ease-in-out,-webkit-transform .2s ease-in-out;
   transition: background .2s ease-in-out,-webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out,background .2s ease-in-out;
   transition: transform .2s ease-in-out,background .2s ease-in-out,-webkit-transform .2s ease-in-out
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar:hover .value {
-  display: -webkit-box!important;
-  display: -ms-flexbox!important;
-  display: flex!important;
-  opacity: 1;
-  -webkit-transition: opacity .2s ease-in-out .2s;
-  transition: opacity .2s ease-in-out .2s
-}
-.profile-content .cc-2.block .c-left .activity .graph .bar:hover::after {
-  background: #b3d7f2;
-  -webkit-transform: translateX(-50%) scale(1);
-  -ms-transform: translateX(-50%) scale(1);
-  transform: translateX(-50%) scale(1)
-}
 .profile-content .cc-2.block .c-left .activity .graph .bar.s0::after {
   background: #4682b4
-}
-.profile-content .cc-2.block .c-left .activity .graph .bar.s0:hover::after {
-  background: #6295bd
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar.s1::after {
   background: #6295bd
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar.s1:hover::after {
-  background: #79a9cf
-}
 .profile-content .cc-2.block .c-left .activity .graph .bar.s2::after {
   background: #79a9cf
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar.s2:hover::after {
-  background: #98c2e3
-}
 .profile-content .cc-2.block .c-left .activity .graph .bar.s3::after {
   background: #98c2e3
-}
-.profile-content .cc-2.block .c-left .activity .graph .bar.s3:hover::after {
-  background: #b3d7f2
 }
 .profile-content .cc-2.block .c-left .activity .graph.x34 {
   display: none
