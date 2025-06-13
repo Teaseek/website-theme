@@ -64,6 +64,16 @@ const injectCssToHtml = async () => {
     const styleTagId = "custom_css";
 
     try {
+        const files = await fs.readdir(path.html.dest);
+        if (files.length === 0) {
+            return;
+        }
+    } catch (e) {
+        console.warn(`Directory ${path.html.dest} does not exist or is empty, skipping CSS injection.`);
+        return;
+    }
+
+    try {
         await fs.mkdir(path.html.dest, { recursive: true });
         await fs.cp(path.html.src, path.html.dest, { recursive: true, force: true });
 

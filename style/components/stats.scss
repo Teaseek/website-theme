@@ -109,30 +109,45 @@
                                     transition: opacity 0.2s ease-in-out 0.2s;
                                 }
 
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 0;
+                                    width: 1px;
+                                    height: calc(100% + 10px);
+                                    background: #b3d7f2;
+                                    transform: translateX(-50%);
+                                }
+
                                 &::after {
                                     background: #b3d7f2;
                                     transform: translate(-50%, -50%) scale(1);
                                 }
 
                                 &.s0 {
+                                    &::before,
                                     &::after {
                                         background: #6295bd;
                                     }
                                 }
 
                                 &.s1 {
+                                    &::before,
                                     &::after {
                                         background: #79a9cf;
                                     }
                                 }
 
                                 &.s2 {
+                                    &::before,
                                     &::after {
                                         background: #98c2e3;
                                     }
                                 }
 
                                 &.s3 {
+                                    &::before,
                                     &::after {
                                         background: #b3d7f2;
                                     }

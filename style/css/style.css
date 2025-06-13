@@ -726,22 +726,38 @@
   -webkit-transition: opacity .2s ease-in-out .2s;
   transition: opacity .2s ease-in-out .2s
 }
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: calc(100% + 10px);
+  background: #b3d7f2;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
 .profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar::after {
   background: #b3d7f2;
   -webkit-transform: translate(-50%,-50%) scale(1);
   -ms-transform: translate(-50%,-50%) scale(1);
   transform: translate(-50%,-50%) scale(1)
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s0::after {
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s0::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s0::before {
   background: #6295bd
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s1::after {
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s1::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s1::before {
   background: #79a9cf
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s2::after {
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s2::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s2::before {
   background: #98c2e3
 }
-.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s3::after {
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s3::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s3::before {
   background: #b3d7f2
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar {
