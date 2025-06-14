@@ -150,3 +150,37 @@
         }
     }
 }
+
+@mixin bar-keyframes($name, $count, $from-props, $to-props) {
+    $active: 100% / $count;
+    $step: $active;
+    $active-middle: $step;
+    $active-end: $step + $active-middle;
+
+    @keyframes #{$name} {
+        0% { @each $prop, $val in $from-props { #{$prop}: #{$val}; } }
+        #{$active-middle} { @each $prop, $val in $to-props { #{$prop}: #{$val}; } }
+        #{$active-end} { @each $prop, $val in $from-props { #{$prop}: #{$val}; } }
+        100% { @each $prop, $val in $from-props { #{$prop}: #{$val}; } }
+    }
+}
+
+@mixin infinite-sequential-delay($selector, $child: '.bar', $duration: 1s, $max: 34) {
+    $total: $duration * $max;
+
+        @include bar-keyframes(
+            resize-#{$max},
+            $max,
+            ('transform': translate(-50%, -50%) scale(.5)),
+            ('transform': translate(-50%, -50%) scale(.7))
+        );
+
+    @for $i from 1 through $max {
+            #{$selector}:nth-child(#{$i}) #{$child} {
+                animation: resize-#{$max} ease-in-out;
+                animation-delay: ($i - 1) * ($duration / 2);
+                animation-duration: $total / 2;
+                animation-iteration-count: infinite;
+            }
+    }
+}
