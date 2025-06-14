@@ -1,5 +1,39 @@
 @use "../common" as *;
 
+@mixin bar-keyframes($name, $count, $from-props, $to-props) {
+    $active: 100% / $count;
+    $step: $active;
+    $active-middle: $step;
+    $active-end: $step + $active-middle;
+
+    @keyframes #{$name} {
+        0% { @each $prop, $val in $from-props { #{$prop}: #{$val}; } }
+        #{$active-middle} { @each $prop, $val in $to-props { #{$prop}: #{$val}; } }
+        #{$active-end} { @each $prop, $val in $from-props { #{$prop}: #{$val}; } }
+        100% { @each $prop, $val in $from-props { #{$prop}: #{$val}; } }
+    }
+}
+
+@mixin infinite-sequential-delay($selector, $child: '.bar', $duration: 1s, $max: 34) {
+    $total: $duration * $max;
+
+        @include bar-keyframes(
+            resize-#{$max},
+            $max,
+            ('transform': translate(-50%, -50%) scale(.5)),
+            ('transform': translate(-50%, -50%) scale(.7))
+        );
+
+    @for $i from 1 through $max {
+            #{$selector}:nth-child(#{$i}) #{$child} {
+                animation: resize-#{$max} ease-in-out;
+                animation-delay: ($i - 1) * ($duration / 2);
+                animation-duration: $total / 2;
+                animation-iteration-count: infinite;
+            }
+    }
+}
+
 .profile-content {
     .cc-2.block {
         .c-left {
@@ -85,6 +119,24 @@
                         overflow: visible;
                     }
 
+                    @supports selector(:has(*)) {
+                        &:has(.bar-container:hover) .bar::after {
+                            animation: none !important;
+                        }
+                    }
+
+                    &.x26 {
+                        display: flex;
+
+                        @include infinite-sequential-delay('.line', '.bar-container .bar::after', 1s, 26);
+                    }
+
+                    &.x34 {
+                        display: none;
+
+                        @include infinite-sequential-delay('.line', '.bar-container .bar::after', 1s, 34);
+                    }
+
                     .bar-container {
                         &::before {
                             content: '';
@@ -111,7 +163,7 @@
 
                                 &::after {
                                     background: #b3d7f2;
-                                    transform: translate(-50%, -50%) scale(1);
+                                    transform: translate(-50%, -50%) scale(1) !important;
                                 }
 
                                 &.s0 {
@@ -219,14 +271,6 @@
                                 background: #98c2e3;
                             }
                         }
-                    }
-
-                    &.x34 {
-                        display: none;
-                    }
-
-                    &.x26 {
-                        display: flex;
                     }
                 }
 
