@@ -1,5 +1,6 @@
 @use "colors" as *;
 @use "data" as *;
+@use "sass:math";
 
 @keyframes slide {
     to {
@@ -152,7 +153,7 @@
 }
 
 @mixin bar-keyframes($name, $count, $from-props, $to-props) {
-    $active: 100% / $count;
+    $active: math.div(100%, $count);
     $step: $active;
     $active-middle: $step;
     $active-end: $step + $active-middle;
@@ -165,7 +166,7 @@
     }
 }
 
-@mixin infinite-sequential-delay($selector, $child: '.bar', $duration: 1s, $max: 34) {
+@mixin infinite-sequential-delay($selector, $child, $duration: 1s, $max: 34) {
     $total: $duration * $max;
 
         @include bar-keyframes(
@@ -178,8 +179,8 @@
     @for $i from 1 through $max {
             #{$selector}:nth-child(#{$i}) #{$child} {
                 animation: resize-#{$max} ease-in-out;
-                animation-delay: ($i - 1) * ($duration / 2);
-                animation-duration: $total / 2;
+                animation-delay: ($i - 1) * math.div($duration, 2);
+                animation-duration: math.div($total, 2);
                 animation-iteration-count: infinite;
             }
     }
