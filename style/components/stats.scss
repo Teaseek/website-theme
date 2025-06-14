@@ -29,8 +29,35 @@
                     .first {
                         @extend %border-radius-left;
 
-                        background: $bar-background;
-                        box-shadow: $bar-lifetime-first-box-shadow;
+                        overflow: hidden;
+                        position: relative;
+
+                        &::after {
+                            @extend %border-radius-left;
+
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 100%;
+
+                            @keyframes slide-pg {
+                                from {
+                                    background-position-x: 0;
+                                }
+
+                                to {
+                                    background-position-x: $lifetime-fundamental-base;
+                                }
+                            }
+
+                            width: calc($lifetime-fundamental-base * 6);
+                            box-shadow: $bar-lifetime-first-box-shadow;
+                            background-color: $bar-background;
+                            background-image: $lifetime-gradient-background;
+                            animation: slide-pg $lifetime-speed linear infinite;
+                            will-change: background-position;
+                        }
                     }
 
                     .third {
@@ -44,6 +71,7 @@
                 }
 
                 .times {
+                    display: flex;
                     padding-top: 2px;
                 }
 

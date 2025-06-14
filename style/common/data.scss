@@ -21,3 +21,8 @@ $main-border-radius: 5px;
 $main-padding: 15px;
 $padding: 10px;
 $small-padding: 5px;
+$lifetime-speed: 4s;
+$lifetime-pattern-repeat-width: 80;
+$lifetime-stripe-width: calc($lifetime-pattern-repeat-width * 1px);
+$lifetime-fundamental-base: calc(1px * sqrt(2 * pow($lifetime-pattern-repeat-width, 2)));
+$lifetime-gradient-background: repeating-linear-gradient(135deg, transparent, transparent calc($lifetime-stripe-width / 2), #f45151 calc($lifetime-stripe-width / 2), #f45151 $lifetime-stripe-width);

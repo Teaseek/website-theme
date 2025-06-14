@@ -146,6 +146,7 @@
 .profile-content .cc-2.block .c-left .activity .graph .bar,
 .profile-content .cc-2.block .c-left .lifetime,
 .profile-content .cc-2.block .c-left .lifetime .bar .first,
+.profile-content .cc-2.block .c-left .lifetime .bar .first::after,
 .profile-content .cc-2.block .c-left .lifetime .bar .third,
 .profile-content .cc-2.block .c-right .b-clubs,
 .profile-content .cc-2.block .c-right .b-clubs a,
@@ -178,6 +179,7 @@
   background-clip: padding-box
 }
 .profile-content .cc-2.block .c-left .lifetime .bar .first,
+.profile-content .cc-2.block .c-left .lifetime .bar .first::after,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child {
   border-radius: 5px 0 0 5px
 }
@@ -678,15 +680,48 @@
   padding: 1px
 }
 .profile-content .cc-2.block .c-left .lifetime .bar .first {
-  background: #f45151;
+  overflow: hidden;
+  position: relative
+}
+.profile-content .cc-2.block .c-left .lifetime .bar .first::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 678.8225099391px;
   -webkit-box-shadow: inset 1px 1px 2px 1px rgba(255,255,255,.33);
-  box-shadow: inset 1px 1px 2px 1px rgba(255,255,255,.33)
+  box-shadow: inset 1px 1px 2px 1px rgba(255,255,255,.33);
+  background-color: #cf4e4e;
+  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#f45151 40px,#f45151 80px);
+  -webkit-animation: slide-pg 4s linear infinite;
+  animation: slide-pg 4s linear infinite;
+  will-change: background-position
+}
+@-webkit-keyframes slide-pg {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
+@keyframes slide-pg {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
 }
 .profile-content .cc-2.block .c-left .lifetime .cuts .cut {
   height: 0;
   margin: 1px
 }
 .profile-content .cc-2.block .c-left .lifetime .times {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 2px
 }
 .profile-content .cc-2.block .c-left .activity {
