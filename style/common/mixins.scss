@@ -152,9 +152,9 @@
     }
 }
 
-@mixin bar-keyframes($name, $count, $from-props, $to-props) {
+@mixin bar-keyframes($name, $count, $from-props, $to-props, $ratio: 5) {
     $active: math.div(100%, $count);
-    $step: $active;
+    $step: $active * math.div($ratio, 2);
     $active-middle: $step;
     $active-end: $step + $active-middle;
 
@@ -166,7 +166,7 @@
     }
 }
 
-@mixin infinite-sequential-delay($selector, $child, $duration: 1s, $max: 34) {
+@mixin infinite-sequential-delay($selector, $child, $duration: 1s, $max: 34, $ratio: 5) {
     $total: $duration * $max;
 
         @include bar-keyframes(
@@ -179,8 +179,8 @@
     @for $i from 1 through $max {
             #{$selector}:nth-child(#{$i}) #{$child} {
                 animation: resize-#{$max} ease-in-out;
-                animation-delay: ($i - 1) * math.div($duration, 2);
-                animation-duration: math.div($total, 2);
+                animation-delay: ($i - 1) * math.div($duration, $ratio);
+                animation-duration: math.div($total, $ratio);
                 animation-iteration-count: infinite;
             }
     }
