@@ -9,7 +9,9 @@ import sortMediaQueries from "postcss-sort-media-queries";
 import fs from "fs/promises";
 import autoprefixer from "gulp-autoprefixer";
 import { join } from "path";
+import browserSync from "browser-sync";
 
+const bs = browserSync.create();
 const sass = gulpSass(dartSass);
 
 const path = {
@@ -17,6 +19,7 @@ const path = {
         src: {
             main: "style/style.scss",
             components: "style/components/*.scss",
+            common: "style/common/*.scss",
         },
         dest: "style/css/",
     },
@@ -79,14 +82,14 @@ const injectCssToHtml = async () => {
 
         const css = await fs.readFile(cssPath, "utf8");
         const htmlFileName = await fs.readdir(path.html.dest)
-            .then(files => files.find(file => file.endsWith(".html")));
+            .then(files => files.find(file => file.endsWith(".html") || file.endsWith(".mhtml")));
         if (!htmlFileName) {
             throw new Error(`HTML file not found in ${path.html.dest}`);
         }
 
         const htmlFilePath = join(path.html.dest, htmlFileName);
         let html = await fs.readFile(htmlFilePath, "utf8");
-        
+
         html = html.replace(
             new RegExp(`<style id="${styleTagId}" type="text/css">[\\s\\S]*?</style>`, "g"),
             `<style id="${styleTagId}" type="text/css">${css}</style>`
@@ -103,7 +106,31 @@ const build = series(clear, sassBuild, cssMin, injectCssToHtml);
 const watchFiles = () => {
     gulpWatch(path.scss.src.main, build);
     gulpWatch(path.scss.src.components, { delay: 500 }, build);
+    gulpWatch(path.scss.src.common, { delay: 500 }, build);
 };
 
-export { clear, build };
+const serve = async () => {
+    const htmlFileName = await fs.readdir(path.html.dest)
+        .then(files => files.find(file => file.endsWith(".html") || file.endsWith(".mhtml")));
+
+    if (!htmlFileName) {
+        throw new Error(`HTML file not found in ${path.html.dest}`);
+    }
+
+    const startPath = join(path.html.dest, htmlFileName)
+        .replace(/\\/g, "/")
+        .replace(/\/\//g, "/");
+
+    bs.init({
+        server: path.html.dest,
+        open: false,
+        notify: false,
+        startPath,
+        port: 8080,
+    });
+
+    bs.watch(startPath).on("change", bs.reload);
+};
+
+export { clear, build, serve };
 export const watch = series(build, watchFiles);
