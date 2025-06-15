@@ -110,7 +110,8 @@
                 .stat_names {
                     grid-area: stat;
                     font-size: 14px;
-                    margin-bottom: -$small-padding;
+                    display: flex;
+                    gap: $small-padding;
 
                     .stat_name {
                         @extend %remove-sub-elements;

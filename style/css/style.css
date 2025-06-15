@@ -688,7 +688,10 @@
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names {
   grid-area: stat;
   font-size: 14px;
-  margin-bottom: -4px
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px
 }
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name {
   gap: 4px;
@@ -856,8 +859,14 @@
 .profile-content .cc-2.block .c-right .cc-favourites .b-catalog_entry {
   width: 100%!important
 }
+.profile-content .cc-2.block .c-right .cc-favourites .b-catalog_entry .image-cutter,
+.profile-content .cc-2.block .c-right .cc-favourites .b-catalog_entry .image-decor {
+  width: 100%;
+  height: 100%
+}
 .profile-content .cc-2.block .c-right .cc-favourites .b-catalog_entry a {
   width: 100%;
+  height: 100%;
   max-width: 150px
 }
 .profile-head .c-mobile-actions {
