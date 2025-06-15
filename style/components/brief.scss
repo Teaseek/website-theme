@@ -122,6 +122,7 @@
                 left: $padding;
                 padding: 0;
                 top: calc($head-title-height + $head-misc-height + $padding * 3);
+                z-index: 4;
             }
 
             .notice {

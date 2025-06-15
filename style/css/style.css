@@ -593,7 +593,8 @@
   position: absolute;
   left: 8px;
   padding: 0;
-  top: 68px
+  top: 68px;
+  z-index: 4
 }
 .profile-head .c-brief .head .notice {
   z-index: 4;
