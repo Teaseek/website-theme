@@ -33,7 +33,7 @@ Paste this into the custom styles field:
 
 ## Style cache reset
 - [Reset cache for all styles](https://shikimori.one/tests/reset_styles_cache/)
-- [Reset cache for a specific style](https://shikimori.one/tests/reset_styles_cache?url=https%3A%2F%2Fraw.githubusercontent.com%2FTeaseek%2Fwebsite-theme%2Fmain%2Fstyle%2Fcss%2Fstyle.min.css)
+- [Reset cache for this theme](https://shikimori.one/tests/reset_styles_cache?url=https%3A%2F%2Fraw.githubusercontent.com%2FTeaseek%2Fwebsite-theme%2Fmain%2Fstyle%2Fcss%2Fstyle.min.css)
 
 ---
 
