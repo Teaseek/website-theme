@@ -2,9 +2,9 @@
 @use "components" as *;
 
 :root {
-    --profile-head-image: url('https://giffiles.alphacoders.com/100/100264.gif');
-    --profile-head-image-position-y: 10%;
-    --profile-head-image-position-x: 30%;
+    --profile-head-image: none;
+    --profile-head-image-position-y: 0;
+    --profile-head-image-position-x: 0;
 }
 
 .profile-head {
