@@ -144,6 +144,7 @@
   animation: slide 4s linear 0s infinite forwards
 }
 .profile-content .about,
+.profile-content .about .block .b-code-v2,
 .profile-content .about .block:has(.b-spoiler_block.is-opened),
 .profile-content .block.achievements .cc-2,
 .profile-content .block.achievements .cc-achievements .b-achievement,
@@ -273,6 +274,7 @@
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name {
   border-radius: 5px 5px 5px 5px
 }
+.profile-content .about .block .b-code-v2,
 .profile-content .block.achievements .cc-achievements .b-achievement::after,
 .profile-content .block.achievements .cc-achievements .b-badge::after,
 .profile-content .block.achievements .cc-authors .b-achievement::after,

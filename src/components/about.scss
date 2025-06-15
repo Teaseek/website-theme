@@ -51,6 +51,10 @@
                 }
             }
 
+            .b-code-v2 {
+                @extend %border-radius-3;
+            }
+
             .subheadline {
                 margin: 0 (-$padding) $padding !important;
             }
