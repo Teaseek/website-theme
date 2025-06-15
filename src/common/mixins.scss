@@ -167,6 +167,7 @@
 }
 
 %subline {
+    .b-spoiler_block > span,
     .subheadline {
         @extend %remove-margin-bottom;
         @extend %headline-arrow;

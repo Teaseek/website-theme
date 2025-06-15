@@ -1,7 +1,7 @@
 @use "../common" as *;
 
 .profile-content {
-    .about.block {
+    .about {
         @extend %block-style;
         @extend %border-radius-bottom;
         @extend %remove-margin-bottom;
@@ -9,13 +9,35 @@
 
         padding: 0 $padding $padding !important;
 
-        .subheadline {
+        & > .subheadline {
             margin: 0 (-$padding) $padding;
             margin-bottom: $padding !important;
         }
 
         .subheadline-buttons {
             @extend %headline-arrow;
+        }
+
+        & .block {
+            @extend %remove-sub-elements;
+            @extend %remove-margin;
+            @extend %remove-margin-bottom;
+            @extend %border-radius-2-bottom;
+            @extend %block-style;
+            @extend %subline;
+
+            padding: 0 $padding $padding !important;
+
+            .b-spoiler_block,
+            .subheadline {
+                margin: 0 (-$padding) $padding !important;
+            }
+
+            .b-spoiler_block {
+                & > span {
+                    color: var(--link-color);
+                }
+            }
         }
     }
 }
