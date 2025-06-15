@@ -111,6 +111,7 @@
                     grid-area: stat;
                     font-size: 14px;
                     display: flex;
+                    flex-wrap: wrap;
                     gap: $small-padding;
 
                     .stat_name {
