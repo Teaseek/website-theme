@@ -27,7 +27,6 @@
                 "cc-achievements-1 cc-achievements-2"
                 "franchises authors";
             grid-template-columns: 1fr 1fr;
-            // grid-template-rows: 1fr auto;
             gap: $padding;
 
             .c-column {
@@ -95,14 +94,10 @@
         .cc-authors {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr 1fr;
-
-            @include dynamic-grid(7);
         }
 
         .cc-achievements {
             grid-template-columns: repeat(2, 1fr);
-            
-            @include dynamic-grid(7);
         }
 
         .cc-franchises,
