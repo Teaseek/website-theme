@@ -28,6 +28,8 @@
 5. After building, the page and all compiled styles will be in `dest/website`.
 6. Open [http://localhost:8080](http://localhost:8080) — you can view your page with up-to-date styles and see changes live during development.
 
+---
+
 ### Main scripts
 - `pnpm run build` — one-time build of styles
 - `pnpm run watch` — automatic rebuild on changes
