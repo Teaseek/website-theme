@@ -28,15 +28,28 @@
 
             padding: 0 $padding $padding !important;
 
-            .b-spoiler_block,
-            .subheadline {
-                margin: 0 (-$padding) $padding !important;
+            &:has(.b-spoiler_block) {
+                padding: 0 $padding !important;
+                border-radius: none !important;
             }
 
             .b-spoiler_block {
+                margin: 0 (-$padding) !important;
+
                 & > span {
                     color: var(--link-color);
+                    margin: 0 0 $padding !important;
                 }
+
+                & > div {
+                    padding: 0 13px 5px;
+                    border-left: unset;
+                    background-color: unset;
+                }
+            }
+
+            .subheadline {
+                margin: 0 (-$padding) $padding !important;
             }
         }
     }

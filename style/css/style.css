@@ -413,12 +413,24 @@
 .profile-content .about .block {
   padding: 0 8px 8px!important
 }
-.profile-content .about .block .b-spoiler_block,
-.profile-content .about .block .subheadline {
-  margin: 0 -8px 8px!important
+.profile-content .about .block:has(.b-spoiler_block) {
+  padding: 0 8px!important;
+  border-radius: none!important
+}
+.profile-content .about .block .b-spoiler_block {
+  margin: 0 -8px!important
 }
 .profile-content .about .block .b-spoiler_block > span {
-  color: var(--link-color)
+  color: var(--link-color);
+  margin: 0 0 8px!important
+}
+.profile-content .about .block .b-spoiler_block > div {
+  padding: 0 13px 5px;
+  border-left: unset;
+  background-color: unset
+}
+.profile-content .about .block .subheadline {
+  margin: 0 -8px 8px!important
 }
 .profile-content .block.achievements .cc-2 {
   display: grid;
