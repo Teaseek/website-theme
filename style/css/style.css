@@ -413,6 +413,11 @@
 .profile-content .about .block {
   padding: 0 8px 8px!important
 }
+@supports selector(:has(*)) {
+  .profile-content .about .block:has(.b-spoiler_block) {
+    padding: 0 8px!important
+  }
+}
 .profile-content .about .block .b-spoiler_block {
   margin: 0 -8px!important
 }
@@ -420,7 +425,7 @@
   color: var(--link-color)
 }
 .profile-content .about .block .b-spoiler_block > div {
-  padding: 5px 13px;
+  padding: 8px;
   border-left: unset;
   background-color: unset
 }
