@@ -494,6 +494,9 @@
 .profile-content .about .block .subheadline {
   margin: 0 -8px 8px
 }
+.profile-content .about .block .b-quote {
+  margin: 0!important
+}
 .profile-content .block.achievements .cc-2 {
   display: grid;
   grid-template-areas: "cc-achievements-1 cc-achievements-2" "franchises authors";
