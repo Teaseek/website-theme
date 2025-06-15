@@ -1,4 +1,5 @@
-$main-container-transition: all 1s cubic-bezier(0.26, 0.01, 0, 0.99),
+$main-container-transition: box-shadow 1s cubic-bezier(0.26, 0.01, 0, 0.99),
+    border 1s cubic-bezier(0.26, 0.01, 0, 0.99),
     background-color 0.7s cubic-bezier(0.31, 0, 0, 0.96), border 0.4s linear;
 $shadow-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 $history-entry-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);

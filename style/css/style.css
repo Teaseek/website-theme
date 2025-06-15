@@ -105,8 +105,10 @@
 .profile-head .c-info .c-additionals,
 .profile-head .c-info .c-lists-info .b-stats_bar,
 .profile-head .c-mobile-actions {
-  -webkit-transition: all 1s cubic-bezier(.26,.01,0,.99),background-color .7s cubic-bezier(.31,0,0,.96),border .4s linear;
-  transition: all 1s cubic-bezier(.26,.01,0,.99),background-color .7s cubic-bezier(.31,0,0,.96),border .4s linear;
+  -webkit-transition: border 1s cubic-bezier(.26,.01,0,.99),background-color .7s cubic-bezier(.31,0,0,.96),border .4s linear,-webkit-box-shadow 1s cubic-bezier(.26,.01,0,.99);
+  transition: border 1s cubic-bezier(.26,.01,0,.99),background-color .7s cubic-bezier(.31,0,0,.96),border .4s linear,-webkit-box-shadow 1s cubic-bezier(.26,.01,0,.99);
+  transition: box-shadow 1s cubic-bezier(.26,.01,0,.99),border 1s cubic-bezier(.26,.01,0,.99),background-color .7s cubic-bezier(.31,0,0,.96),border .4s linear;
+  transition: box-shadow 1s cubic-bezier(.26,.01,0,.99),border 1s cubic-bezier(.26,.01,0,.99),background-color .7s cubic-bezier(.31,0,0,.96),border .4s linear,-webkit-box-shadow 1s cubic-bezier(.26,.01,0,.99);
   -webkit-box-shadow: none;
   box-shadow: none
 }
