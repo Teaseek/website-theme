@@ -1,0 +1,238 @@
+@use "colors" as *;
+@use "data" as *;
+@use "sass:math";
+
+@keyframes slide {
+    to {
+        background-position-x: 400%;
+    }
+}
+
+%headline-arrow a {
+    color: $subheadline-a-color;
+
+    &::before {
+        color: $subheadline-a-icon-color;
+    }
+}
+
+%small-shadows {
+    box-shadow: $secondary-elements-shadow;
+    transition: $shadow-transition;
+}
+
+%small-shadows-hover {
+    &:hover {
+        box-shadow: $secondary-elements-shadow-hover !important;
+        z-index: 1000;
+    }
+}
+
+%stat-names-shadows-hover {
+    box-shadow: $stat-names-shadow-hover;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+%block-style {
+    background: $main-container-background;
+    border: 1px $main-border-color solid;
+}
+
+%block-style-hover {
+    @extend %block-style;
+
+    transition: $main-container-transition;
+    box-shadow: none;
+
+    &:hover {
+        box-shadow: $main-elements-shadow;
+        background: $main-container-background-hover;
+        border: 1px $main-border-color-hover solid;
+    }
+}
+
+%caption-text-hover {
+    background: $linear-gradient-background;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slide $text-animation-time linear 0s infinite forwards;
+}
+
+%border-radius-fix {
+    background-clip: padding-box;
+}
+
+@mixin border-radius($top-left, $top-right, $bottom-right, $bottom-left) {
+    @extend %border-radius-fix;
+
+    border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+%border-radius-left {
+    @include border-radius($main-border-radius, 0, 0, $main-border-radius);
+}
+
+%border-radius-right {
+    @include border-radius(0, $main-border-radius, $main-border-radius, 0);
+}
+
+%border-radius-bottom {
+    @include border-radius(0, 0, $main-border-radius, $main-border-radius);
+}
+
+%border-radius-top {
+    @include border-radius($main-border-radius, $main-border-radius, 0, 0);
+}
+
+%border-radius {
+    @include border-radius(
+        $main-border-radius,
+        $main-border-radius,
+        $main-border-radius,
+        $main-border-radius
+    );
+}
+
+%border-radius-2-left {
+    @include border-radius($border-radius, 0, 0, $border-radius);
+}
+
+%border-radius-2-right {
+    @include border-radius(0, $border-radius, $border-radius, 0);
+}
+
+%border-radius-2-bottom {
+    @include border-radius(0, 0, $border-radius, $border-radius);
+}
+
+%border-radius-2-top {
+    @include border-radius($border-radius, $border-radius, 0, 0);
+}
+
+%border-radius-2 {
+    @include border-radius(
+        $border-radius,
+        $border-radius,
+        $border-radius,
+        $border-radius
+    );
+}
+
+%border-radius-3-left {
+    @include border-radius($small-border-radius, 0, 0, $small-border-radius);
+}
+
+%border-radius-3-right {
+    @include border-radius(0, $small-border-radius, $small-border-radius, 0);
+}
+
+%border-radius-3-bottom {
+    @include border-radius(0, 0, $small-border-radius, $small-border-radius);
+}
+
+%border-radius-3-top {
+    @include border-radius($small-border-radius, $small-border-radius, 0, 0);
+}
+
+%border-radius-3 {
+    @include border-radius(
+        $small-border-radius,
+        $small-border-radius,
+        $small-border-radius,
+        $small-border-radius
+    );
+}
+
+%item-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%remove-sub-elements {
+    &::after,
+    &::before {
+        display: none !important;
+        content: unset !important;
+    }
+}
+
+%remove-margin {
+    margin: 0 !important;
+}
+
+%remove-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+%subline {
+    .subheadline {
+        @extend %remove-margin-bottom;
+        @extend %headline-arrow;
+
+        background: $subheadline-background;
+        border: 0;
+    }
+}
+
+%subline-item {
+    border-top: none !important;
+    padding: $padding;
+}
+
+%third-bar {
+    .bar {
+        .third {
+            background: $bar-stat-third-background;
+            position: relative;
+        }
+    }
+}
+
+@mixin bar-keyframes($name, $count, $from-props, $to-props, $ratio: 5) {
+    $active: math.div(100%, $count);
+    $step: $active * math.div($ratio, 2);
+    $active-middle: $step;
+    $active-end: $step + $active-middle;
+
+    @keyframes #{$name} {
+        0% { @each $prop, $val in $from-props { #{$prop}: #{$val}; } }
+        #{$active-middle} { @each $prop, $val in $to-props { #{$prop}: #{$val}; } }
+        #{$active-end} { @each $prop, $val in $from-props { #{$prop}: #{$val}; } }
+        100% { @each $prop, $val in $from-props { #{$prop}: #{$val}; } }
+    }
+}
+
+@mixin infinite-sequential-delay($selector, $child, $duration: 1s, $max: 34, $ratio: 5) {
+    $total: $duration * $max;
+
+        @include bar-keyframes(
+            resize-#{$max},
+            $max,
+            ('transform': translate(-50%, -50%) scale(.5)),
+            ('transform': translate(-50%, -50%) scale(.7))
+        );
+
+    @for $i from 1 through $max {
+            #{$selector}:nth-child(#{$i}) #{$child} {
+                animation: resize-#{$max} ease-in-out;
+                animation-delay: ($i - 1) * math.div($duration, $ratio);
+                animation-duration: math.div($total, $ratio);
+                animation-iteration-count: infinite;
+            }
+    }
+}
+
+@mixin dynamic-grid($count) {
+    $times: math.floor(math.div($count, 2));
+
+    @supports selector(:has(*)) {
+        @for $i from $times through 1 {
+            $child: ($i * 2) + 1;
+            &:not(:has(:nth-child(#{$child}))) {
+                grid-template-columns: repeat($i, 1fr);
+            }
+        }
+    }
+}

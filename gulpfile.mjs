@@ -17,9 +17,9 @@ const sass = gulpSass(dartSass);
 const path = {
     scss: {
         src: {
-            main: "style/style.scss",
-            components: "style/components/*.scss",
-            common: "style/common/*.scss",
+            main: "src/style.scss",
+            components: "src/components/*.scss",
+            common: "src/common/*.scss",
         },
         dest: "style/css/",
     },

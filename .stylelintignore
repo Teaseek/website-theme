@@ -1,6 +1,6 @@
 node_modules/
 dist/
 build/
-style/css/
+style/
 dest/
-*.min.css
+*.css

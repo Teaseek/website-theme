@@ -1,0 +1,301 @@
+@use "../common" as *;
+
+@keyframes slide-pg {
+    from {
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-x: $lifetime-fundamental-base;
+    }
+}
+
+.profile-content {
+    .cc-2.block {
+        .c-left {
+            @extend %remove-margin;
+
+            width: 100% !important;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: $main-padding;
+
+            .lifetime {
+                @extend %block-style-hover;
+                @extend %border-radius;
+                @extend %remove-margin;
+
+                padding: $padding;
+                display: flex;
+                flex-direction: column;
+                gap: $small-padding;
+                align-content: center;
+
+                &:hover {
+                    .bar {
+                        @extend %small-shadows;
+                    }
+
+                    .label {
+                        @extend %caption-text-hover;
+                    }
+                }
+
+                .bar {
+                    @extend %border-radius-2;
+                
+                    height: 12px;
+                    line-height: 12px;
+                    background: $bar-stat-third-background;
+                    overflow: hidden;
+
+                    .first {
+                        @extend %border-radius-2;
+
+                        z-index: 10 ;
+                        overflow: hidden;
+                        position: relative;
+
+                        &::after {
+                            @extend %border-radius-2;
+
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 100%;
+                            width: calc($lifetime-fundamental-base * 6);
+                            box-shadow: $bar-lifetime-first-box-shadow;
+                            background-color: $bar-background;
+                            background-image: $lifetime-gradient-background;
+                            animation: slide-pg $lifetime-speed linear infinite;
+                            will-change: background-position;
+                        }
+                    }
+
+                    .third {
+                        @extend %border-radius;
+                    }
+                }
+
+                .cuts .cut {
+                    height: 12px;
+                    z-index: 2;
+                    width: 3px;
+                    background: #9da2a83a;
+                    transform: translateX(-50%);
+                }
+
+                .times {
+                    display: flex;
+                }
+            }
+
+            .activity {
+                @extend %block-style-hover;
+                @extend %border-radius;
+                @extend %remove-margin;
+
+                padding: $padding;
+                display: grid;
+                grid-template-rows: auto minmax(100px, 1fr);
+                gap: $small-padding;
+
+                @media screen and (min-width: 1200px) {
+                    .graph.x34 {
+                        display: flex;
+                    }
+
+                    .graph.x26 {
+                        display: none;
+                    }
+                }
+
+                .graph {
+                    @extend %border-radius-2;
+
+                    height: auto;
+                    border: none !important;
+                    padding: 10px 0;
+                    background: white;
+
+                    .line {
+                        overflow: visible;
+                    }
+
+                    @supports selector(:has(*)) {
+                        &:has(.bar-container:hover) .bar::after {
+                            animation: none !important;
+                        }
+                    }
+
+                    &.x26 {
+                        display: flex;
+
+                        @include infinite-sequential-delay('.line', '.bar-container .bar::after', 1s, 26);
+                    }
+
+                    &.x34 {
+                        display: none;
+
+                        @include infinite-sequential-delay('.line', '.bar-container .bar::after', 1s, 34);
+                    }
+
+                    .bar-container {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            bottom: -10px;
+                            width: 1px;
+                            height: calc(100% + 20px);
+                            background: #d4d4d4;
+                            transform: translateX(-50%);
+                        }
+
+                        &:hover {
+                            &::before {
+                                background: #a3c2db;
+                            }
+                            
+                            .bar {
+                                .value {
+                                    display: flex !important;
+                                    opacity: 1;
+                                    transition: opacity 0.2s ease-in-out 0.2s;
+                                }
+
+                                &::after {
+                                    background: #b3d7f2;
+                                    transform: translate(-50%, -50%) scale(1) !important;
+                                }
+
+                                &.s0 {
+                                    &::before,
+                                    &::after {
+                                        background: #6295bd;
+                                    }
+                                }
+
+                                &.s1 {
+                                    &::before,
+                                    &::after {
+                                        background: #79a9cf;
+                                    }
+                                }
+
+                                &.s2 {
+                                    &::before,
+                                    &::after {
+                                        background: #98c2e3;
+                                    }
+                                }
+
+                                &.s3 {
+                                    &::before,
+                                    &::after {
+                                        background: #b3d7f2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .bar {
+                        @extend %border-radius-top;
+
+                        background: none !important;
+
+                        .value {
+                            position: absolute !important;
+                            left: 50%;
+                            top: 0;
+                            bottom: unset !important;
+                            z-index: 2;
+                            transform: translate(-50%, -50%);
+                            width: 95% !important;
+                            height: auto;
+                            aspect-ratio: 1 / 1;
+                            align-items: center;
+                            justify-content: center;
+                            color: #fff !important;
+                            opacity: 0;
+                            display: flex;
+                            transition: none;
+                        }
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            top: 0;
+                            width: 1px;
+                            height: calc(100% + 10px);
+                            background: #b3d7f2;
+                            transform: translateX(-50%);
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            top: 0;
+                            width: 95%;
+                            aspect-ratio: 1/1;
+                            background: #98c2e3;
+                            border-radius: 100%;
+                            transform: translate(-50%, -50%) scale(.5);
+                            transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+                        }
+
+                        &.s0 {
+                            &::before,
+                            &::after {
+                                background: #4682b4;
+                            }
+                        }
+
+                        &.s1 {
+                            &::before,
+                            &::after {
+                                background: #6295bd;
+                            }
+                        }
+
+                        &.s2 {
+                            &::before,
+                            &::after {
+                                background: #79a9cf;
+                            }
+                        }
+
+                        &.s3 {
+                            &::before,
+                            &::after {
+                                background: #98c2e3;
+                            }
+                        }
+                    }
+                }
+
+                .title {
+                    @extend %remove-margin;
+                }
+
+                &:hover {
+                    .title {
+                        @extend %caption-text-hover;
+                    }
+
+                    .graph {
+                        @extend %small-shadows;
+                    }
+                }
+
+                &:last-child {
+                    padding-bottom: calc(19px + $padding);
+                }
+            }
+        }
+    }
+}
