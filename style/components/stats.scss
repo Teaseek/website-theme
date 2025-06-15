@@ -1,5 +1,15 @@
 @use "../common" as *;
 
+@keyframes slide-pg {
+    from {
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-x: $lifetime-fundamental-base;
+    }
+}
+
 .profile-content {
     .cc-2.block {
         .c-left {
@@ -22,34 +32,28 @@
                 align-content: center;
 
                 .bar {
+                    @extend %border-radius;
+                
                     height: 100%;
                     line-height: 100%;
                     padding: 1px;
+                    background: $bar-stat-third-background;
+                    overflow: hidden;
 
                     .first {
-                        @extend %border-radius-left;
+                        @extend %border-radius;
 
                         overflow: hidden;
                         position: relative;
 
                         &::after {
-                            @extend %border-radius-left;
+                            @extend %border-radius;
 
                             content: '';
                             position: absolute;
                             left: 0;
                             top: 0;
                             height: 100%;
-
-                            @keyframes slide-pg {
-                                from {
-                                    background-position-x: 0;
-                                }
-
-                                to {
-                                    background-position-x: $lifetime-fundamental-base;
-                                }
-                            }
 
                             width: calc($lifetime-fundamental-base * 6);
                             box-shadow: $bar-lifetime-first-box-shadow;
@@ -61,7 +65,7 @@
                     }
 
                     .third {
-                        @extend %border-radius-right;
+                        @extend %border-radius;
                     }
                 }
 

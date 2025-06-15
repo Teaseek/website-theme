@@ -134,20 +134,7 @@
     .bar {
         .third {
             background: $bar-stat-third-background;
-            box-shadow: $bar-third-shadow;
             position: relative;
-
-            &::before {
-                @extend %border-radius-right;
-
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                box-shadow: $bar-third-left-shadow;
-            }
         }
     }
 }

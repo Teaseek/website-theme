@@ -127,7 +127,6 @@
   animation: slide 4s linear 0s infinite forwards
 }
 .profile-content .about.block,
-.profile-content .bar .third::before,
 .profile-content .block.achievements .cc-2,
 .profile-content .block.achievements .cc-achievements .b-achievement,
 .profile-content .block.achievements .cc-achievements .b-achievement::after,
@@ -145,6 +144,7 @@
 .profile-content .cc-2.block .c-left .activity .graph,
 .profile-content .cc-2.block .c-left .activity .graph .bar,
 .profile-content .cc-2.block .c-left .lifetime,
+.profile-content .cc-2.block .c-left .lifetime .bar,
 .profile-content .cc-2.block .c-left .lifetime .bar .first,
 .profile-content .cc-2.block .c-left .lifetime .bar .first::after,
 .profile-content .cc-2.block .c-left .lifetime .bar .third,
@@ -155,7 +155,6 @@
 .profile-content .cc-2.block .c-right .cc-friends,
 .profile-content .cc-2.block .c-right .cc-friends a,
 .profile-content .cc-2.block .c-right img,
-.profile-head .bar .third::before,
 .profile-head .c-brief .avatar .profile-actions,
 .profile-head .c-brief .avatar .profile-actions a,
 .profile-head .c-brief .avatar img,
@@ -178,14 +177,9 @@
 .profile-head .c-mobile-actions a {
   background-clip: padding-box
 }
-.profile-content .cc-2.block .c-left .lifetime .bar .first,
-.profile-content .cc-2.block .c-left .lifetime .bar .first::after,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child {
   border-radius: 5px 0 0 5px
 }
-.profile-content .bar .third::before,
-.profile-content .cc-2.block .c-left .lifetime .bar .third,
-.profile-head .bar .third::before,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :last-child {
   border-radius: 0 5px 5px 0
 }
@@ -216,6 +210,10 @@
 .profile-content .cc-2.block .c-left .activity,
 .profile-content .cc-2.block .c-left .activity .graph,
 .profile-content .cc-2.block .c-left .lifetime,
+.profile-content .cc-2.block .c-left .lifetime .bar,
+.profile-content .cc-2.block .c-left .lifetime .bar .first,
+.profile-content .cc-2.block .c-left .lifetime .bar .first::after,
+.profile-content .cc-2.block .c-left .lifetime .bar .third,
 .profile-content .cc-2.block .c-right .b-clubs a,
 .profile-content .cc-2.block .c-right .cc-favourites a,
 .profile-content .cc-2.block .c-right .cc-friends a,
@@ -327,20 +325,7 @@
 .profile-content .bar .third,
 .profile-head .bar .third {
   background: #d4d4d4;
-  -webkit-box-shadow: inset -2px 5px 5px rgba(154,147,140,.5);
-  box-shadow: inset -2px 5px 5px rgba(154,147,140,.5);
   position: relative
-}
-.profile-content .bar .third::before,
-.profile-head .bar .third::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: inset 3px 3px 5px 0 rgba(154,147,140,.5);
-  box-shadow: inset 3px 3px 5px 0 rgba(154,147,140,.5)
 }
 .profile-content .about.block {
   padding: 0 10px!important
@@ -660,6 +645,22 @@
   padding: 10px;
   font-weight: 700
 }
+@-webkit-keyframes slide-pg {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
+@keyframes slide-pg {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
 .profile-content .cc-2.block .c-left {
   width: 100%!important;
   display: grid;
@@ -677,7 +678,9 @@
 .profile-content .cc-2.block .c-left .lifetime .bar {
   height: 100%;
   line-height: 100%;
-  padding: 1px
+  padding: 1px;
+  background: #d4d4d4;
+  overflow: hidden
 }
 .profile-content .cc-2.block .c-left .lifetime .bar .first {
   overflow: hidden;
@@ -697,22 +700,6 @@
   -webkit-animation: slide-pg 4s linear infinite;
   animation: slide-pg 4s linear infinite;
   will-change: background-position
-}
-@-webkit-keyframes slide-pg {
-  from {
-    background-position-x: 0
-  }
-  to {
-    background-position-x: 113.1370849898px
-  }
-}
-@keyframes slide-pg {
-  from {
-    background-position-x: 0
-  }
-  to {
-    background-position-x: 113.1370849898px
-  }
 }
 .profile-content .cc-2.block .c-left .lifetime .cuts .cut {
   height: 0;
