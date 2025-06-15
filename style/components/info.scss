@@ -51,7 +51,6 @@
                     "left right"
                     "bar bar"
                     "stat stat";
-                grid-template-rows: auto 1fr auto;
                 gap: $small-padding;
 
                 .compatibility {
@@ -69,7 +68,6 @@
                     grid-area: bar;
                     height: auto;
                     overflow: visible;
-
                     min-height: 20px;
 
                     * {
@@ -97,6 +95,10 @@
                     .stat_names .stat_name {
                         @extend %small-shadows;
                     }
+
+                    .title {
+                        @extend %caption-text-hover;
+                    }
                 }
 
                 @media screen and (max-width: 1000px) {
@@ -113,9 +115,9 @@
                     .stat_name {
                         @extend %remove-sub-elements;
                         @extend %border-radius-2;
+                        @extend %remove-margin;
 
                         gap: $small-padding;
-
                         margin: 0 $padding $small-padding 0;
                         display: inline-flex;
                         flex-wrap: wrap;
@@ -157,12 +159,6 @@
                         a {
                             color: $manga-stat-text-color;
                         }
-                    }
-                }
-
-                &:hover {
-                    .title {
-                        @extend %caption-text-hover;
                     }
                 }
             }

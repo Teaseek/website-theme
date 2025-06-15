@@ -29,21 +29,6 @@
             grid-template-columns: 1fr 1fr;
             gap: $padding;
 
-            .c-column {
-                &:nth-child(1) {
-                    grid-area: cc-achievements-1;
-                }
-                &:nth-child(2) {
-                    grid-area: cc-achievements-2;
-                }
-                &:nth-child(3) {
-                    grid-area: franchises;
-                }
-                &:nth-child(4) {
-                    grid-area: authors;
-                }
-            }
-
             &:hover {
                 .cc-franchises,
                 .cc-authors,
@@ -60,10 +45,25 @@
 
                 width: 100%;
                 height: 100%;
-
                 display: flex;
                 flex-direction: column;
                 gap: $small-padding;
+
+                &:nth-child(1) {
+                    grid-area: cc-achievements-1;
+                }
+
+                &:nth-child(2) {
+                    grid-area: cc-achievements-2;
+                }
+
+                &:nth-child(3) {
+                    grid-area: franchises;
+                }
+
+                &:nth-child(4) {
+                    grid-area: authors;
+                }
 
                 .header {
                     @extend %remove-margin;
@@ -91,6 +91,7 @@
 
             @include dynamic-grid(9);
         }
+
         .cc-authors {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr 1fr;
@@ -106,14 +107,11 @@
             @extend %remove-sub-elements;
 
             gap: $padding;
-
             display: grid;
-            align-content: space-between;
+            place-content: space-between space-between;
             width: 100%;
             height: 100%;
-            align-items: start;
-            justify-content: space-between;
-            justify-items: stretch;
+            place-items: start stretch;
 
             @supports selector(:has(*)) {
                 &:not(:has(:nth-child(4))) {

@@ -16,6 +16,7 @@
                 &:hover {
                     .b-comment {
                         @extend %small-shadows;
+
                         background: $entry-background;
                     }
                 }

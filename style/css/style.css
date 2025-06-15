@@ -339,7 +339,8 @@
 .profile-head .c-history,
 .profile-head .c-history .b-block_list .entry,
 .profile-head .c-history > div:last-child .entry,
-.profile-head .c-info .c-lists-info .b-stats_bar {
+.profile-head .c-info .c-lists-info .b-stats_bar,
+.profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name {
   margin: 0!important
 }
 .profile-content .about.block,
@@ -385,18 +386,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 8px
 }
-.profile-content .block.achievements .cc-2 .c-column:nth-child(1) {
-  grid-area: cc-achievements-1
-}
-.profile-content .block.achievements .cc-2 .c-column:nth-child(2) {
-  grid-area: cc-achievements-2
-}
-.profile-content .block.achievements .cc-2 .c-column:nth-child(3) {
-  grid-area: franchises
-}
-.profile-content .block.achievements .cc-2 .c-column:nth-child(4) {
-  grid-area: authors
-}
 .profile-content .block.achievements .cc-2 .c-column {
   width: 100%;
   height: 100%;
@@ -408,6 +397,18 @@
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 4px
+}
+.profile-content .block.achievements .cc-2 .c-column:nth-child(1) {
+  grid-area: cc-achievements-1
+}
+.profile-content .block.achievements .cc-2 .c-column:nth-child(2) {
+  grid-area: cc-achievements-2
+}
+.profile-content .block.achievements .cc-2 .c-column:nth-child(3) {
+  grid-area: franchises
+}
+.profile-content .block.achievements .cc-2 .c-column:nth-child(4) {
+  grid-area: authors
 }
 .profile-content .block.achievements .border {
   display: none
@@ -442,17 +443,10 @@
 .profile-content .block.achievements .cc-franchises {
   gap: 8px;
   display: grid;
-  -ms-flex-line-pack: justify;
-  align-content: space-between;
+  place-content: space-between space-between;
   width: 100%;
   height: 100%;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  justify-items: stretch
+  place-items: start stretch
 }
 @supports selector(:has(*)) {
   .profile-content .block.achievements .cc-achievements:not(:has(:nth-child(4))),
@@ -612,7 +606,7 @@
 .profile-head .c-history > div:last-child {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-  gap: 4px
+  gap: 8px
 }
 .profile-head .c-history .b-block_list:hover > div,
 .profile-head .c-history > div:last-child:hover > div {
@@ -670,7 +664,6 @@
   padding: 8px;
   display: grid;
   grid-template-areas: "left right" "bar bar" "stat stat";
-  grid-template-rows: auto 1fr auto;
   gap: 4px
 }
 .profile-head .c-info .c-lists-info .b-stats_bar .compatibility {

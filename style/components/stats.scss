@@ -35,6 +35,10 @@
                     .bar {
                         @extend %small-shadows;
                     }
+
+                    .label {
+                        @extend %caption-text-hover;
+                    }
                 }
 
                 .bar {
@@ -49,7 +53,6 @@
                         @extend %border-radius-2;
 
                         z-index: 10 ;
-
                         overflow: hidden;
                         position: relative;
 
@@ -61,7 +64,6 @@
                             left: 0;
                             top: 0;
                             height: 100%;
-
                             width: calc($lifetime-fundamental-base * 6);
                             box-shadow: $bar-lifetime-first-box-shadow;
                             background-color: $bar-background;
@@ -86,12 +88,6 @@
 
                 .times {
                     display: flex;
-                }
-
-                &:hover {
-                    .label {
-                        @extend %caption-text-hover;
-                    }
                 }
             }
 
