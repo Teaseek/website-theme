@@ -19,6 +19,14 @@
 
                         background: $entry-background;
                     }
+
+                    .comments-loader {
+                        @extend %small-shadows;
+                        @extend %border-radius-2;
+                        @extend %small-shadows-hover;
+
+                        background: #fff;
+                    }
                 }
 
                 .b-comment {

@@ -25,6 +25,7 @@
 .profile-content .block.achievements .cc-2:hover .cc-franchises .b-achievement,
 .profile-content .block.achievements .cc-2:hover .cc-franchises .b-badge,
 .profile-content .block:last-child .b-comments:hover .b-comment,
+.profile-content .block:last-child .b-comments:hover .comments-loader,
 .profile-content .cc-2.block .c-left .activity:hover .graph,
 .profile-content .cc-2.block .c-left .lifetime:hover .bar,
 .profile-content .cc-2.block .c-right:hover a,
@@ -44,6 +45,7 @@
 .profile-content .block.achievements .cc-franchises .b-achievement:hover,
 .profile-content .block.achievements .cc-franchises .b-badge:hover,
 .profile-content .block:last-child .b-comments .b-comment:hover,
+.profile-content .block:last-child .b-comments:hover .comments-loader:hover,
 .profile-content .cc-2.block .c-right .b-clubs a:hover,
 .profile-content .cc-2.block .c-right .cc-favourites a:hover,
 .profile-content .cc-2.block .c-right .cc-friends a:hover,
@@ -150,6 +152,7 @@
 .profile-content .block:last-child .b-comments,
 .profile-content .block:last-child .b-comments .b-comment,
 .profile-content .block:last-child .b-comments .b-comment img,
+.profile-content .block:last-child .b-comments:hover .comments-loader,
 .profile-content .block:last-child .b-topic,
 .profile-content .block:last-child > * > .editor-container .b-offtopic_marker::before,
 .profile-content .block:last-child > * > .editor-container .btn,
@@ -239,6 +242,7 @@
 .profile-content .block.achievements img,
 .profile-content .block:last-child .b-comments .b-comment,
 .profile-content .block:last-child .b-comments .b-comment img,
+.profile-content .block:last-child .b-comments:hover .comments-loader,
 .profile-content .block:last-child > * > .editor-container .b-offtopic_marker::before,
 .profile-content .block:last-child > * > .editor-container .btn,
 .profile-content .cc-2.block .c-left .activity .graph,
@@ -375,10 +379,11 @@
   position: relative
 }
 .profile-content .about.block {
-  padding: 0 8px!important
+  padding: 0 8px 8px!important
 }
 .profile-content .about.block .subheadline {
-  margin: 0 -8px
+  margin: 0 -8px 8px;
+  margin-bottom: 8px!important
 }
 .profile-content .block.achievements .cc-2 {
   display: grid;
@@ -627,6 +632,9 @@
   background-repeat: no-repeat
 }
 .profile-content .block:last-child .b-comments:hover .b-comment {
+  background: #fff
+}
+.profile-content .block:last-child .b-comments:hover .comments-loader {
   background: #fff
 }
 .profile-content .block:last-child .b-comments .b-comment {
