@@ -1,12 +1,6 @@
 @use "common" as *;
 @use "components" as *;
 
-:root {
-    --profile-head-image: none;
-    --profile-head-image-position-y: 0;
-    --profile-head-image-position-x: 0;
-}
-
 .profile-head {
     @extend %remove-sub-elements;
     @extend %third-bar;

@@ -1942,11 +1942,6 @@
 .profile-content .cc-2.block .c-left .activity:last-child {
   padding-bottom: 27px
 }
-:root {
-  --profile-head-image: none;
-  --profile-head-image-position-y: 0;
-  --profile-head-image-position-x: 0
-}
 .profile-head {
   display: grid;
   grid-template-rows: auto auto;
