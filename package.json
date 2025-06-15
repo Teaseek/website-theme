@@ -1,6 +1,6 @@
 {
     "name": "website-theme",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "main": "gulpfile.js",
     "type": "module",
     "devDependencies": {

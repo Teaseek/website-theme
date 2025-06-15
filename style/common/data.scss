@@ -6,21 +6,23 @@ $bar-lifetime-first-animation-time: 50s;
 $text-animation-time: 4s;
 $main-elements-shadow: inset 2px 2px 5px rgb(154 147 140 / 50%),
     1px 1px 5px rgb(255 255 255 / 100%);
-$secondary-elements-shadow: 2px 1px 3px 0px rgb(154 147 140 / 50%);
-$secondary-elements-shadow-hover: 5px 4px 8px 0px rgb(0 0 0 / 25%),
+$secondary-elements-shadow: 2px 2px 3px 0px rgba(154, 147, 140, 0.307);
+$secondary-elements-shadow-hover: 5px 6px 4px 0px rgba(0, 0, 0, 0.145),
     2px 5px 8px rgb(0 0 0 / 22%);
 $bar-lifetime-first-box-shadow: inset 1px 1px 2px 1px rgb(255 255 255 / 33%);
 $bar-third-shadow: inset -2px 5px 5px rgb(154 147 140 / 50%);
 $bar-third-left-shadow: inset 3px 3px 5px 0px rgb(154 147 140 / 50%);
-$stat-names-shadow-hover: 5px 4px 8px 0px rgb(0 0 0 / 25%),
-    2px 9px 8px rgb(0 0 0 / 22%);
+$stat-names-shadow-hover: 5px 4px 4px 0px rgba(0, 0, 0, 0.145),
+    2px 6px 4px rgba(0, 0, 0, 0.135);
 $page-shadow-start: 0px 0px 20px 15px #8a35af40;
 $page-shadow-middle: 0px 0px 20px 18px #b951e640;
 $page-shadow-end: 0px 0px 20px 20px #8427ad40;
-$main-border-radius: 5px;
-$main-padding: 15px;
-$padding: 10px;
-$small-padding: 5px;
+$main-border-radius: 13px;
+$border-radius: 5px;
+$small-border-radius: 2px;
+$main-padding: 13px;
+$padding: 8px;
+$small-padding: 4px;
 $lifetime-speed: 4s;
 $lifetime-pattern-repeat-width: 80;
 $lifetime-stripe-width: calc($lifetime-pattern-repeat-width * 1px);

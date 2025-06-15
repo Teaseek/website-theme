@@ -8,13 +8,7 @@
         grid-column: 1 / 3;
 
         @media screen and (max-width: 767px) {
-            margin-bottom: $main-padding !important;
-            grid-column: 1;
 
-            .b-block_list {
-                display: grid;
-                grid-template-columns: minmax(100px, 1fr);
-            }
         }
 
         &>div:last-child,
@@ -25,22 +19,30 @@
 
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            grid-gap: 1%;
+            gap: $small-padding;
 
             @media screen and (max-width: 767px) {
                 display: grid;
-                grid-template-columns: minmax(100px, 1fr);
+                grid-auto-flow: row;
+                grid-template-columns: unset;
+            }
+
+            &:hover {
+                &>div {
+                    @extend %small-shadows;
+                    background: $entry-background;
+                }
             }
 
             .entry {
                 @extend %small-shadows-hover;
-                @extend %border-radius;
+                @extend %border-radius-2;
                 @extend %item-align;
                 @extend %remove-margin;
 
                 width: 100% !important;
                 transition: $history-entry-transition;
-                padding: 0 $small-padding !important;
+                padding: 0 !important;
                 justify-content: left !important;
                 border-top: 0 !important;
                 border: 0;
@@ -51,12 +53,12 @@
                 }
 
                 .image-name {
-                    @extend %border-radius;
+                    @extend %border-radius-2;
 
                     img {
-                        @extend %border-radius;
+                        @extend %border-radius-2;
 
-                        margin: calc($small-padding / 2) $small-padding calc($small-padding / 2) 0;
+                        margin: 0 $padding 0 0;
                         max-height: 75px !important;
                         max-width: 48px !important;
                     }

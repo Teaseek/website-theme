@@ -13,8 +13,15 @@
                 @extend %subline-item;
                 @extend %block-style-hover;
 
+                &:hover {
+                    .b-comment {
+                        @extend %small-shadows;
+                        background: $entry-background;
+                    }
+                }
+
                 .b-comment {
-                    @extend %border-radius;
+                    @extend %border-radius-2;
                     @extend %small-shadows-hover;
 
                     transition: $history-entry-transition;
@@ -22,17 +29,17 @@
                     margin-bottom: $padding !important;
                     border: 0;
 
+                    .inner {
+                        min-height: unset !important;
+                    }
+
                     img {
-                        @extend %border-radius;
+                        @extend %border-radius-2;
                         @extend %remove-margin;
                     }
 
                     &:last-child {
                         margin-bottom: 0 !important;
-                    }
-
-                    &:hover {
-                        background: $entry-background;
                     }
                 }
             }
@@ -43,8 +50,13 @@
                 @extend %subline-item;
             }
 
-            >*>.editor-container {
+            > * >.editor-container {
                 margin-top: $main-padding;
+
+                .b-offtopic_marker::before,
+                .btn {
+                    @extend %border-radius-2;
+                }
 
                 >.b-form {
                     @extend %block-style;

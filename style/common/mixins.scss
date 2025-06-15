@@ -94,6 +94,56 @@
     );
 }
 
+%border-radius-2-left {
+    @include border-radius($border-radius, 0, 0, $border-radius);
+}
+
+%border-radius-2-right {
+    @include border-radius(0, $border-radius, $border-radius, 0);
+}
+
+%border-radius-2-bottom {
+    @include border-radius(0, 0, $border-radius, $border-radius);
+}
+
+%border-radius-2-top {
+    @include border-radius($border-radius, $border-radius, 0, 0);
+}
+
+%border-radius-2 {
+    @include border-radius(
+        $border-radius,
+        $border-radius,
+        $border-radius,
+        $border-radius
+    );
+}
+
+%border-radius-3-left {
+    @include border-radius($small-border-radius, 0, 0, $small-border-radius);
+}
+
+%border-radius-3-right {
+    @include border-radius(0, $small-border-radius, $small-border-radius, 0);
+}
+
+%border-radius-3-bottom {
+    @include border-radius(0, 0, $small-border-radius, $small-border-radius);
+}
+
+%border-radius-3-top {
+    @include border-radius($small-border-radius, $small-border-radius, 0, 0);
+}
+
+%border-radius-3 {
+    @include border-radius(
+        $small-border-radius,
+        $small-border-radius,
+        $small-border-radius,
+        $small-border-radius
+    );
+}
+
 %item-align {
     display: flex;
     justify-content: center;
@@ -104,6 +154,7 @@
     &::after,
     &::before {
         display: none !important;
+        content: unset !important;
     }
 }
 

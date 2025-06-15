@@ -1,10 +1,32 @@
 @use "../common" as *;
 
 .profile-head {
+    @media screen and (max-width: 767px) {
+        .c-info {
+            grid-row: unset;
+            grid-column: 1 / 3;
+            margin-left: unset;
+            margin-top: unset;
+        }
+
+        .c-lists-info {
+            height: unset !important;
+        }
+
+        .c-additionals {
+            margin: 0 !important;
+        }
+    }
+
     .c-info {
         display: grid;
         grid-template-rows: 1fr;
-        grid-gap: $main-padding;
+        gap: $main-padding;
+        grid-row: 2;
+        grid-column: 1 / 3;
+        margin-left: calc(160px + $main-padding);
+        margin-top: calc(81px + $main-padding);
+        overflow: visible !important;
 
         @supports selector(:has(*)) {
             .grid:has(> *:nth-child(2)) {
@@ -13,9 +35,9 @@
         }
 
         .c-lists-info {
+            height: calc(160px + 33px + $main-padding);
             display: grid;
-            grid-auto-flow: row;
-            grid-gap: $main-padding;
+            gap: $main-padding;
 
             .b-stats_bar {
                 @extend %block-style-hover;
@@ -29,7 +51,8 @@
                     "left right"
                     "bar bar"
                     "stat stat";
-                grid-gap: 5px;
+                grid-template-rows: auto 1fr auto;
+                gap: $small-padding;
 
                 .compatibility {
                     grid-area: right;
@@ -40,10 +63,14 @@
                 }
 
                 .bar {
+                    @extend %border-radius;
+                        
                     display: flex;
                     grid-area: bar;
-                    height: 30px;
+                    height: auto;
                     overflow: visible;
+
+                    min-height: 20px;
 
                     * {
                         @extend %item-align;
@@ -53,15 +80,28 @@
                     }
 
                     & :first-child {
-                        @extend %border-radius-left;
+                        @extend %border-radius-2-left;
                     }
 
                     & :last-child {
-                        @extend %border-radius-right;
+                        @extend %border-radius-2-right;
                     }
 
                     & :first-child:last-child {
-                        @extend %border-radius;
+                        @extend %border-radius-2;
+                    }
+                }
+
+                &:hover {
+                    .bar,
+                    .stat_names .stat_name {
+                        @extend %small-shadows;
+                    }
+                }
+
+                @media screen and (max-width: 1000px) {
+                    .stat_names {
+                        font-size: 11px;
                     }
                 }
 
@@ -72,11 +112,13 @@
 
                     .stat_name {
                         @extend %remove-sub-elements;
-                        @extend %border-radius;
-                        @extend %small-shadows;
+                        @extend %border-radius-2;
+
+                        gap: $small-padding;
 
                         margin: 0 $padding $small-padding 0;
                         display: inline-flex;
+                        flex-wrap: wrap;
                         padding: $small-padding $padding;
 
                         &:hover {
@@ -132,6 +174,7 @@
             @extend %remove-margin-bottom;
 
             padding: $padding;
+            margin: 0 0 0 calc(-160px - $main-padding);
         }
     }
 }

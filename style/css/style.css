@@ -18,38 +18,56 @@
 .profile-head .subheadline a::before {
   color: var(--headline-arrow-color)
 }
-.profile-content .block.achievements .cc-achievements .b-achievement,
+.profile-content .block.achievements .cc-2:hover .cc-achievements .b-achievement,
+.profile-content .block.achievements .cc-2:hover .cc-achievements .b-badge,
+.profile-content .block.achievements .cc-2:hover .cc-authors .b-achievement,
+.profile-content .block.achievements .cc-2:hover .cc-authors .b-badge,
+.profile-content .block.achievements .cc-2:hover .cc-franchises .b-achievement,
+.profile-content .block.achievements .cc-2:hover .cc-franchises .b-badge,
 .profile-content .block.achievements .cc-achievements .b-achievement::after,
-.profile-content .block.achievements .cc-authors .b-achievement,
+.profile-content .block.achievements .cc-achievements .b-badge::after,
 .profile-content .block.achievements .cc-authors .b-achievement::after,
-.profile-content .block.achievements .cc-franchises a,
-.profile-content .cc-2.block .c-right .b-clubs a,
-.profile-content .cc-2.block .c-right .cc-favourites a,
-.profile-content .cc-2.block .c-right .cc-friends a,
-.profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name {
-  -webkit-box-shadow: 2px 1px 3px 0 rgba(154,147,140,.5);
-  box-shadow: 2px 1px 3px 0 rgba(154,147,140,.5);
+.profile-content .block.achievements .cc-authors .b-badge::after,
+.profile-content .block.achievements .cc-franchises .b-achievement::after,
+.profile-content .block.achievements .cc-franchises .b-badge::after,
+.profile-content .block:last-child .b-comments:hover .b-comment,
+.profile-content .cc-2.block .c-left .activity:hover .graph,
+.profile-content .cc-2.block .c-left .lifetime:hover .bar,
+.profile-content .cc-2.block .c-right:hover a,
+.profile-head .c-history .b-block_list:hover > div,
+.profile-head .c-history > div:last-child:hover > div,
+.profile-head .c-info .c-lists-info .b-stats_bar:hover .bar,
+.profile-head .c-info .c-lists-info .b-stats_bar:hover .stat_names .stat_name {
+  -webkit-box-shadow: 2px 2px 3px 0 rgba(154,147,140,.307);
+  box-shadow: 2px 2px 3px 0 rgba(154,147,140,.307);
   -webkit-transition: all .3s cubic-bezier(.25,.8,.25,1);
   transition: all .3s cubic-bezier(.25,.8,.25,1)
 }
 .profile-content .block.achievements .cc-achievements .b-achievement:hover,
 .profile-content .block.achievements .cc-achievements .b-achievement:hover::after,
+.profile-content .block.achievements .cc-achievements .b-badge:hover,
+.profile-content .block.achievements .cc-achievements .b-badge:hover::after,
 .profile-content .block.achievements .cc-authors .b-achievement:hover,
 .profile-content .block.achievements .cc-authors .b-achievement:hover::after,
-.profile-content .block.achievements .cc-franchises a:hover,
+.profile-content .block.achievements .cc-authors .b-badge:hover,
+.profile-content .block.achievements .cc-authors .b-badge:hover::after,
+.profile-content .block.achievements .cc-franchises .b-achievement:hover,
+.profile-content .block.achievements .cc-franchises .b-achievement:hover::after,
+.profile-content .block.achievements .cc-franchises .b-badge:hover,
+.profile-content .block.achievements .cc-franchises .b-badge:hover::after,
 .profile-content .block:last-child .b-comments .b-comment:hover,
 .profile-content .cc-2.block .c-right .b-clubs a:hover,
 .profile-content .cc-2.block .c-right .cc-favourites a:hover,
 .profile-content .cc-2.block .c-right .cc-friends a:hover,
 .profile-head .c-history .b-block_list .entry:hover,
 .profile-head .c-history > div:last-child .entry:hover {
-  -webkit-box-shadow: 5px 4px 8px 0 rgba(0,0,0,.25),2px 5px 8px rgba(0,0,0,.22)!important;
-  box-shadow: 5px 4px 8px 0 rgba(0,0,0,.25),2px 5px 8px rgba(0,0,0,.22)!important;
+  -webkit-box-shadow: 5px 6px 4px 0 rgba(0,0,0,.145),2px 5px 8px rgba(0,0,0,.22)!important;
+  box-shadow: 5px 6px 4px 0 rgba(0,0,0,.145),2px 5px 8px rgba(0,0,0,.22)!important;
   z-index: 1000
 }
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name:hover {
-  -webkit-box-shadow: 5px 4px 8px 0 rgba(0,0,0,.25),2px 9px 8px rgba(0,0,0,.22);
-  box-shadow: 5px 4px 8px 0 rgba(0,0,0,.25),2px 9px 8px rgba(0,0,0,.22);
+  -webkit-box-shadow: 5px 4px 4px 0 rgba(0,0,0,.145),2px 6px 4px rgba(0,0,0,.135);
+  box-shadow: 5px 4px 4px 0 rgba(0,0,0,.145),2px 6px 4px rgba(0,0,0,.135);
   text-decoration: none;
   z-index: 1000
 }
@@ -130,15 +148,23 @@
 .profile-content .block.achievements .cc-2,
 .profile-content .block.achievements .cc-achievements .b-achievement,
 .profile-content .block.achievements .cc-achievements .b-achievement::after,
+.profile-content .block.achievements .cc-achievements .b-badge,
+.profile-content .block.achievements .cc-achievements .b-badge::after,
 .profile-content .block.achievements .cc-authors .b-achievement,
 .profile-content .block.achievements .cc-authors .b-achievement::after,
-.profile-content .block.achievements .cc-franchises .b-badge::before,
-.profile-content .block.achievements .cc-franchises a,
+.profile-content .block.achievements .cc-authors .b-badge,
+.profile-content .block.achievements .cc-authors .b-badge::after,
+.profile-content .block.achievements .cc-franchises .b-achievement,
+.profile-content .block.achievements .cc-franchises .b-achievement::after,
+.profile-content .block.achievements .cc-franchises .b-badge,
+.profile-content .block.achievements .cc-franchises .b-badge::after,
 .profile-content .block.achievements img,
 .profile-content .block:last-child .b-comments,
 .profile-content .block:last-child .b-comments .b-comment,
 .profile-content .block:last-child .b-comments .b-comment img,
 .profile-content .block:last-child .b-topic,
+.profile-content .block:last-child > * > .editor-container .b-offtopic_marker::before,
+.profile-content .block:last-child > * > .editor-container .btn,
 .profile-content .block:last-child > * > .editor-container > .b-form,
 .profile-content .cc-2.block .c-left .activity,
 .profile-content .cc-2.block .c-left .activity .graph,
@@ -169,6 +195,7 @@
 .profile-head .c-history > div:last-child .entry .image-name img,
 .profile-head .c-info .c-additionals,
 .profile-head .c-info .c-lists-info .b-stats_bar,
+.profile-head .c-info .c-lists-info .b-stats_bar .bar,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child:last-child,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :last-child,
@@ -177,15 +204,8 @@
 .profile-head .c-mobile-actions a {
   background-clip: padding-box
 }
-.profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child {
-  border-radius: 5px 0 0 5px
-}
-.profile-head .c-info .c-lists-info .b-stats_bar .bar :last-child {
-  border-radius: 0 5px 5px 0
-}
 .profile-content .about.block,
 .profile-content .block.achievements .cc-2,
-.profile-content .block.achievements .cc-franchises .b-badge::before,
 .profile-content .block:last-child .b-comments,
 .profile-content .block:last-child > * > .editor-container > .b-form,
 .profile-content .cc-2.block .c-right .b-clubs,
@@ -193,48 +213,68 @@
 .profile-content .cc-2.block .c-right .cc-friends,
 .profile-head .c-history .b-block_list,
 .profile-head .c-history > div:last-child {
-  border-radius: 0 0 5px 5px
+  border-radius: 0 0 13px 13px
 }
 .profile-content .cc-2.block .c-left .activity .graph .bar {
-  border-radius: 5px 5px 0 0
+  border-radius: 13px 13px 0 0
 }
-.profile-content .block.achievements .cc-achievements .b-achievement,
-.profile-content .block.achievements .cc-achievements .b-achievement::after,
-.profile-content .block.achievements .cc-authors .b-achievement,
-.profile-content .block.achievements .cc-authors .b-achievement::after,
-.profile-content .block.achievements .cc-franchises a,
-.profile-content .block.achievements img,
-.profile-content .block:last-child .b-comments .b-comment,
-.profile-content .block:last-child .b-comments .b-comment img,
 .profile-content .block:last-child .b-topic,
 .profile-content .cc-2.block .c-left .activity,
-.profile-content .cc-2.block .c-left .activity .graph,
 .profile-content .cc-2.block .c-left .lifetime,
-.profile-content .cc-2.block .c-left .lifetime .bar,
-.profile-content .cc-2.block .c-left .lifetime .bar .first,
-.profile-content .cc-2.block .c-left .lifetime .bar .first::after,
 .profile-content .cc-2.block .c-left .lifetime .bar .third,
 .profile-content .cc-2.block .c-right .b-clubs a,
 .profile-content .cc-2.block .c-right .cc-favourites a,
 .profile-content .cc-2.block .c-right .cc-friends a,
-.profile-content .cc-2.block .c-right img,
 .profile-head .c-brief .avatar .profile-actions,
 .profile-head .c-brief .avatar .profile-actions a,
 .profile-head .c-brief .avatar img,
 .profile-head .c-brief .head,
+.profile-head .c-info .c-additionals,
+.profile-head .c-info .c-lists-info .b-stats_bar,
+.profile-head .c-info .c-lists-info .b-stats_bar .bar,
+.profile-head .c-mobile-actions,
+.profile-head .c-mobile-actions a {
+  border-radius: 13px 13px 13px 13px
+}
+.profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child {
+  border-radius: 5px 0 0 5px
+}
+.profile-head .c-info .c-lists-info .b-stats_bar .bar :last-child {
+  border-radius: 0 5px 5px 0
+}
+.profile-content .block.achievements .cc-achievements .b-achievement,
+.profile-content .block.achievements .cc-achievements .b-badge,
+.profile-content .block.achievements .cc-authors .b-achievement,
+.profile-content .block.achievements .cc-authors .b-badge,
+.profile-content .block.achievements .cc-franchises .b-achievement,
+.profile-content .block.achievements .cc-franchises .b-badge,
+.profile-content .block.achievements img,
+.profile-content .block:last-child .b-comments .b-comment,
+.profile-content .block:last-child .b-comments .b-comment img,
+.profile-content .block:last-child > * > .editor-container .b-offtopic_marker::before,
+.profile-content .block:last-child > * > .editor-container .btn,
+.profile-content .cc-2.block .c-left .activity .graph,
+.profile-content .cc-2.block .c-left .lifetime .bar,
+.profile-content .cc-2.block .c-left .lifetime .bar .first,
+.profile-content .cc-2.block .c-left .lifetime .bar .first::after,
+.profile-content .cc-2.block .c-right img,
 .profile-head .c-history .b-block_list .entry,
 .profile-head .c-history .b-block_list .entry .image-name,
 .profile-head .c-history .b-block_list .entry .image-name img,
 .profile-head .c-history > div:last-child .entry,
 .profile-head .c-history > div:last-child .entry .image-name,
 .profile-head .c-history > div:last-child .entry .image-name img,
-.profile-head .c-info .c-additionals,
-.profile-head .c-info .c-lists-info .b-stats_bar,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child:last-child,
-.profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name,
-.profile-head .c-mobile-actions,
-.profile-head .c-mobile-actions a {
+.profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name {
   border-radius: 5px 5px 5px 5px
+}
+.profile-content .block.achievements .cc-achievements .b-achievement::after,
+.profile-content .block.achievements .cc-achievements .b-badge::after,
+.profile-content .block.achievements .cc-authors .b-achievement::after,
+.profile-content .block.achievements .cc-authors .b-badge::after,
+.profile-content .block.achievements .cc-franchises .b-achievement::after,
+.profile-content .block.achievements .cc-franchises .b-badge::after {
+  border-radius: 2px 2px 2px 2px
 }
 .profile-content .cc-2.block .c-right .b-clubs .b-club,
 .profile-content .cc-2.block .c-right .cc-favourites .b-catalog_entry,
@@ -252,6 +292,14 @@
   -ms-flex-align: center;
   align-items: center
 }
+.profile-content .block.achievements .cc-2::after,
+.profile-content .block.achievements .cc-2::before,
+.profile-content .block.achievements .cc-achievements::after,
+.profile-content .block.achievements .cc-achievements::before,
+.profile-content .block.achievements .cc-authors::after,
+.profile-content .block.achievements .cc-authors::before,
+.profile-content .block.achievements .cc-franchises::after,
+.profile-content .block.achievements .cc-franchises::before,
 .profile-content .cc-2.block .c-right .b-clubs::after,
 .profile-content .cc-2.block .c-right .b-clubs::before,
 .profile-content .cc-2.block .c-right .cc-2a::after,
@@ -262,8 +310,6 @@
 .profile-content .cc-2.block .c-right .cc-friends::before,
 .profile-content .cc-2.block::after,
 .profile-content .cc-2.block::before,
-.profile-head .c-brief .head .notice span::after,
-.profile-head .c-brief .head .notice span::before,
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name::after,
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name::before,
 .profile-head .c-info .c-lists-info .b-stats_bar::after,
@@ -272,17 +318,28 @@
 .profile-head .c-mobile-actions a::before,
 .profile-head::after,
 .profile-head::before {
-  display: none!important
+  display: none!important;
+  content: unset!important
 }
+.profile-content .block.achievements .cc-2 .c-column,
+.profile-content .block.achievements .cc-2 .c-column .header,
+.profile-content .block.achievements .cc-achievements .b-achievement,
+.profile-content .block.achievements .cc-achievements .b-badge,
+.profile-content .block.achievements .cc-authors .b-achievement,
+.profile-content .block.achievements .cc-authors .b-badge,
+.profile-content .block.achievements .cc-franchises .b-achievement,
+.profile-content .block.achievements .cc-franchises .b-badge,
 .profile-content .block:last-child .b-comments .b-comment img,
 .profile-content .block:last-child .subheadline,
 .profile-content .cc-2.block,
 .profile-content .cc-2.block .c-left,
 .profile-content .cc-2.block .c-left .activity,
+.profile-content .cc-2.block .c-left .activity .title,
 .profile-content .cc-2.block .c-left .lifetime,
 .profile-content .cc-2.block .c-right .b-clubs,
 .profile-content .cc-2.block .c-right .b-clubs .b-club,
 .profile-content .cc-2.block .c-right .cc-2a,
+.profile-content .cc-2.block .c-right .cc-friends .b-user,
 .profile-content .cc-2.block .c-right img,
 .profile-head .c-brief,
 .profile-head .c-brief .avatar,
@@ -297,7 +354,6 @@
 }
 .profile-content .about.block,
 .profile-content .block.achievements,
-.profile-content .block.achievements .cc-2 .c-column,
 .profile-content .subheadline,
 .profile-head .c-info .c-additionals,
 .profile-head .c-mobile-actions,
@@ -320,7 +376,7 @@
 .profile-head .c-history .b-block_list,
 .profile-head .c-history > div:last-child {
   border-top: none!important;
-  padding: 10px
+  padding: 8px
 }
 .profile-content .bar .third,
 .profile-head .bar .third {
@@ -328,16 +384,35 @@
   position: relative
 }
 .profile-content .about.block {
-  padding: 0 10px!important
+  padding: 0 8px!important
 }
 .profile-content .about.block .subheadline {
-  margin: 0 -10px
+  margin: 0 -8px
+}
+.profile-content .block.achievements .cc-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 4px
+}
+.profile-content .block.achievements .cc-2 .c-column {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px
 }
 .profile-content .block.achievements .border {
   display: none
 }
 .profile-content .block.achievements .cc-achievements,
-.profile-content .block.achievements .cc-authors {
+.profile-content .block.achievements .cc-authors,
+.profile-content .block.achievements .cc-franchises {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,22 +421,36 @@
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   -ms-flex-line-pack: stretch;
-  align-content: stretch
+  align-content: stretch;
+  gap: 4px;
+  width: 100%
 }
 .profile-content .block.achievements .cc-achievements .b-achievement::before,
-.profile-content .block.achievements .cc-authors .b-achievement::before {
+.profile-content .block.achievements .cc-achievements .b-badge::before,
+.profile-content .block.achievements .cc-authors .b-achievement::before,
+.profile-content .block.achievements .cc-authors .b-badge::before,
+.profile-content .block.achievements .cc-franchises .b-achievement::before,
+.profile-content .block.achievements .cc-franchises .b-badge::before {
   bottom: 0
 }
 .profile-content .block.achievements .cc-achievements .b-achievement::after,
-.profile-content .block.achievements .cc-authors .b-achievement::after {
-  top: 10px;
-  right: 10px;
+.profile-content .block.achievements .cc-achievements .b-badge::after,
+.profile-content .block.achievements .cc-authors .b-achievement::after,
+.profile-content .block.achievements .cc-authors .b-badge::after,
+.profile-content .block.achievements .cc-franchises .b-achievement::after,
+.profile-content .block.achievements .cc-franchises .b-badge::after {
+  top: 4px;
+  right: 4px;
   opacity: 1;
   color: #000;
   background: #fff
 }
 .profile-content .block.achievements .cc-achievements .b-achievement:only-child,
-.profile-content .block.achievements .cc-authors .b-achievement:only-child {
+.profile-content .block.achievements .cc-achievements .b-badge:only-child,
+.profile-content .block.achievements .cc-authors .b-achievement:only-child,
+.profile-content .block.achievements .cc-authors .b-badge:only-child,
+.profile-content .block.achievements .cc-franchises .b-achievement:only-child,
+.profile-content .block.achievements .cc-franchises .b-badge:only-child {
   min-width: 48.5%;
   max-width: 100%;
   width: auto!important;
@@ -369,41 +458,45 @@
   -ms-flex: 1;
   flex: 1
 }
-.profile-content .block.achievements .cc-franchises .b-badge::before {
-  background: rgba(26,26,26,.4117647059);
-  color: #fff;
-  width: 100%!important;
-  display: block!important;
-  content: attr(data-progress) "%";
-  position: absolute;
-  text-align: center;
-  inset: auto 0 0
-}
 .profile-head .c-brief {
-  display: grid;
-  grid-auto-flow: row dense;
-  grid-gap: 15px
+  overflow: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  gap: 13px;
+  grid-column: 1/3;
+  grid-row: 2
 }
 .profile-head .c-brief .avatar {
   grid-row: 2;
-  display: grid;
-  grid-auto-flow: row;
-  grid-gap: 15px;
-  max-width: unset!important;
-  width: 100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  justify-content: normal
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 13px;
+  width: 160px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  height: 100%
 }
 .profile-head .c-brief .avatar img {
   justify-self: center;
   border: 1px var(--headline-background-color) solid
 }
 .profile-head .c-brief .avatar .profile-actions {
-  padding: 5px 0;
+  width: 100%;
+  padding: 4px;
   display: grid;
   grid-auto-flow: column;
   -ms-flex-line-pack: center;
@@ -411,42 +504,36 @@
   align-self: end
 }
 .profile-head .c-brief .avatar .profile-actions a::before {
-  font-size: 20px
+  font-size: 20px!important;
+  line-height: 24px!important
 }
 .profile-head .c-brief .head {
-  padding: 10px;
-  display: grid;
-  grid-auto-flow: row;
-  grid-gap: 1px
+  padding: 8px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px
 }
 .profile-head .c-brief .head .misc {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap
+  padding: 0
 }
-.profile-head .c-brief .head .notice {
-  padding: 0;
-  display: grid;
-  grid-auto-flow: row
+.profile-content .block:last-child .b-comments:hover .b-comment {
+  background: #fff
 }
 .profile-content .block:last-child .b-comments .b-comment {
   -webkit-transition: all .3s cubic-bezier(.25,.8,.25,1);
   transition: all .3s cubic-bezier(.25,.8,.25,1);
-  padding: 5px;
-  margin-bottom: 10px!important;
+  padding: 4px;
+  margin-bottom: 8px!important;
   border: 0
+}
+.profile-content .block:last-child .b-comments .b-comment .inner {
+  min-height: unset!important
 }
 .profile-content .block:last-child .b-comments .b-comment:last-child {
   margin-bottom: 0!important
 }
-.profile-content .block:last-child .b-comments .b-comment:hover {
-  background: #fff
-}
 .profile-content .block:last-child > * > .editor-container {
-  margin-top: 15px
+  margin-top: 13px
 }
 .profile-head .c-history {
   width: 100%!important;
@@ -456,14 +543,18 @@
 .profile-head .c-history > div:last-child {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-  grid-gap: 1%
+  gap: 4px
+}
+.profile-head .c-history .b-block_list:hover > div,
+.profile-head .c-history > div:last-child:hover > div {
+  background: #fff
 }
 .profile-head .c-history .b-block_list .entry,
 .profile-head .c-history > div:last-child .entry {
   width: 100%!important;
   -webkit-transition: all .3s cubic-bezier(.25,.8,.25,1);
   transition: all .3s cubic-bezier(.25,.8,.25,1);
-  padding: 0 5px!important;
+  padding: 0!important;
   -webkit-box-pack: left!important;
   -ms-flex-pack: left!important;
   justify-content: left!important;
@@ -477,7 +568,7 @@
 }
 .profile-head .c-history .b-block_list .entry .image-name img,
 .profile-head .c-history > div:last-child .entry .image-name img {
-  margin: 2.5px 5px 2.5px 0;
+  margin: 0 8px 0 0;
   max-height: 75px!important;
   max-width: 48px!important
 }
@@ -489,7 +580,12 @@
 .profile-head .c-info {
   display: grid;
   grid-template-rows: 1fr;
-  grid-gap: 15px
+  gap: 13px;
+  grid-row: 2;
+  grid-column: 1/3;
+  margin-left: 173px;
+  margin-top: 94px;
+  overflow: visible!important
 }
 @supports selector(:has(*)) {
   .profile-head .c-info .grid:has(>:nth-child(2)) {
@@ -497,15 +593,16 @@
   }
 }
 .profile-head .c-info .c-lists-info {
+  height: 206px;
   display: grid;
-  grid-auto-flow: row;
-  grid-gap: 15px
+  gap: 13px
 }
 .profile-head .c-info .c-lists-info .b-stats_bar {
-  padding: 10px;
+  padding: 8px;
   display: grid;
   grid-template-areas: "left right" "bar bar" "stat stat";
-  grid-gap: 5px
+  grid-template-rows: auto 1fr auto;
+  gap: 4px
 }
 .profile-head .c-info .c-lists-info .b-stats_bar .compatibility {
   grid-area: right
@@ -518,8 +615,9 @@
   display: -ms-flexbox;
   display: flex;
   grid-area: bar;
-  height: 30px;
-  overflow: visible
+  height: auto;
+  overflow: visible;
+  min-height: 20px
 }
 .profile-head .c-info .c-lists-info .b-stats_bar .bar * {
   vertical-align: middle;
@@ -528,14 +626,17 @@
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names {
   grid-area: stat;
   font-size: 14px;
-  margin-bottom: -5px
+  margin-bottom: -4px
 }
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name {
-  margin: 0 10px 5px 0;
+  gap: 4px;
+  margin: 0 8px 4px 0;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 5px 10px
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 4px 8px
 }
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name a {
   width: 100%;
@@ -559,19 +660,20 @@
   color: #9f6fb1
 }
 .profile-head .c-info .c-additionals {
-  padding: 10px
+  padding: 8px;
+  margin: 0 0 0 -173px
 }
 .profile-content .cc-2.block .c-right {
   width: 100%!important;
   height: 100%;
   display: grid;
   grid-auto-flow: row;
-  grid-gap: 15px
+  gap: 13px
 }
 .profile-content .cc-2.block .c-right .cc-2a {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 15px;
+  grid-template-columns: .7fr .3fr;
+  gap: 13px;
   padding: 0
 }
 .profile-content .cc-2.block .c-right .cc-2a > .c-column {
@@ -598,21 +700,31 @@
 }
 .profile-content .cc-2.block .c-right .cc-friends {
   display: grid;
-  grid-template-columns: repeat(4,minmax(25px,1fr));
-  grid-gap: 5px;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  width: 100%;
   height: 100%
 }
 .profile-content .cc-2.block .c-right .cc-friends .b-user {
-  padding: 2.5px
+  width: 100%;
+  height: 100%
+}
+.profile-content .cc-2.block .c-right .cc-friends .b-user a {
+  width: min(40px,100%)
 }
 .profile-content .cc-2.block .c-right .b-clubs {
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  grid-gap: 12px;
+  gap: 8px;
   height: 100%
 }
 .profile-content .cc-2.block .c-right .b-clubs .b-club {
-  width: 100%!important
+  width: 100%!important;
+  height: 100%
+}
+.profile-content .cc-2.block .c-right .b-clubs .b-club a {
+  width: min(40px,100%)
 }
 .profile-content .cc-2.block .c-right .b-clubs .b-nothing_here {
   grid-column: 1/3
@@ -633,16 +745,23 @@
 }
 .profile-content .cc-2.block .c-right .cc-favourites {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit,minmax(70px,1fr));
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit,minmax(40px,1fr));
   height: 100%
 }
 .profile-content .cc-2.block .c-right .cc-favourites .b-catalog_entry {
   width: 100%!important
 }
+.profile-content .cc-2.block .c-right .cc-favourites .b-catalog_entry a {
+  width: 100%;
+  max-width: 150px
+}
+.profile-head .c-mobile-actions {
+  grid-column: 1/3
+}
 .profile-head .c-mobile-actions a,
 .profile-head .c-mobile-actions span {
-  padding: 10px;
+  padding: 8px;
   font-weight: 700
 }
 @-webkit-keyframes slide-pg {
@@ -664,25 +783,30 @@
 .profile-content .cc-2.block .c-left {
   width: 100%!important;
   display: grid;
-  grid-template-rows: minmax(95px,.25fr) 1fr;
-  grid-gap: 15px
+  grid-template-rows: auto 1fr;
+  gap: 13px
 }
 .profile-content .cc-2.block .c-left .lifetime {
-  padding: 10px;
-  display: grid;
-  grid-template-rows: 1fr auto 1fr;
-  grid-gap: 5px;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
   -ms-flex-line-pack: center;
   align-content: center
 }
 .profile-content .cc-2.block .c-left .lifetime .bar {
-  height: 100%;
-  line-height: 100%;
-  padding: 1px;
+  height: 12px;
+  line-height: 12px;
   background: #d4d4d4;
   overflow: hidden
 }
 .profile-content .cc-2.block .c-left .lifetime .bar .first {
+  z-index: 10;
   overflow: hidden;
   position: relative
 }
@@ -702,19 +826,24 @@
   will-change: background-position
 }
 .profile-content .cc-2.block .c-left .lifetime .cuts .cut {
-  height: 0;
-  margin: 1px
+  height: 12px;
+  z-index: 2;
+  width: 3px;
+  background: rgba(157,162,168,.2274509804);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%)
 }
 .profile-content .cc-2.block .c-left .lifetime .times {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  padding-top: 2px
+  display: flex
 }
 .profile-content .cc-2.block .c-left .activity {
-  padding: 10px;
+  padding: 8px;
   display: grid;
-  grid-template-rows: auto minmax(100px,1fr)
+  grid-template-rows: auto minmax(100px,1fr);
+  gap: 4px
 }
 .profile-content .cc-2.block .c-left .activity .graph {
   height: auto;
@@ -1531,26 +1660,45 @@
   background: #98c2e3
 }
 .profile-content .cc-2.block .c-left .activity:last-child {
-  padding-bottom: 30px
+  padding-bottom: 27px
 }
 .profile-head {
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: auto 1fr;
-  grid-gap: 15px;
-  margin-bottom: 15px
+  gap: 13px;
+  margin-bottom: 13px
+}
+.profile-head .midheadline,
+.profile-head .subheadline {
+  padding: 0 8px
 }
 .profile-content {
   display: grid;
   grid-auto-flow: row;
-  grid-gap: 15px
+  gap: 13px
 }
 .profile-content .cc-2.block {
   display: grid;
-  grid-gap: 15px;
+  gap: 13px;
   grid-template-columns: .6fr .4fr
 }
+.profile-content .midheadline,
+.profile-content .subheadline {
+  padding: 0 8px
+}
 @media screen and (min-width:1200px) {
+  .profile-content .block.achievements .cc-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 4px
+  }
+  .profile-content .block.achievements .cc-2 .cc-achievements,
+  .profile-content .block.achievements .cc-2 .cc-authors,
+  .profile-content .block.achievements .cc-2 .cc-franchises {
+    gap: 4px
+  }
   .profile-content .cc-2.block .c-left .activity .graph.x34 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1560,29 +1708,56 @@
     display: none
   }
 }
+@media screen and (max-width:1000px) {
+  .profile-head .c-info .c-lists-info .b-stats_bar .stat_names {
+    font-size: 11px
+  }
+}
 @media screen and (max-width:767px) {
   .profile-head .c-brief {
-    grid-template-columns: auto 1fr;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    max-width: unset!important
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 13px
+  }
+  .profile-head .c-brief .head {
+    display: grid;
+    grid-auto-flow: row;
+    -webkit-box-flex: unset;
+    -ms-flex: unset;
+    flex: unset;
+    width: 100%
+  }
+  .profile-head .c-brief .avatar {
+    height: 100%;
+    max-width: unset!important;
+    width: unset!important;
+    aspect-ratio: 1/1
   }
   .profile-head .c-brief .avatar {
     grid-row: 1
   }
-  .profile-head .c-history {
-    margin-bottom: 15px!important;
-    grid-column: 1
-  }
-  .profile-head .c-history .b-block_list {
-    display: grid;
-    grid-template-columns: minmax(100px,1fr)
-  }
   .profile-head .c-history .b-block_list,
   .profile-head .c-history > div:last-child {
     display: grid;
-    grid-template-columns: minmax(100px,1fr)
+    grid-auto-flow: row;
+    grid-template-columns: unset
+  }
+  .profile-head .c-info {
+    grid-row: unset;
+    grid-column: 1/3;
+    margin-left: unset;
+    margin-top: unset
+  }
+  .profile-head .c-lists-info {
+    height: unset!important
+  }
+  .profile-head .c-additionals {
+    margin: 0!important
   }
   .profile-head .c-mobile-actions {
     display: grid!important;
