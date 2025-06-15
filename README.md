@@ -1,13 +1,13 @@
 # website-theme
-<p style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
-  <a href="https://github.com/Teaseek/website-theme/actions/workflows/npm-gulp.yml" style="display: flex; place-items: center;">
-    <img src="https://github.com/Teaseek/website-theme/actions/workflows/npm-gulp.yml/badge.svg?event=push" alt="NodeJS with Gulp status"/>
-  </a>
-  <kbd style="color: #ff8a3c; background: #ffe8d8;">#profile-only</kbd>
-  <kbd style="color: #ff8a3c; background: #ffe8d8;">#has-media-queries</kbd>
-  <kbd style="color: #4bf; background: #daf1ff;">#mobile-supported</kbd>
-  <kbd style="color: #74d61f; background: #e7f6da;">#auto-update</kbd>
+<p>
+  <kbd>#profile-only</kbd>
+  <kbd>#has-media-queries</kbd>
+  <kbd>#mobile-supported</kbd>
+  <kbd>#auto-update</kbd>
 </p>
+<a href="https://github.com/Teaseek/website-theme/actions/workflows/npm-gulp.yml">
+<img src="https://github.com/Teaseek/website-theme/actions/workflows/npm-gulp.yml/badge.svg?event=push" alt="NodeJS with Gulp status"/>
+</a>
 
 ## Quick Start for Development
 
