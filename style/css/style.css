@@ -762,7 +762,9 @@
   width: 100%!important;
   height: 100%!important;
   max-width: none!important;
-  background: #fff
+  background: #fff;
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .profile-content .cc-2.block .c-right .cc-friends {
   display: grid;
