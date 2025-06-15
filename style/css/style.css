@@ -144,7 +144,7 @@
   animation: slide 4s linear 0s infinite forwards
 }
 .profile-content .about,
-.profile-content .about .block,
+.profile-content .about .block:has(.b-spoiler_block.is-opened),
 .profile-content .block.achievements .cc-2,
 .profile-content .block.achievements .cc-achievements .b-achievement,
 .profile-content .block.achievements .cc-achievements .b-achievement::after,
@@ -243,7 +243,7 @@
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :last-child {
   border-radius: 0 5px 5px 0
 }
-.profile-content .about .block {
+.profile-content .about .block:has(.b-spoiler_block.is-opened) {
   border-radius: 0 0 5px 5px
 }
 .profile-content .block.achievements .cc-achievements .b-achievement,
@@ -413,19 +413,15 @@
 .profile-content .about .block {
   padding: 0 8px 8px!important
 }
-.profile-content .about .block:has(.b-spoiler_block) {
-  padding: 0 8px!important;
-  border-radius: none!important
-}
 .profile-content .about .block .b-spoiler_block {
-  margin: 0 -8px!important
+  margin: 0 -8px!important;
+  padding: 0 8px!important
 }
 .profile-content .about .block .b-spoiler_block > span {
-  color: var(--link-color);
-  margin: 0 0 8px!important
+  color: var(--link-color)
 }
 .profile-content .about .block .b-spoiler_block > div {
-  padding: 0 13px 5px;
+  padding: 5px 13px;
   border-left: unset;
   background-color: unset
 }

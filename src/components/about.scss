@@ -22,27 +22,25 @@
             @extend %remove-sub-elements;
             @extend %remove-margin;
             @extend %remove-margin-bottom;
-            @extend %border-radius-2-bottom;
             @extend %block-style;
             @extend %subline;
 
             padding: 0 $padding $padding !important;
 
-            &:has(.b-spoiler_block) {
-                padding: 0 $padding !important;
-                border-radius: none !important;
+            &:has(.b-spoiler_block.is-opened) {
+                @extend %border-radius-2-bottom;
             }
 
             .b-spoiler_block {
                 margin: 0 (-$padding) !important;
+                padding: 0 $padding !important;
 
                 & > span {
                     color: var(--link-color);
-                    margin: 0 0 $padding !important;
                 }
 
                 & > div {
-                    padding: 0 13px 5px;
+                    padding: 5px 13px;
                     border-left: unset;
                     background-color: unset;
                 }
