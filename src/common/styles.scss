@@ -1,0 +1,78 @@
+$br-3: 2px;
+$br-2: 5px;
+$br-1: 13px;
+
+.br-3 {
+    background-clip: padding-box;
+    border-radius: $br-3;
+}
+
+.brt-3 {
+    background-clip: padding-box;
+    border-radius: $br-3 $br-3 0 0;
+}
+
+.brb-3 {
+    background-clip: padding-box;
+    border-radius: 0 0 $br-3 $br-3;
+}
+
+.brl-3 {
+    background-clip: padding-box;
+    border-radius: $br-3 0 0 $br-3;
+}
+
+.brr-3 {
+    background-clip: padding-box;
+    border-radius: 0 $br-3 $br-3 0;
+}
+
+.br-2 {
+    background-clip: padding-box;
+    border-radius: $br-2;
+}
+
+.brt-2 {
+    background-clip: padding-box;
+    border-radius: $br-2 $br-2 0 0;
+}
+
+.brb-2 {
+    background-clip: padding-box;
+    border-radius: 0 0 $br-2 $br-2;
+}
+
+.brl-2 {
+    background-clip: padding-box;
+    border-radius: $br-2 0 0 $br-2;
+}
+
+.brr-2 {
+    background-clip: padding-box;
+    border-radius: 0 $br-2 $br-2 0;
+}
+
+.br-1 {
+    background-clip: padding-box;
+    border-radius: $br-1;
+}
+
+.brt-1 {
+    background-clip: padding-box;
+    border-radius: $br-1 $br-1 0 0;
+}
+
+.brb-1 {
+    background-clip: padding-box;
+    border-radius: 0 0 $br-1 $br-1;
+}
+
+.brl-1 {
+    background-clip: padding-box;
+    border-radius: $br-1 0 0 $br-1;
+}
+
+.brr-1 {
+    background-clip: padding-box;
+    border-radius: 0 $br-1 $br-1 0;
+}

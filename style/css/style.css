@@ -405,6 +405,66 @@
   background: #d4d4d4;
   position: relative
 }
+.br-3 {
+  background-clip: padding-box;
+  border-radius: 2px
+}
+.brt-3 {
+  background-clip: padding-box;
+  border-radius: 2px 2px 0 0
+}
+.brb-3 {
+  background-clip: padding-box;
+  border-radius: 0 0 2px 2px
+}
+.brl-3 {
+  background-clip: padding-box;
+  border-radius: 2px 0 0 2px
+}
+.brr-3 {
+  background-clip: padding-box;
+  border-radius: 0 2px 2px 0
+}
+.br-2 {
+  background-clip: padding-box;
+  border-radius: 5px
+}
+.brt-2 {
+  background-clip: padding-box;
+  border-radius: 5px 5px 0 0
+}
+.brb-2 {
+  background-clip: padding-box;
+  border-radius: 0 0 5px 5px
+}
+.brl-2 {
+  background-clip: padding-box;
+  border-radius: 5px 0 0 5px
+}
+.brr-2 {
+  background-clip: padding-box;
+  border-radius: 0 5px 5px 0
+}
+.br-1 {
+  background-clip: padding-box;
+  border-radius: 13px
+}
+.brt-1 {
+  background-clip: padding-box;
+  border-radius: 13px 13px 0 0
+}
+.brb-1 {
+  background-clip: padding-box;
+  border-radius: 0 0 13px 13px
+}
+.brl-1 {
+  background-clip: padding-box;
+  border-radius: 13px 0 0 13px
+}
+.brr-1 {
+  background-clip: padding-box;
+  border-radius: 0 13px 13px 0
+}
 .profile-content .about {
   padding: 0 8px 8px!important
 }
