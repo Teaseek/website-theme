@@ -24,12 +24,6 @@
 .profile-content .block.achievements .cc-2:hover .cc-authors .b-badge,
 .profile-content .block.achievements .cc-2:hover .cc-franchises .b-achievement,
 .profile-content .block.achievements .cc-2:hover .cc-franchises .b-badge,
-.profile-content .block.achievements .cc-achievements .b-achievement::after,
-.profile-content .block.achievements .cc-achievements .b-badge::after,
-.profile-content .block.achievements .cc-authors .b-achievement::after,
-.profile-content .block.achievements .cc-authors .b-badge::after,
-.profile-content .block.achievements .cc-franchises .b-achievement::after,
-.profile-content .block.achievements .cc-franchises .b-badge::after,
 .profile-content .block:last-child .b-comments:hover .b-comment,
 .profile-content .cc-2.block .c-left .activity:hover .graph,
 .profile-content .cc-2.block .c-left .lifetime:hover .bar,
@@ -44,17 +38,11 @@
   transition: all .3s cubic-bezier(.25,.8,.25,1)
 }
 .profile-content .block.achievements .cc-achievements .b-achievement:hover,
-.profile-content .block.achievements .cc-achievements .b-achievement:hover::after,
 .profile-content .block.achievements .cc-achievements .b-badge:hover,
-.profile-content .block.achievements .cc-achievements .b-badge:hover::after,
 .profile-content .block.achievements .cc-authors .b-achievement:hover,
-.profile-content .block.achievements .cc-authors .b-achievement:hover::after,
 .profile-content .block.achievements .cc-authors .b-badge:hover,
-.profile-content .block.achievements .cc-authors .b-badge:hover::after,
 .profile-content .block.achievements .cc-franchises .b-achievement:hover,
-.profile-content .block.achievements .cc-franchises .b-achievement:hover::after,
 .profile-content .block.achievements .cc-franchises .b-badge:hover,
-.profile-content .block.achievements .cc-franchises .b-badge:hover::after,
 .profile-content .block:last-child .b-comments .b-comment:hover,
 .profile-content .cc-2.block .c-right .b-clubs a:hover,
 .profile-content .cc-2.block .c-right .cc-favourites a:hover,
@@ -393,9 +381,21 @@
 }
 .profile-content .block.achievements .cc-2 {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
-  gap: 4px
+  grid-template-areas: "cc-achievements-1 cc-achievements-2" "franchises authors";
+  grid-template-columns: 1fr 1fr;
+  gap: 8px
+}
+.profile-content .block.achievements .cc-2 .c-column:nth-child(1) {
+  grid-area: cc-achievements-1
+}
+.profile-content .block.achievements .cc-2 .c-column:nth-child(2) {
+  grid-area: cc-achievements-2
+}
+.profile-content .block.achievements .cc-2 .c-column:nth-child(3) {
+  grid-area: franchises
+}
+.profile-content .block.achievements .cc-2 .c-column:nth-child(4) {
+  grid-area: authors
 }
 .profile-content .block.achievements .cc-2 .c-column {
   width: 100%;
@@ -412,20 +412,90 @@
 .profile-content .block.achievements .border {
   display: none
 }
+.profile-content .block.achievements .cc-franchises {
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: 1fr 1fr
+}
+@supports selector(:has(*)) {
+  .profile-content .block.achievements .cc-franchises:not(:has(:nth-child(9))) {
+    grid-template-columns: repeat(4,1fr)
+  }
+  .profile-content .block.achievements .cc-franchises:not(:has(:nth-child(7))) {
+    grid-template-columns: repeat(3,1fr)
+  }
+  .profile-content .block.achievements .cc-franchises:not(:has(:nth-child(5))) {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .profile-content .block.achievements .cc-franchises:not(:has(:nth-child(3))) {
+    grid-template-columns: repeat(1,1fr)
+  }
+}
+.profile-content .block.achievements .cc-authors {
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr 1fr
+}
+@supports selector(:has(*)) {
+  .profile-content .block.achievements .cc-authors:not(:has(:nth-child(7))) {
+    grid-template-columns: repeat(3,1fr)
+  }
+  .profile-content .block.achievements .cc-authors:not(:has(:nth-child(5))) {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .profile-content .block.achievements .cc-authors:not(:has(:nth-child(3))) {
+    grid-template-columns: repeat(1,1fr)
+  }
+}
+.profile-content .block.achievements .cc-achievements {
+  grid-template-columns: repeat(2,1fr)
+}
+@supports selector(:has(*)) {
+  .profile-content .block.achievements .cc-achievements:not(:has(:nth-child(7))) {
+    grid-template-columns: repeat(3,1fr)
+  }
+  .profile-content .block.achievements .cc-achievements:not(:has(:nth-child(5))) {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .profile-content .block.achievements .cc-achievements:not(:has(:nth-child(3))) {
+    grid-template-columns: repeat(1,1fr)
+  }
+}
 .profile-content .block.achievements .cc-achievements,
 .profile-content .block.achievements .cc-authors,
 .profile-content .block.achievements .cc-franchises {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  gap: 4px;
-  width: 100%
+  gap: 8px;
+  display: grid;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  justify-items: stretch
+}
+@supports selector(:has(*)) {
+  .profile-content .block.achievements .cc-achievements:not(:has(:nth-child(4))),
+  .profile-content .block.achievements .cc-authors:not(:has(:nth-child(4))),
+  .profile-content .block.achievements .cc-franchises:not(:has(:nth-child(4))) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start
+  }
+}
+.profile-content .block.achievements .cc-achievements .b-achievement,
+.profile-content .block.achievements .cc-achievements .b-badge,
+.profile-content .block.achievements .cc-authors .b-achievement,
+.profile-content .block.achievements .cc-authors .b-badge,
+.profile-content .block.achievements .cc-franchises .b-achievement,
+.profile-content .block.achievements .cc-franchises .b-badge {
+  width: 100%;
+  height: 100%
 }
 .profile-content .block.achievements .cc-achievements .b-achievement::before,
 .profile-content .block.achievements .cc-achievements .b-badge::before,
@@ -434,6 +504,26 @@
 .profile-content .block.achievements .cc-franchises .b-achievement::before,
 .profile-content .block.achievements .cc-franchises .b-badge::before {
   bottom: 0
+}
+.profile-content .block.achievements .cc-achievements .b-achievement .c-image,
+.profile-content .block.achievements .cc-achievements .b-badge .c-image,
+.profile-content .block.achievements .cc-authors .b-achievement .c-image,
+.profile-content .block.achievements .cc-authors .b-badge .c-image,
+.profile-content .block.achievements .cc-franchises .b-achievement .c-image,
+.profile-content .block.achievements .cc-franchises .b-badge .c-image {
+  width: 100%;
+  height: 100%
+}
+.profile-content .block.achievements .cc-achievements .b-achievement img,
+.profile-content .block.achievements .cc-achievements .b-badge img,
+.profile-content .block.achievements .cc-authors .b-achievement img,
+.profile-content .block.achievements .cc-authors .b-badge img,
+.profile-content .block.achievements .cc-franchises .b-achievement img,
+.profile-content .block.achievements .cc-franchises .b-badge img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%
 }
 .profile-content .block.achievements .cc-achievements .b-achievement::after,
 .profile-content .block.achievements .cc-achievements .b-badge::after,
@@ -1689,17 +1779,6 @@
   padding: 0 8px
 }
 @media screen and (min-width:1200px) {
-  .profile-content .block.achievements .cc-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    gap: 4px
-  }
-  .profile-content .block.achievements .cc-2 .cc-achievements,
-  .profile-content .block.achievements .cc-2 .cc-authors,
-  .profile-content .block.achievements .cc-2 .cc-franchises {
-    gap: 4px
-  }
   .profile-content .cc-2.block .c-left .activity .graph.x34 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1715,6 +1794,11 @@
   }
 }
 @media screen and (max-width:767px) {
+  .profile-content .block.achievements .cc-2 {
+    display: grid;
+    grid-template-areas: "cc-achievements-1" "cc-achievements-2" "franchises" "authors";
+    grid-template-columns: 1fr
+  }
   .profile-head .c-brief {
     display: -webkit-box;
     display: -ms-flexbox;

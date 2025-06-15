@@ -4,18 +4,15 @@
     .block.achievements {
         @extend %remove-margin-bottom;
 
-        @media screen and (min-width: 1200px) {
+        @media screen and (max-width: 767px) {
             .cc-2 {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr auto;
-                gap: $small-padding;
-
-                .cc-franchises,
-                .cc-authors,
-                .cc-achievements {
-                    gap: $small-padding;
-                }
+                grid-template-areas:
+                    "cc-achievements-1"
+                    "cc-achievements-2"
+                    "franchises"
+                    "authors";
+                grid-template-columns: 1fr;
             }
         }
 
@@ -26,9 +23,27 @@
             @extend %remove-sub-elements;
 
             display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr auto;
-            gap: $small-padding;
+            grid-template-areas:
+                "cc-achievements-1 cc-achievements-2"
+                "franchises authors";
+            grid-template-columns: 1fr 1fr;
+            // grid-template-rows: 1fr auto;
+            gap: $padding;
+
+            .c-column {
+                &:nth-child(1) {
+                    grid-area: cc-achievements-1;
+                }
+                &:nth-child(2) {
+                    grid-area: cc-achievements-2;
+                }
+                &:nth-child(3) {
+                    grid-area: franchises;
+                }
+                &:nth-child(4) {
+                    grid-area: authors;
+                }
+            }
 
             &:hover {
                 .cc-franchises,
@@ -71,17 +86,46 @@
             @extend %border-radius-2;
         }
 
+        .cc-franchises {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 1fr 1fr;
+
+            @include dynamic-grid(9);
+        }
+        .cc-authors {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+
+            @include dynamic-grid(7);
+        }
+
+        .cc-achievements {
+            grid-template-columns: repeat(2, 1fr);
+            
+            @include dynamic-grid(7);
+        }
+
         .cc-franchises,
         .cc-authors,
         .cc-achievements {
             @extend %remove-sub-elements;
 
-            display: flex;
-            flex-flow: row wrap;
-            align-content: stretch;
-            gap: $small-padding;
+            gap: $padding;
 
+            display: grid;
+            align-content: space-between;
             width: 100%;
+            height: 100%;
+            align-items: start;
+            justify-content: space-between;
+            justify-items: stretch;
+
+            @supports selector(:has(*)) {
+                &:not(:has(:nth-child(4))) {
+                    display: flex;
+                    justify-content: start;
+                }
+            }
 
             .b-badge,
             .b-achievement {
@@ -89,14 +133,26 @@
                 @extend %small-shadows-hover;
                 @extend %remove-margin;
 
+                width: 100%;
+                height: 100%;
+
                 &::before {
                     bottom: 0;
                 }
 
+                .c-image {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+
                 &::after {
                     @extend %border-radius-3;
-                    @extend %small-shadows;
-                    @extend %small-shadows-hover;
 
                     top: $small-padding;
                     right: $small-padding;

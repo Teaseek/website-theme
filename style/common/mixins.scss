@@ -223,3 +223,16 @@
             }
     }
 }
+
+@mixin dynamic-grid($count) {
+    $times: math.floor(math.div($count, 2));
+
+    @supports selector(:has(*)) {
+        @for $i from $times through 1 {
+            $child: ($i * 2) + 1;
+            &:not(:has(:nth-child(#{$child}))) {
+                grid-template-columns: repeat($i, 1fr);
+            }
+        }
+    }
+}
