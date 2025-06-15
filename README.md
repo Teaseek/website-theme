@@ -13,12 +13,13 @@
 
 Paste this into the custom styles field:
 ```css
-:root {
-    --profile-head-image: url('https://shikimori.one/assets/achievements/anime/animelist_6.jpg');
-    --profile-head-image-position-y: 10%;
-    --profile-head-image-position-x: 30%;
+@media {
+  :root {
+      --profile-head-image: url('https://shikimori.one/assets/achievements/anime/animelist_6.jpg');
+      --profile-head-image-position-y: 10%;
+      --profile-head-image-position-x: 30%;
+  }
 }
-
 @import url(https://raw.githubusercontent.com/Teaseek/website-theme/main/style/css/style.min.css);
 ```
 - `--profile-head-image` — the image that will be added to the page header.
