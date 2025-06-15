@@ -524,7 +524,6 @@
 .profile-content .block:last-child .b-comments .b-comment {
   -webkit-transition: all .3s cubic-bezier(.25,.8,.25,1);
   transition: all .3s cubic-bezier(.25,.8,.25,1);
-  padding: 4px;
   margin-bottom: 8px!important;
   border: 0
 }
