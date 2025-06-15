@@ -98,6 +98,7 @@
                 left: $padding;
                 top: $padding;
                 width: 100%;
+                line-height: 30px;
             }
 
             @media screen and (max-width: 767px) {
@@ -105,19 +106,31 @@
                     z-index: 4;
                     position: absolute;
                     left: $padding;
-                    top: calc(33px + $padding * 2);
+                    top: calc($head-title-mobile-height + $small-padding * 2);
+                }
+
+                .misc {
+                    padding: 0;
+                    top: calc($head-title-mobile-height + $head-misc-mobile-height + $small-padding * 3);
                 }
             }
 
             .misc {
+                @extend %remove-margin-bottom;
+
+                position: absolute;
+                left: $padding;
                 padding: 0;
+                top: calc($head-title-height + $head-misc-height + $padding * 3);
             }
 
             .notice {
+                @extend %remove-margin-bottom;
+
                 z-index: 4;
                 position: absolute;
                 left: $padding;
-                top: calc(41px + $padding * 2);
+                top: calc($head-title-height + $padding * 2);
             }
 
             &::before {
