@@ -9,7 +9,7 @@
 
         padding: 0 $padding $padding !important;
 
-        & > .subheadline {
+        & > * ~ .subheadline {
             margin: 0 (-$padding) $padding;
             margin-bottom: $padding !important;
         }
