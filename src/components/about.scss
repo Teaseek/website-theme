@@ -25,12 +25,6 @@
             @extend %block-style;
             @extend %subline;
 
-            @supports selector(:has(*)) {
-                &:has(.b-spoiler_block.is-opened) {
-                    @extend %border-radius-2-bottom;
-                }
-            }
-
             .b-spoiler_block {
                 & > span {
                     color: var(--link-color);
@@ -53,6 +47,21 @@
 
             .b-quote {
                 margin: 0 !important;
+            }
+
+
+            @supports selector(:has(*)) {
+                &:has(.b-spoiler_block.is-opened) {
+                    @extend %border-radius-2-bottom;
+                }
+
+                &:has(.title) {
+                    &:hover {
+                        .title {
+                            @extend %caption-text-hover;
+                        }
+                    }
+                }
             }
         }
     }
