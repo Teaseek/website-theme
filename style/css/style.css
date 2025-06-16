@@ -819,11 +819,9 @@
   overflow: visible!important
 }
 @supports selector(:has(*)) {
-  .profile-head .c-info .grid:has(>:nth-child(2)) {
-    grid-template-rows: 1fr auto
-  }
   .profile-head .c-info .c-lists-info:not(:has(>:nth-child(2))) {
-    grid-template-rows: 1fr auto
+    -ms-flex-line-pack: start;
+    align-content: start
   }
 }
 .profile-head .c-info .c-lists-info {

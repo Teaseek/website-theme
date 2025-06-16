@@ -29,11 +29,8 @@
         overflow: visible !important;
 
         @supports selector(:has(*)) {
-            .grid:has(> *:nth-child(2)) {
-                grid-template-rows: 1fr auto;
-            }
             .c-lists-info:not(:has(> *:nth-child(2))) {
-                grid-template-rows: 1fr auto;
+                align-content: start;
             }
         }
 
