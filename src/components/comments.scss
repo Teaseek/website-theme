@@ -3,8 +3,12 @@
 .profile-content {
     .block {
         &:last-child {
-            .subheadline {
-                @extend %remove-margin;
+            @supports selector(:has(*)) {
+                &:not(:has(.about)) {
+                    .subheadline {
+                        @extend %remove-margin;
+                    }
+                }
             }
 
             .b-comments {
