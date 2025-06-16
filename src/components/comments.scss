@@ -1,14 +1,14 @@
 @use "../common" as *;
 
 .profile-content {
+    [class="block"] {
+        .subheadline {
+            @extend %remove-margin;
+        }
+    }
+
     .block {
         &:last-child {
-            [class="block"] {
-                .subheadline {
-                    @extend %remove-margin;
-                }
-            }
-
             .b-comments {
                 @extend %block-style !optional;
                 @extend %border-radius-bottom;
