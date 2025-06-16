@@ -58,10 +58,6 @@
                     @extend %border-radius-2-bottom;
                 }
 
-                &:has(.br-3):has(.b-spoiler_block.is-opened) {
-                    @extend %border-radius-3-bottom;
-                }
-
                 &:has(.title) {
                     &:hover > .title {
                         @extend %caption-text-hover;
