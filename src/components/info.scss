@@ -32,18 +32,15 @@
             .grid:has(> *:nth-child(2)) {
                 grid-template-rows: 1fr auto;
             }
+            .c-lists-info:not(:has(> *:nth-child(2))) {
+                grid-template-rows: 1fr auto;
+            }
         }
 
         .c-lists-info {
             height: calc($avatar-width + $profile-actions-height - 1px + $main-padding);
             display: grid;
             gap: $main-padding;
-
-            @supports selector(:has(*)) {
-                &:not(:has(:nth-child(2))) {
-                    align-content: start;
-                }
-            }
 
             .b-stats_bar {
                 @extend %block-style-hover;
