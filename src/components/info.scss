@@ -39,6 +39,12 @@
             display: grid;
             gap: $main-padding;
 
+            @supports selector(:has(*)) {
+                &:not(:has(:nth-child(2))) {
+                    align-content: start;
+                }
+            }
+
             .b-stats_bar {
                 @extend %block-style-hover;
                 @extend %border-radius;
