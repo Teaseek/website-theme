@@ -25,21 +25,13 @@
             @extend %block-style;
             @extend %subline;
 
-            // padding: 0 $padding $padding !important;
-
             @supports selector(:has(*)) {
-                // &:has(.b-spoiler_block) {
-                //     padding: 0 $padding !important;
-                // }
-
                 &:has(.b-spoiler_block.is-opened) {
                     @extend %border-radius-2-bottom;
                 }
             }
 
             .b-spoiler_block {
-                // margin: 0 (-$padding) !important;
-
                 & > span {
                     color: var(--link-color);
                 }
