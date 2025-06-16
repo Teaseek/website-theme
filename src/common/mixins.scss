@@ -52,10 +52,6 @@
     }
 }
 
-.block-hover {
-    @extend %block-style-hover;
-}
-
 %caption-text-hover {
     background: $linear-gradient-background;
     background-clip: text;

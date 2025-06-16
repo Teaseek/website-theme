@@ -18,6 +18,12 @@
             @extend %headline-arrow;
         }
 
+        
+
+        & .block-hover {
+            @extend %block-style-hover;
+        }
+
         & .block {
             @extend %remove-sub-elements;
             @extend %remove-margin;

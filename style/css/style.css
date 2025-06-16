@@ -69,9 +69,9 @@
   text-decoration: none;
   z-index: 1000
 }
-.block-hover,
 .profile-content .about,
 .profile-content .about .block,
+.profile-content .about .block-hover,
 .profile-content .block.achievements .cc-2,
 .profile-content .block:last-child .b-comments,
 .profile-content .block:last-child .b-topic,
@@ -91,7 +91,7 @@
   background: 0 0;
   border: 1px var(--headline-background-color) solid
 }
-.block-hover,
+.profile-content .about .block-hover,
 .profile-content .block.achievements .cc-2,
 .profile-content .block:last-child .b-comments,
 .profile-content .cc-2.block .c-left .activity,
@@ -112,7 +112,7 @@
   -webkit-box-shadow: none;
   box-shadow: none
 }
-.block-hover:hover,
+.profile-content .about .block-hover:hover,
 .profile-content .block.achievements .cc-2:hover,
 .profile-content .block:last-child .b-comments:hover,
 .profile-content .cc-2.block .c-left .activity:hover,
