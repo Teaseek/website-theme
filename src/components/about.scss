@@ -60,7 +60,7 @@
 
                 &:has(.title) {
                     &:hover {
-                        .title {
+                        & > .title {
                             @extend %caption-text-hover;
                         }
                     }

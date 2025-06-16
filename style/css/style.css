@@ -128,7 +128,7 @@
   background: #ececec;
   border: 1px transparent solid
 }
-.profile-content .about .block:has(.title):hover .title,
+.profile-content .about .block:has(.title):hover > .title,
 .profile-content .block.achievements .cc-2 .c-column:hover .title,
 .profile-content .cc-2.block .c-left .activity:hover .title,
 .profile-content .cc-2.block .c-left .lifetime:hover .label,
