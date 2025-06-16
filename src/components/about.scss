@@ -59,10 +59,8 @@
                 }
 
                 &:has(.title) {
-                    &:hover {
-                        & > .title {
-                            @extend %caption-text-hover;
-                        }
+                    &:hover > .title {
+                        @extend %caption-text-hover;
                     }
                 }
             }
