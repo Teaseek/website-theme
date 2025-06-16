@@ -346,7 +346,7 @@
 .profile-content .block.achievements .cc-franchises .b-achievement,
 .profile-content .block.achievements .cc-franchises .b-badge,
 .profile-content .block:last-child .b-comments .b-comment img,
-.profile-content .block:last-child:not(:has(.about)) .subheadline,
+.profile-content .block:last-child [class=block] .subheadline,
 .profile-content .cc-2.block,
 .profile-content .cc-2.block .c-left,
 .profile-content .cc-2.block .c-left .activity,

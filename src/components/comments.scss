@@ -3,11 +3,9 @@
 .profile-content {
     .block {
         &:last-child {
-            @supports selector(:has(*)) {
-                &:not(:has(.about)) {
-                    .subheadline {
-                        @extend %remove-margin;
-                    }
+            [class="block"] {
+                .subheadline {
+                    @extend %remove-margin;
                 }
             }
 
