@@ -21,6 +21,7 @@
             font-weight: bold;
         }
 
+        span,
         a {
             @extend %highlight;
             @extend %border-radius;
