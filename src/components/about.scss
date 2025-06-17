@@ -45,6 +45,10 @@
 
             .b-code-v2 {
                 @extend %border-radius-3;
+
+                code {
+                    word-break: break-all;
+                }
             }
 
             .subheadline {
