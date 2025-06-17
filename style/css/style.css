@@ -140,7 +140,8 @@
 .profile-head .c-brief .avatar .profile-actions a:hover::before,
 .profile-head .c-brief .head:hover h1,
 .profile-head .c-info .c-lists-info .b-stats_bar:hover .title,
-.profile-head .c-mobile-actions a:hover {
+.profile-head .c-mobile-actions a:hover,
+.profile-head .c-mobile-actions span:hover {
   background: -webkit-gradient(linear,left top,right top,from(#b347bb),color-stop(6.25%,#9a5fbe),color-stop(12.5%,#9b5ebe),color-stop(18.75%,#688ec4),color-stop(25%,#5c9cc8),color-stop(31.25%,#51a8ca),color-stop(37.5%,#44b5cb),color-stop(43.75%,#32c8cf),color-stop(50%,#32c8cf),color-stop(56.25%,#44b5cb),color-stop(62.5%,#51a8ca),color-stop(68.75%,#5c9cc8),color-stop(75%,#688ec4),color-stop(81.25%,#9b5ebe),color-stop(87.5%,#9a5fbe),to(#b347bb)) 0 center/400% auto;
   background: linear-gradient(to right,#b347bb 0,#9a5fbe 6.25%,#9b5ebe 12.5%,#688ec4 18.75%,#5c9cc8 25%,#51a8ca 31.25%,#44b5cb 37.5%,#32c8cf 43.75%,#32c8cf 50%,#44b5cb 56.25%,#51a8ca 62.5%,#5c9cc8 68.75%,#688ec4 75%,#9b5ebe 81.25%,#9a5fbe 87.5%,#b347bb 100%) 0 center/400% auto;
   -webkit-background-clip: text;
@@ -209,7 +210,8 @@
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :last-child,
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name,
 .profile-head .c-mobile-actions,
-.profile-head .c-mobile-actions a {
+.profile-head .c-mobile-actions a,
+.profile-head .c-mobile-actions span {
   background-clip: padding-box
 }
 .profile-content .about,
@@ -241,7 +243,8 @@
 .profile-head .c-info .c-lists-info .b-stats_bar,
 .profile-head .c-info .c-lists-info .b-stats_bar .bar,
 .profile-head .c-mobile-actions,
-.profile-head .c-mobile-actions a {
+.profile-head .c-mobile-actions a,
+.profile-head .c-mobile-actions span {
   border-radius: 13px 13px 13px 13px
 }
 .profile-head .c-info .c-lists-info .b-stats_bar .bar :first-child {
@@ -331,6 +334,8 @@
 .profile-head .c-info .c-lists-info .b-stats_bar::before,
 .profile-head .c-mobile-actions a::after,
 .profile-head .c-mobile-actions a::before,
+.profile-head .c-mobile-actions span::after,
+.profile-head .c-mobile-actions span::before,
 .profile-head::after,
 .profile-head::before {
   display: none!important;
@@ -485,6 +490,9 @@
   padding: 8px;
   border-left: unset;
   background-color: unset
+}
+.profile-content .about .block .b-code-v2 code {
+  word-break: break-all
 }
 .profile-content .about .block .subheadline {
   margin: 0 -8px 8px
@@ -2050,5 +2058,10 @@
   }
   .profile-content .cc-2.block {
     grid-template-columns: auto
+  }
+}
+@media screen and (max-width:480px) {
+  .profile-head .c-history {
+    display: block!important
   }
 }
