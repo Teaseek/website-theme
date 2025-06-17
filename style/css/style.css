@@ -472,14 +472,7 @@
   border-radius: 0 13px 13px 0
 }
 .profile-content .about {
-  padding: 0 8px 8px!important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column
+  padding: 0 8px 8px!important
 }
 .profile-content .about > .subheadline {
   margin: 0 -8px 8px;
@@ -724,9 +717,9 @@
 .profile-head .c-brief .head::before {
   content: " ";
   position: absolute;
-  left: var(--profile-head-image-position-x,20%);
+  left: 30%;
   top: 0;
-  width: calc(100% - var(--profile-head-image-position-x,20%));
+  width: 70%;
   height: 100%;
   background: -webkit-gradient(linear,left top,right top,from(#fff),to(transparent));
   background: linear-gradient(90deg,#fff,transparent);
@@ -735,14 +728,12 @@
 .profile-head .c-brief .head::after {
   content: " ";
   position: absolute;
-  left: var(--profile-head-image-position-x,20%);
+  left: 30%;
   top: 0;
-  width: calc(100% - var(--profile-head-image-position-x,20%));
+  width: 70%;
   height: 100%;
   z-index: 1;
-  background-image: var(--profile-head-image,none);
   background-size: 100%;
-  background-position-y: var(--profile-head-image-position-y,0);
   background-repeat: no-repeat
 }
 .profile-content .block:last-child .b-comments:hover .b-comment {
@@ -819,8 +810,9 @@
   overflow: visible!important
 }
 @supports selector(:has(*)) {
-  .profile-head .c-info .grid:has(>:nth-child(2)) {
-    grid-template-rows: 1fr auto
+  .profile-head .c-info .c-lists-info:not(:has(>:nth-child(2))) {
+    -ms-flex-line-pack: start;
+    align-content: start
   }
 }
 .profile-head .c-info .c-lists-info {

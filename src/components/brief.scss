@@ -137,9 +137,9 @@
             &::before {
                 content: ' ';
                 position: absolute;
-                left: var(--profile-head-image-position-x, 20%);
+                left: $head-image-offset-x;
                 top: 0;
-                width: calc(100% - var(--profile-head-image-position-x, 20%));
+                width: calc(100% - $head-image-offset-x);
                 height: 100%;
                 background: linear-gradient(90deg, #fff, transparent);
                 z-index: 2;
@@ -148,14 +148,12 @@
             &::after {
                 content: ' ';
                 position: absolute;
-                left: var(--profile-head-image-position-x, 20%);
+                left: $head-image-offset-x;
                 top: 0;
-                width: calc(100% - var(--profile-head-image-position-x, 20%));
+                width: calc(100% - $head-image-offset-x);
                 height: 100%;
                 z-index: 1;
-                background-image: var(--profile-head-image, none);
                 background-size: 100%;
-                background-position-y: var(--profile-head-image-position-y, 0);
                 background-repeat: no-repeat;
             }
 

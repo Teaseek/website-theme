@@ -8,8 +8,6 @@
         @extend %subline-item;
 
         padding: 0 $padding $padding !important;
-        display: flex;
-        flex-direction: column;
 
         & > .subheadline {
             margin: 0 (-$padding) $padding;
