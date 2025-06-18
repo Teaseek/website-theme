@@ -126,7 +126,7 @@ const serve = async () => {
         open: false,
         notify: false,
         startPath,
-        port: 8080,
+        port: 8081,
     });
 
     bs.watch(startPath).on("change", bs.reload);

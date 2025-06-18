@@ -122,6 +122,13 @@
                     $achievements-100-gradient-background,
                 );
 
+                &.level-0 {
+                    &::before {
+                        background-image: $achievements-none-gradient-background !important;
+                        background-color: $achievements-none-background !important;
+                    }
+                }
+
                 &::before {
                     top: unset;
                     left: -10px;
