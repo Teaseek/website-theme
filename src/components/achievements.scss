@@ -235,7 +235,7 @@
                     @include get-subelement-content((
                         'attr(data-hint)',
                         'attr(data-title)'
-                    ), '|');
+                    ), '/');
                 }
 
                 &::after {
