@@ -17,19 +17,19 @@
 }
 
 %small-shadows {
-    box-shadow: $secondary-elements-shadow;
+    filter: $secondary-elements-shadow;
     transition: $shadow-transition;
 }
 
 %small-shadows-hover {
     &:hover {
-        box-shadow: $secondary-elements-shadow-hover !important;
+        filter: $secondary-elements-shadow-hover !important;
         z-index: 1000;
     }
 }
 
 %stat-names-shadows-hover {
-    box-shadow: $stat-names-shadow-hover;
+    filter: $stat-names-shadow-hover;
     text-decoration: none;
     z-index: 1000;
 }

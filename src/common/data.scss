@@ -1,34 +1,39 @@
+// Transition settings
 $main-container-transition: box-shadow 1s cubic-bezier(0.26, 0.01, 0, 0.99),
     border 1s cubic-bezier(0.26, 0.01, 0, 0.99),
     background-color 0.7s cubic-bezier(0.31, 0, 0, 0.96), border 0.4s linear;
-$shadow-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+$shadow-transition: filter 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 $history-entry-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+// Animation settings
 $bar-lifetime-first-animation-time: 50s;
 $text-animation-time: 4s;
+
+// Shadow settings
 $main-elements-shadow: inset 2px 2px 5px rgb(154 147 140 / 50%),
     1px 1px 5px rgb(255 255 255 / 100%);
-$secondary-elements-shadow: 2px 2px 3px 0px rgb(154 147 140 / 30.7%);
-$secondary-elements-shadow-hover: 5px 6px 4px 0px rgb(0 0 0 / 14.5%),
-    2px 5px 8px rgb(0 0 0 / 22%);
-$bar-lifetime-first-box-shadow: inset 1px 1px 2px 1px rgb(255 255 255 / 33%);
-$bar-third-shadow: inset -2px 5px 5px rgb(154 147 140 / 50%);
-$bar-third-left-shadow: inset 3px 3px 5px 0px rgb(154 147 140 / 50%);
-$stat-names-shadow-hover: 5px 4px 4px 0px rgb(0 0 0 / 14.5%),
-    2px 6px 4px rgb(0 0 0 / 13.5%);
-$page-shadow-start: 0px 0px 20px 15px #8a35af40;
-$page-shadow-middle: 0px 0px 20px 18px #b951e640;
-$page-shadow-end: 0px 0px 20px 20px #8427ad40;
+$secondary-elements-shadow: drop-shadow(2px 2px 2px rgb(154 147 140 / 30.7%));
+$secondary-elements-shadow-hover: drop-shadow(5px 6px 3px rgb(0 0 0 / 14.5%))
+    drop-shadow(2px 5px 7px rgb(0 0 0 / 22%));
+$stat-names-shadow-hover: drop-shadow(5px 4px 3px rgb(0 0 0 / 14.5%))
+    drop-shadow(2px 6px 3px rgb(0 0 0 / 13.5%));
+
+// Variables
 $main-border-radius: 13px;
 $border-radius: 5px;
 $small-border-radius: 2px;
 $main-padding: 13px;
 $padding: 8px;
 $small-padding: 4px;
+
+// lifetime bar settings
 $lifetime-speed: 4s;
 $lifetime-pattern-repeat-width: 80;
 $lifetime-stripe-width: calc($lifetime-pattern-repeat-width * 1px);
 $lifetime-fundamental-base: calc(1px * sqrt(2 * pow($lifetime-pattern-repeat-width, 2)));
 $lifetime-gradient-background: repeating-linear-gradient(135deg, transparent, transparent calc($lifetime-stripe-width / 2), #f45151 calc($lifetime-stripe-width / 2), #f45151 $lifetime-stripe-width);
+
+// Profile settings
 $head-height: 91px;
 $avatar-width: 160px;
 $avatar-mobile-width: 120px;

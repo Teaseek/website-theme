@@ -65,7 +65,6 @@
                             top: 0;
                             height: 100%;
                             width: calc($lifetime-fundamental-base * 6);
-                            box-shadow: $bar-lifetime-first-box-shadow;
                             background-color: $bar-background;
                             background-image: $lifetime-gradient-background;
                             animation: slide-pg $lifetime-speed linear infinite;
