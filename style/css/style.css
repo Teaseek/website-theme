@@ -165,9 +165,7 @@
 .profile-content .block.achievements .cc-authors .b-badge,
 .profile-content .block.achievements .cc-authors .b-badge::after,
 .profile-content .block.achievements .cc-franchises .b-achievement,
-.profile-content .block.achievements .cc-franchises .b-achievement::after,
 .profile-content .block.achievements .cc-franchises .b-badge,
-.profile-content .block.achievements .cc-franchises .b-badge::after,
 .profile-content .block.achievements img,
 .profile-content .block:last-child .b-comments,
 .profile-content .block:last-child .b-comments .b-comment,
@@ -289,9 +287,7 @@
 .profile-content .block.achievements .cc-achievements .b-achievement::after,
 .profile-content .block.achievements .cc-achievements .b-badge::after,
 .profile-content .block.achievements .cc-authors .b-achievement::after,
-.profile-content .block.achievements .cc-authors .b-badge::after,
-.profile-content .block.achievements .cc-franchises .b-achievement::after,
-.profile-content .block.achievements .cc-franchises .b-badge::after {
+.profile-content .block.achievements .cc-authors .b-badge::after {
   border-radius: 2px 2px 2px 2px
 }
 .profile-content .cc-2.block .c-right .b-clubs .b-club,
@@ -838,6 +834,17 @@
 .profile-content .block.achievements .border {
   display: none
 }
+.profile-content .block.achievements .cc-authors {
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr 1fr
+}
+.profile-content .block.achievements .cc-authors .b-achievement::before,
+.profile-content .block.achievements .cc-authors .b-badge::before {
+  content: attr(data-title)!important
+}
+.profile-content .block.achievements .cc-achievements {
+  grid-template-columns: repeat(2,1fr)
+}
 .profile-content .block.achievements .cc-franchises {
   grid-template-columns: repeat(6,1fr);
   grid-template-rows: 1fr 1fr
@@ -856,16 +863,179 @@
     grid-template-columns: repeat(1,1fr)
   }
 }
-.profile-content .block.achievements .cc-authors {
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: 1fr 1fr
+.profile-content .block.achievements .cc-franchises .b-badge {
+  position: relative;
+  overflow: hidden
 }
+@-webkit-keyframes slide-pg-achievements {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
+@keyframes slide-pg-achievements {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
+.profile-content .block.achievements .cc-franchises .b-badge::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 339.4112549695px;
+  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#f4c651 40px,#f4c651 80px);
+  -webkit-animation: slide-pg-achievements 4s linear infinite;
+  animation: slide-pg-achievements 4s linear infinite;
+  will-change: background-position
+}
+.profile-content .block.achievements .cc-franchises .b-badge::before {
+  top: unset;
+  left: -10px;
+  bottom: 0;
+  background-color: #e9bd4d!important;
+  height: 20px;
+  display: inline;
+  z-index: 1;
+  opacity: 1!important;
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
+  transform: scale(-1)
+}
+.profile-content .block.achievements .cc-franchises .b-badge::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 20px;
+  padding: 0 8px;
+  font-size: 11px;
+  height: 20px;
+  -webkit-filter: drop-shadow(0 0 1px rgb(17, 34, 51));
+  filter: drop-shadow(0 0 1px rgb(17, 34, 51));
+  content: attr(original-title)!important
+}
+.profile-content .block.achievements .cc-achievements .c-image,
+.profile-content .block.achievements .cc-authors .c-image {
+  overflow: hidden;
+  position: relative
+}
+@keyframes slide-pg-achievements {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
+.profile-content .block.achievements .cc-achievements .c-image::after,
+.profile-content .block.achievements .cc-authors .c-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 339.4112549695px;
+  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#50c2f6 40px,#50c2f6 80px);
+  -webkit-animation: slide-pg-achievements 4s linear infinite;
+  animation: slide-pg-achievements 4s linear infinite;
+  will-change: background-position
+}
+.profile-content .block.achievements .cc-achievements .c-image::before,
+.profile-content .block.achievements .cc-authors .c-image::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: #123;
+  display: inline;
+  content: "";
+  z-index: 2;
+  opacity: .5
+}
+.profile-content .block.achievements .cc-achievements .c-image::after,
+.profile-content .block.achievements .cc-authors .c-image::after {
+  top: unset;
+  left: -10px;
+  bottom: 0;
+  background-color: #4cb5e5;
+  height: 20px;
+  display: inline;
+  z-index: 3;
+  clip-path: inset(0 calc(100% - var(--progress,0) * 1%) 0 0)
+}
+.profile-content .block.achievements .cc-achievements .b-achievement[data-progress="100"]::after,
+.profile-content .block.achievements .cc-achievements .b-badge[data-progress="100"]::after,
+.profile-content .block.achievements .cc-authors .b-achievement[data-progress="100"]::after,
+.profile-content .block.achievements .cc-authors .b-badge[data-progress="100"]::after {
+  color: #e9bd4d!important
+}
+.profile-content .block.achievements .cc-achievements .b-achievement[data-progress="100"] .c-image::after,
+.profile-content .block.achievements .cc-achievements .b-badge[data-progress="100"] .c-image::after,
+.profile-content .block.achievements .cc-authors .b-achievement[data-progress="100"] .c-image::after,
+.profile-content .block.achievements .cc-authors .b-badge[data-progress="100"] .c-image::after {
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
+  transform: scale(-1);
+  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#f4c651 40px,#f4c651 80px)!important;
+  background-color: #e9bd4d!important
+}
+.profile-content .block.achievements .cc-achievements .b-achievement.level-0::after,
+.profile-content .block.achievements .cc-achievements .b-badge.level-0::after,
+.profile-content .block.achievements .cc-authors .b-achievement.level-0::after,
+.profile-content .block.achievements .cc-authors .b-badge.level-0::after {
+  color: #c1c1c1!important
+}
+.profile-content .block.achievements .cc-achievements .b-achievement.level-0 .c-image::after,
+.profile-content .block.achievements .cc-achievements .b-badge.level-0 .c-image::after,
+.profile-content .block.achievements .cc-authors .b-achievement.level-0 .c-image::after,
+.profile-content .block.achievements .cc-authors .b-badge.level-0 .c-image::after {
+  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#cecece 40px,#cecece 80px)!important;
+  background-color: #c1c1c1!important
+}
+.profile-content .block.achievements .cc-achievements .b-achievement::before,
+.profile-content .block.achievements .cc-achievements .b-badge::before,
 .profile-content .block.achievements .cc-authors .b-achievement::before,
 .profile-content .block.achievements .cc-authors .b-badge::before {
-  content: attr(data-title)!important
+  bottom: 0;
+  background: 0 0!important;
+  z-index: 4;
+  -webkit-filter: drop-shadow(0 0 1px rgb(17, 34, 51));
+  filter: drop-shadow(0 0 1px rgb(17, 34, 51));
+  content: attr(data-hint) " | " attr(data-title)
 }
-.profile-content .block.achievements .cc-achievements {
-  grid-template-columns: repeat(2,1fr)
+.profile-content .block.achievements .cc-achievements .b-achievement::after,
+.profile-content .block.achievements .cc-achievements .b-badge::after,
+.profile-content .block.achievements .cc-authors .b-achievement::after,
+.profile-content .block.achievements .cc-authors .b-badge::after {
+  top: 4px;
+  right: 4px;
+  color: #4cb5e5;
+  background: rgba(17,34,51,.6);
+  z-index: 4;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out
+}
+.profile-content .block.achievements .cc-achievements .b-achievement:hover::after,
+.profile-content .block.achievements .cc-achievements .b-badge:hover::after,
+.profile-content .block.achievements .cc-authors .b-achievement:hover::after,
+.profile-content .block.achievements .cc-authors .b-badge:hover::after {
+  opacity: 1
 }
 .profile-content .block.achievements .cc-achievements,
 .profile-content .block.achievements .cc-authors,
@@ -889,70 +1059,6 @@
     justify-content: start
   }
 }
-.profile-content .block.achievements .cc-achievements .c-image,
-.profile-content .block.achievements .cc-authors .c-image,
-.profile-content .block.achievements .cc-franchises .c-image {
-  overflow: hidden;
-  position: relative
-}
-@-webkit-keyframes slide-pg-achievements {
-  from {
-    background-position-x: 0
-  }
-  to {
-    background-position-x: 113.1370849898px
-  }
-}
-@keyframes slide-pg-achievements {
-  from {
-    background-position-x: 0
-  }
-  to {
-    background-position-x: 113.1370849898px
-  }
-}
-.profile-content .block.achievements .cc-achievements .c-image::after,
-.profile-content .block.achievements .cc-authors .c-image::after,
-.profile-content .block.achievements .cc-franchises .c-image::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 339.4112549695px;
-  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#50c2f6 40px,#50c2f6 80px);
-  -webkit-animation: slide-pg-achievements 4s linear infinite;
-  animation: slide-pg-achievements 4s linear infinite;
-  will-change: background-position
-}
-.profile-content .block.achievements .cc-achievements .c-image::before,
-.profile-content .block.achievements .cc-authors .c-image::before,
-.profile-content .block.achievements .cc-franchises .c-image::before {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: #123;
-  display: inline;
-  content: "";
-  z-index: 2;
-  opacity: .5
-}
-.profile-content .block.achievements .cc-achievements .c-image::after,
-.profile-content .block.achievements .cc-authors .c-image::after,
-.profile-content .block.achievements .cc-franchises .c-image::after {
-  top: unset;
-  left: -10px;
-  bottom: 0;
-  background-color: #4cb5e5;
-  height: 20px;
-  display: inline;
-  z-index: 3;
-  --end: calc(100% - var(--progress, 0) * 1%);
-  --cut: 20px;
-  clip-path: inset(0 calc(100% - var(--progress,0) * 1%) 0 0)
-}
 .profile-content .block.achievements .cc-achievements .b-achievement,
 .profile-content .block.achievements .cc-achievements .b-badge,
 .profile-content .block.achievements .cc-authors .b-achievement,
@@ -961,56 +1067,6 @@
 .profile-content .block.achievements .cc-franchises .b-badge {
   width: 100%;
   height: 100%
-}
-.profile-content .block.achievements .cc-achievements .b-achievement[data-progress="100"]::after,
-.profile-content .block.achievements .cc-achievements .b-badge[data-progress="100"]::after,
-.profile-content .block.achievements .cc-authors .b-achievement[data-progress="100"]::after,
-.profile-content .block.achievements .cc-authors .b-badge[data-progress="100"]::after,
-.profile-content .block.achievements .cc-franchises .b-achievement[data-progress="100"]::after,
-.profile-content .block.achievements .cc-franchises .b-badge[data-progress="100"]::after {
-  color: #e9bd4d!important
-}
-.profile-content .block.achievements .cc-achievements .b-achievement[data-progress="100"] .c-image::after,
-.profile-content .block.achievements .cc-achievements .b-badge[data-progress="100"] .c-image::after,
-.profile-content .block.achievements .cc-authors .b-achievement[data-progress="100"] .c-image::after,
-.profile-content .block.achievements .cc-authors .b-badge[data-progress="100"] .c-image::after,
-.profile-content .block.achievements .cc-franchises .b-achievement[data-progress="100"] .c-image::after,
-.profile-content .block.achievements .cc-franchises .b-badge[data-progress="100"] .c-image::after {
-  -webkit-transform: scale(-1);
-  -ms-transform: scale(-1);
-  transform: scale(-1);
-  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#f4c651 40px,#f4c651 80px)!important;
-  background-color: #e9bd4d!important
-}
-.profile-content .block.achievements .cc-achievements .b-achievement.level-0::after,
-.profile-content .block.achievements .cc-achievements .b-badge.level-0::after,
-.profile-content .block.achievements .cc-authors .b-achievement.level-0::after,
-.profile-content .block.achievements .cc-authors .b-badge.level-0::after,
-.profile-content .block.achievements .cc-franchises .b-achievement.level-0::after,
-.profile-content .block.achievements .cc-franchises .b-badge.level-0::after {
-  color: #c1c1c1!important
-}
-.profile-content .block.achievements .cc-achievements .b-achievement.level-0 .c-image::after,
-.profile-content .block.achievements .cc-achievements .b-badge.level-0 .c-image::after,
-.profile-content .block.achievements .cc-authors .b-achievement.level-0 .c-image::after,
-.profile-content .block.achievements .cc-authors .b-badge.level-0 .c-image::after,
-.profile-content .block.achievements .cc-franchises .b-achievement.level-0 .c-image::after,
-.profile-content .block.achievements .cc-franchises .b-badge.level-0 .c-image::after {
-  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#cecece 40px,#cecece 80px)!important;
-  background-color: #c1c1c1!important
-}
-.profile-content .block.achievements .cc-achievements .b-achievement::before,
-.profile-content .block.achievements .cc-achievements .b-badge::before,
-.profile-content .block.achievements .cc-authors .b-achievement::before,
-.profile-content .block.achievements .cc-authors .b-badge::before,
-.profile-content .block.achievements .cc-franchises .b-achievement::before,
-.profile-content .block.achievements .cc-franchises .b-badge::before {
-  bottom: 0;
-  background: 0 0!important;
-  z-index: 4;
-  -webkit-filter: drop-shadow(0 0 1px rgb(17, 34, 51));
-  filter: drop-shadow(0 0 1px rgb(17, 34, 51));
-  content: attr(data-hint) " | " attr(data-title)
 }
 .profile-content .block.achievements .cc-achievements .b-achievement .c-image,
 .profile-content .block.achievements .cc-achievements .b-badge .c-image,
@@ -1031,29 +1087,6 @@
   object-fit: cover;
   width: 100%;
   height: 100%
-}
-.profile-content .block.achievements .cc-achievements .b-achievement::after,
-.profile-content .block.achievements .cc-achievements .b-badge::after,
-.profile-content .block.achievements .cc-authors .b-achievement::after,
-.profile-content .block.achievements .cc-authors .b-badge::after,
-.profile-content .block.achievements .cc-franchises .b-achievement::after,
-.profile-content .block.achievements .cc-franchises .b-badge::after {
-  top: 4px;
-  right: 4px;
-  color: #4cb5e5;
-  background: rgba(17,34,51,.6);
-  z-index: 4;
-  opacity: 0;
-  -webkit-transition: opacity .3s ease-in-out;
-  transition: opacity .3s ease-in-out
-}
-.profile-content .block.achievements .cc-achievements .b-achievement:hover::after,
-.profile-content .block.achievements .cc-achievements .b-badge:hover::after,
-.profile-content .block.achievements .cc-authors .b-achievement:hover::after,
-.profile-content .block.achievements .cc-authors .b-badge:hover::after,
-.profile-content .block.achievements .cc-franchises .b-achievement:hover::after,
-.profile-content .block.achievements .cc-franchises .b-badge:hover::after {
-  opacity: 1
 }
 .profile-content .block.achievements .cc-achievements .b-achievement:only-child,
 .profile-content .block.achievements .cc-achievements .b-badge:only-child,

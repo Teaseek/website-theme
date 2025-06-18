@@ -240,7 +240,7 @@
     }
 }
 
-@mixin slide-bg-anim(
+@mixin slide-bg-anim-after(
     $name,
     $speed,
     $pattern-repeat-width,
@@ -261,6 +261,39 @@
     }
 
     &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: calc($fundamental-base * $fundamental-base-count);
+        background-image: $gradient-background;
+        animation: slide-pg-#{$name} $speed linear infinite;
+        will-change: background-position;
+    }
+}
+
+@mixin slide-bg-anim-before(
+    $name,
+    $speed,
+    $pattern-repeat-width,
+    $stripe-width,
+    $fundamental-base,
+    $fundamental-base-count: 6,
+    $gradient-background,
+    $direction: 1
+) {
+    @keyframes slide-pg-#{$name} {
+        from {
+            background-position-x: 0;
+        }
+
+        to {
+            background-position-x: $fundamental-base * $direction;
+        }
+    }
+
+    &::before {
         content: '';
         position: absolute;
         left: 0;

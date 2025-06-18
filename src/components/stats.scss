@@ -46,7 +46,7 @@
                         overflow: hidden;
                         position: relative;
 
-                        @include slide-bg-anim(
+                        @include slide-bg-anim-after(
                             'lifetime',
                             $lifetime-speed,
                             $lifetime-pattern-repeat-width,

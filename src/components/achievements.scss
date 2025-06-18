@@ -86,13 +86,6 @@
             @extend %border-radius-2;
         }
 
-        .cc-franchises {
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: 1fr 1fr;
-
-            @include dynamic-grid(9);
-        }
-
         .cc-authors {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr 1fr;
@@ -109,30 +102,66 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-        .cc-franchises,
-        .cc-authors,
-        .cc-achievements {
-            @extend %remove-sub-elements;
+        .cc-franchises {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 1fr 1fr;
 
-            gap: $padding;
-            display: grid;
-            place-content: space-between space-between;
-            width: 100%;
-            height: 100%;
-            place-items: start stretch;
+            @include dynamic-grid(9);
 
-            @supports selector(:has(*)) {
-                &:not(:has(:nth-child(4))) {
-                    display: flex;
-                    justify-content: start;
+            .b-badge {
+                position: relative;
+                overflow: hidden;
+
+                @include slide-bg-anim-before(
+                    'achievements',
+                    $achievements-speed,
+                    $achievements-pattern-repeat-width,
+                    $achievements-stripe-width,
+                    $achievements-fundamental-base,
+                    3,
+                    $achievements-100-gradient-background,
+                );
+
+                &::before {
+                    top: unset;
+                    left: -10px;
+                    bottom: 0;
+                    background-color: $achievements-100-background !important;
+                    height: 20px;
+                    display: inline;
+                    z-index: 1;
+                    opacity: 1 !important;
+                    transform: scale(-1);
+                }
+
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 3;
+                    color: #fff;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    line-height: 20px;
+                    padding: 0 8px;
+                    font-size: 11px;
+                    height: 20px;
+                    filter: drop-shadow(0 0 1px rgb(17 34 51));
+                    content: attr(original-title) !important;
                 }
             }
+        }
 
+        .cc-authors,
+        .cc-achievements {
             .c-image {
                 overflow: hidden;
                 position: relative;
 
-                @include slide-bg-anim(
+                @include slide-bg-anim-after(
                     'achievements',
                     $achievements-speed,
                     $achievements-pattern-repeat-width,
@@ -164,23 +193,12 @@
                     height: 20px;
                     display: inline;
                     z-index: 3;
-
-                    --end: calc(100% - var(--progress, 0) * 1%);
-                    --cut: 20px;
-
                     clip-path: inset(0 calc(100% - var(--progress, 0) * 1%) 0 0);
                 }
             }
 
             .b-badge,
             .b-achievement {
-                @extend %border-radius-2;
-                @extend %small-shadows-hover;
-                @extend %remove-margin;
-
-                width: 100%;
-                height: 100%;
-
                 &[data-progress="100"] {
                     &::after {
                         color: $achievements-100-background !important;
@@ -220,17 +238,6 @@
                     ), '|');
                 }
 
-                .c-image {
-                    width: 100%;
-                    height: 100%;
-                }
-
-                img {
-                    object-fit: cover;
-                    width: 100%;
-                    height: 100%;
-                }
-
                 &::after {
                     @extend %border-radius-3;
 
@@ -247,6 +254,47 @@
                     &::after {
                         opacity: 1;
                     }
+                }
+            }
+        }
+
+        .cc-franchises,
+        .cc-authors,
+        .cc-achievements {
+            @extend %remove-sub-elements;
+
+            gap: $padding;
+            display: grid;
+            place-content: space-between space-between;
+            width: 100%;
+            height: 100%;
+            place-items: start stretch;
+
+            @supports selector(:has(*)) {
+                &:not(:has(:nth-child(4))) {
+                    display: flex;
+                    justify-content: start;
+                }
+            }
+
+            .b-badge,
+            .b-achievement {
+                @extend %border-radius-2;
+                @extend %small-shadows-hover;
+                @extend %remove-margin;
+
+                width: 100%;
+                height: 100%;
+
+                .c-image {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
                 }
 
                 &:only-child {
