@@ -897,7 +897,10 @@
 }
 .profile-content .block.achievements .cc-franchises .b-badge.level-0::before {
   background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#cecece 40px,#cecece 80px)!important;
-  background-color: #c1c1c1!important
+  background-color: #c1c1c1!important;
+  -webkit-transform: none!important;
+  -ms-transform: none!important;
+  transform: none!important
 }
 .profile-content .block.achievements .cc-franchises .b-badge::before {
   top: unset;

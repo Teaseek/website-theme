@@ -126,6 +126,7 @@
                     &::before {
                         background-image: $achievements-none-gradient-background !important;
                         background-color: $achievements-none-background !important;
+                        transform: none !important;
                     }
                 }
 
