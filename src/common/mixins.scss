@@ -221,6 +221,7 @@
                 animation-delay: ($i - 1) * math.div($duration, $ratio);
                 animation-duration: math.div($total, $ratio);
                 animation-iteration-count: infinite;
+                will-change: transform;
             }
     }
 }
