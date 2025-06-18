@@ -966,18 +966,42 @@
   animation: slide-pg-achievements 4s linear infinite;
   will-change: background-position
 }
+@keyframes slide-pg-achievements {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
+.profile-content .block.achievements .cc-achievements .c-image::before,
+.profile-content .block.achievements .cc-authors .c-image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 339.4112549695px;
+  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#313131 40px,#313131 80px);
+  -webkit-animation: slide-pg-achievements 4s linear infinite;
+  animation: slide-pg-achievements 4s linear infinite;
+  will-change: background-position
+}
 .profile-content .block.achievements .cc-achievements .c-image::before,
 .profile-content .block.achievements .cc-authors .c-image::before {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: #123;
+  top: unset;
+  bottom: -2px;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: 22px;
+  background-color: #0f0f0f;
   display: inline;
+  -webkit-animation: none!important;
+  animation: none!important;
   content: "";
   z-index: 2;
-  opacity: .5;
+  opacity: .7;
   pointer-events: none
 }
 .profile-content .block.achievements .cc-achievements .c-image::after,

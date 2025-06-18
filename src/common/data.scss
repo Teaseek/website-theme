@@ -44,6 +44,8 @@ $achievements-100-gradient-background: repeating-linear-gradient(135deg, transpa
 $achievements-100-background: #e9bd4d;
 $achievements-none-gradient-background: repeating-linear-gradient(135deg, transparent, transparent calc($achievements-stripe-width / 2), #cecece calc($achievements-stripe-width / 2), #cecece $achievements-stripe-width);
 $achievements-none-background: #c1c1c1;
+$achievements-bg-gradient-background: repeating-linear-gradient(135deg, transparent, transparent calc($achievements-stripe-width / 2), rgb(49 49 49) calc($achievements-stripe-width / 2), rgb(49 49 49) $achievements-stripe-width);
+$achievements-bg-background: rgb(15 15 15);
 
 // Profile settings
 $head-height: 91px;
