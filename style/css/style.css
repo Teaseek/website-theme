@@ -976,7 +976,8 @@
   display: inline;
   content: "";
   z-index: 2;
-  opacity: .5
+  opacity: .5;
+  pointer-events: none
 }
 .profile-content .block.achievements .cc-achievements .c-image::after,
 .profile-content .block.achievements .cc-authors .c-image::after {
@@ -990,7 +991,8 @@
   -webkit-animation: none!important;
   animation: none!important;
   z-index: 3;
-  clip-path: inset(0 calc(100% - var(--progress,0) * 1%) 0 0)
+  clip-path: inset(0 calc(100% - var(--progress,0) * 1%) 0 0);
+  pointer-events: none
 }
 .profile-content .block.achievements .cc-achievements .b-achievement[data-progress="100"]::after,
 .profile-content .block.achievements .cc-achievements .b-badge[data-progress="100"]::after,
@@ -1030,7 +1032,8 @@
   z-index: 4;
   -webkit-filter: drop-shadow(0 0 1px rgb(17, 34, 51));
   filter: drop-shadow(0 0 1px rgb(17, 34, 51));
-  content: attr(data-hint) " / " attr(data-title)
+  content: attr(data-hint) " / " attr(data-title);
+  pointer-events: none
 }
 .profile-content .block.achievements .cc-achievements .b-achievement::after,
 .profile-content .block.achievements .cc-achievements .b-badge::after,
@@ -1043,7 +1046,8 @@
   z-index: 4;
   opacity: 0;
   -webkit-transition: opacity .3s ease-in-out;
-  transition: opacity .3s ease-in-out
+  transition: opacity .3s ease-in-out;
+  pointer-events: none
 }
 .profile-content .block.achievements .cc-achievements .b-achievement:hover::after,
 .profile-content .block.achievements .cc-achievements .b-badge:hover::after,
