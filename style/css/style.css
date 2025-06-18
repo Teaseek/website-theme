@@ -905,10 +905,13 @@
 }
 .profile-content .block.achievements .cc-franchises .b-badge::before {
   top: unset;
-  left: -10px;
+  left: -2px;
   bottom: -2px;
   background-color: #e9bd4d!important;
   height: 22px;
+  width: calc(100% + 4px);
+  -webkit-animation: none!important;
+  animation: none!important;
   display: inline;
   z-index: 1;
   opacity: 1!important;
@@ -978,11 +981,14 @@
 .profile-content .block.achievements .cc-achievements .c-image::after,
 .profile-content .block.achievements .cc-authors .c-image::after {
   top: unset;
-  left: -10px;
+  left: -2px;
   bottom: -2px;
   background-color: #4cb5e5;
   height: 22px;
   display: inline;
+  width: calc(100% + 4px);
+  -webkit-animation: none!important;
+  animation: none!important;
   z-index: 3;
   clip-path: inset(0 calc(100% - var(--progress,0) * 1%) 0 0)
 }

@@ -131,11 +131,15 @@
                 }
 
                 &::before {
+                    $padding: 2px; 
+
                     top: unset;
-                    left: -10px;
+                    left: -$padding;
                     bottom: -2px;
                     background-color: $achievements-100-background !important;
                     height: 22px;
+                    width: calc(100% + $padding * 2);
+                    animation: none !important;
                     display: inline;
                     z-index: 1;
                     opacity: 1 !important;
@@ -194,12 +198,16 @@
 
 
                 &::after {
+                    $padding: 2px;
+                    
                     top: unset;
-                    left: -10px;
+                    left: -$padding;
                     bottom: -2px;
                     background-color: $achievements-background;
                     height: 22px;
                     display: inline;
+                    width: calc(100% + $padding * 2);
+                    animation: none !important;
                     z-index: 3;
                     clip-path: inset(0 calc(100% - var(--progress, 0) * 1%) 0 0);
                 }
