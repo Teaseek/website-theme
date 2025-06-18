@@ -475,6 +475,7 @@
   border-radius: 0 13px 13px 0
 }
 .profile-content .about {
+  overflow: hidden;
   padding: 0 8px 8px!important
 }
 .profile-content .about > .subheadline {
