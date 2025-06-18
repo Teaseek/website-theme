@@ -132,7 +132,7 @@
                 &::before {
                     top: unset;
                     left: -10px;
-                    bottom: 2px;
+                    bottom: -2px;
                     background-color: $achievements-100-background !important;
                     height: 22px;
                     display: inline;
@@ -195,7 +195,7 @@
                 &::after {
                     top: unset;
                     left: -10px;
-                    bottom: 2px;
+                    bottom: -2px;
                     background-color: $achievements-background;
                     height: 22px;
                     display: inline;

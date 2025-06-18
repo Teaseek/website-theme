@@ -902,7 +902,7 @@
 .profile-content .block.achievements .cc-franchises .b-badge::before {
   top: unset;
   left: -10px;
-  bottom: 2px;
+  bottom: -2px;
   background-color: #e9bd4d!important;
   height: 22px;
   display: inline;
@@ -975,7 +975,7 @@
 .profile-content .block.achievements .cc-authors .c-image::after {
   top: unset;
   left: -10px;
-  bottom: 2px;
+  bottom: -2px;
   background-color: #4cb5e5;
   height: 22px;
   display: inline;
