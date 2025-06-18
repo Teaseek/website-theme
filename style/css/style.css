@@ -63,8 +63,8 @@
 .profile-content .cc-2.block .c-right .cc-friends a:hover,
 .profile-head .c-history .b-block_list .entry:hover,
 .profile-head .c-history > div:last-child .entry:hover {
-  -webkit-filter: drop-shadow(5px 6px 3px rgba(0, 0, 0, .145)) drop-shadow(2px 5px 7px rgba(0, 0, 0, .22))!important;
-  filter: drop-shadow(5px 6px 3px rgba(0, 0, 0, .145)) drop-shadow(2px 5px 7px rgba(0, 0, 0, .22))!important;
+  -webkit-filter: drop-shadow(5px 6px 3px rgba(0, 0, 0, .145)) drop-shadow(2px 5px 2px rgba(0, 0, 0, .22))!important;
+  filter: drop-shadow(5px 6px 3px rgba(0, 0, 0, .145)) drop-shadow(2px 5px 2px rgba(0, 0, 0, .22))!important;
   z-index: 1000
 }
 .profile-head .c-info .c-lists-info .b-stats_bar .stat_names .stat_name:hover {
