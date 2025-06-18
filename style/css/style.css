@@ -502,6 +502,309 @@
 .profile-content .about .block .b-quote {
   margin: 0!important
 }
+.profile-content .block.achievements [data-progress="100"] {
+  --progress: 100
+}
+.profile-content .block.achievements [data-progress="99"] {
+  --progress: 99
+}
+.profile-content .block.achievements [data-progress="98"] {
+  --progress: 98
+}
+.profile-content .block.achievements [data-progress="97"] {
+  --progress: 97
+}
+.profile-content .block.achievements [data-progress="96"] {
+  --progress: 96
+}
+.profile-content .block.achievements [data-progress="95"] {
+  --progress: 95
+}
+.profile-content .block.achievements [data-progress="94"] {
+  --progress: 94
+}
+.profile-content .block.achievements [data-progress="93"] {
+  --progress: 93
+}
+.profile-content .block.achievements [data-progress="92"] {
+  --progress: 92
+}
+.profile-content .block.achievements [data-progress="91"] {
+  --progress: 91
+}
+.profile-content .block.achievements [data-progress="90"] {
+  --progress: 90
+}
+.profile-content .block.achievements [data-progress="89"] {
+  --progress: 89
+}
+.profile-content .block.achievements [data-progress="88"] {
+  --progress: 88
+}
+.profile-content .block.achievements [data-progress="87"] {
+  --progress: 87
+}
+.profile-content .block.achievements [data-progress="86"] {
+  --progress: 86
+}
+.profile-content .block.achievements [data-progress="85"] {
+  --progress: 85
+}
+.profile-content .block.achievements [data-progress="84"] {
+  --progress: 84
+}
+.profile-content .block.achievements [data-progress="83"] {
+  --progress: 83
+}
+.profile-content .block.achievements [data-progress="82"] {
+  --progress: 82
+}
+.profile-content .block.achievements [data-progress="81"] {
+  --progress: 81
+}
+.profile-content .block.achievements [data-progress="80"] {
+  --progress: 80
+}
+.profile-content .block.achievements [data-progress="79"] {
+  --progress: 79
+}
+.profile-content .block.achievements [data-progress="78"] {
+  --progress: 78
+}
+.profile-content .block.achievements [data-progress="77"] {
+  --progress: 77
+}
+.profile-content .block.achievements [data-progress="76"] {
+  --progress: 76
+}
+.profile-content .block.achievements [data-progress="75"] {
+  --progress: 75
+}
+.profile-content .block.achievements [data-progress="74"] {
+  --progress: 74
+}
+.profile-content .block.achievements [data-progress="73"] {
+  --progress: 73
+}
+.profile-content .block.achievements [data-progress="72"] {
+  --progress: 72
+}
+.profile-content .block.achievements [data-progress="71"] {
+  --progress: 71
+}
+.profile-content .block.achievements [data-progress="70"] {
+  --progress: 70
+}
+.profile-content .block.achievements [data-progress="69"] {
+  --progress: 69
+}
+.profile-content .block.achievements [data-progress="68"] {
+  --progress: 68
+}
+.profile-content .block.achievements [data-progress="67"] {
+  --progress: 67
+}
+.profile-content .block.achievements [data-progress="66"] {
+  --progress: 66
+}
+.profile-content .block.achievements [data-progress="65"] {
+  --progress: 65
+}
+.profile-content .block.achievements [data-progress="64"] {
+  --progress: 64
+}
+.profile-content .block.achievements [data-progress="63"] {
+  --progress: 63
+}
+.profile-content .block.achievements [data-progress="62"] {
+  --progress: 62
+}
+.profile-content .block.achievements [data-progress="61"] {
+  --progress: 61
+}
+.profile-content .block.achievements [data-progress="60"] {
+  --progress: 60
+}
+.profile-content .block.achievements [data-progress="59"] {
+  --progress: 59
+}
+.profile-content .block.achievements [data-progress="58"] {
+  --progress: 58
+}
+.profile-content .block.achievements [data-progress="57"] {
+  --progress: 57
+}
+.profile-content .block.achievements [data-progress="56"] {
+  --progress: 56
+}
+.profile-content .block.achievements [data-progress="55"] {
+  --progress: 55
+}
+.profile-content .block.achievements [data-progress="54"] {
+  --progress: 54
+}
+.profile-content .block.achievements [data-progress="53"] {
+  --progress: 53
+}
+.profile-content .block.achievements [data-progress="52"] {
+  --progress: 52
+}
+.profile-content .block.achievements [data-progress="51"] {
+  --progress: 51
+}
+.profile-content .block.achievements [data-progress="50"] {
+  --progress: 50
+}
+.profile-content .block.achievements [data-progress="49"] {
+  --progress: 49
+}
+.profile-content .block.achievements [data-progress="48"] {
+  --progress: 48
+}
+.profile-content .block.achievements [data-progress="47"] {
+  --progress: 47
+}
+.profile-content .block.achievements [data-progress="46"] {
+  --progress: 46
+}
+.profile-content .block.achievements [data-progress="45"] {
+  --progress: 45
+}
+.profile-content .block.achievements [data-progress="44"] {
+  --progress: 44
+}
+.profile-content .block.achievements [data-progress="43"] {
+  --progress: 43
+}
+.profile-content .block.achievements [data-progress="42"] {
+  --progress: 42
+}
+.profile-content .block.achievements [data-progress="41"] {
+  --progress: 41
+}
+.profile-content .block.achievements [data-progress="40"] {
+  --progress: 40
+}
+.profile-content .block.achievements [data-progress="39"] {
+  --progress: 39
+}
+.profile-content .block.achievements [data-progress="38"] {
+  --progress: 38
+}
+.profile-content .block.achievements [data-progress="37"] {
+  --progress: 37
+}
+.profile-content .block.achievements [data-progress="36"] {
+  --progress: 36
+}
+.profile-content .block.achievements [data-progress="35"] {
+  --progress: 35
+}
+.profile-content .block.achievements [data-progress="34"] {
+  --progress: 34
+}
+.profile-content .block.achievements [data-progress="33"] {
+  --progress: 33
+}
+.profile-content .block.achievements [data-progress="32"] {
+  --progress: 32
+}
+.profile-content .block.achievements [data-progress="31"] {
+  --progress: 31
+}
+.profile-content .block.achievements [data-progress="30"] {
+  --progress: 30
+}
+.profile-content .block.achievements [data-progress="29"] {
+  --progress: 29
+}
+.profile-content .block.achievements [data-progress="28"] {
+  --progress: 28
+}
+.profile-content .block.achievements [data-progress="27"] {
+  --progress: 27
+}
+.profile-content .block.achievements [data-progress="26"] {
+  --progress: 26
+}
+.profile-content .block.achievements [data-progress="25"] {
+  --progress: 25
+}
+.profile-content .block.achievements [data-progress="24"] {
+  --progress: 24
+}
+.profile-content .block.achievements [data-progress="23"] {
+  --progress: 23
+}
+.profile-content .block.achievements [data-progress="22"] {
+  --progress: 22
+}
+.profile-content .block.achievements [data-progress="21"] {
+  --progress: 21
+}
+.profile-content .block.achievements [data-progress="20"] {
+  --progress: 20
+}
+.profile-content .block.achievements [data-progress="19"] {
+  --progress: 19
+}
+.profile-content .block.achievements [data-progress="18"] {
+  --progress: 18
+}
+.profile-content .block.achievements [data-progress="17"] {
+  --progress: 17
+}
+.profile-content .block.achievements [data-progress="16"] {
+  --progress: 16
+}
+.profile-content .block.achievements [data-progress="15"] {
+  --progress: 15
+}
+.profile-content .block.achievements [data-progress="14"] {
+  --progress: 14
+}
+.profile-content .block.achievements [data-progress="13"] {
+  --progress: 13
+}
+.profile-content .block.achievements [data-progress="12"] {
+  --progress: 12
+}
+.profile-content .block.achievements [data-progress="11"] {
+  --progress: 11
+}
+.profile-content .block.achievements [data-progress="10"] {
+  --progress: 10
+}
+.profile-content .block.achievements [data-progress="9"] {
+  --progress: 9
+}
+.profile-content .block.achievements [data-progress="8"] {
+  --progress: 8
+}
+.profile-content .block.achievements [data-progress="7"] {
+  --progress: 7
+}
+.profile-content .block.achievements [data-progress="6"] {
+  --progress: 6
+}
+.profile-content .block.achievements [data-progress="5"] {
+  --progress: 5
+}
+.profile-content .block.achievements [data-progress="4"] {
+  --progress: 4
+}
+.profile-content .block.achievements [data-progress="3"] {
+  --progress: 3
+}
+.profile-content .block.achievements [data-progress="2"] {
+  --progress: 2
+}
+.profile-content .block.achievements [data-progress="1"] {
+  --progress: 1
+}
+.profile-content .block.achievements [data-progress="0"] {
+  --progress: 0
+}
 .profile-content .block.achievements .cc-2 {
   display: grid;
   grid-template-areas: "cc-achievements-1 cc-achievements-2" "franchises authors";
@@ -557,6 +860,10 @@
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: 1fr 1fr
 }
+.profile-content .block.achievements .cc-authors .b-achievement::before,
+.profile-content .block.achievements .cc-authors .b-badge::before {
+  content: attr(data-title)!important
+}
 .profile-content .block.achievements .cc-achievements {
   grid-template-columns: repeat(2,1fr)
 }
@@ -582,6 +889,70 @@
     justify-content: start
   }
 }
+.profile-content .block.achievements .cc-achievements .c-image,
+.profile-content .block.achievements .cc-authors .c-image,
+.profile-content .block.achievements .cc-franchises .c-image {
+  overflow: hidden;
+  position: relative
+}
+@-webkit-keyframes slide-pg-achievements {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
+@keyframes slide-pg-achievements {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
+.profile-content .block.achievements .cc-achievements .c-image::after,
+.profile-content .block.achievements .cc-authors .c-image::after,
+.profile-content .block.achievements .cc-franchises .c-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 339.4112549695px;
+  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#50c2f6 40px,#50c2f6 80px);
+  -webkit-animation: slide-pg-achievements 4s linear infinite;
+  animation: slide-pg-achievements 4s linear infinite;
+  will-change: background-position
+}
+.profile-content .block.achievements .cc-achievements .c-image::before,
+.profile-content .block.achievements .cc-authors .c-image::before,
+.profile-content .block.achievements .cc-franchises .c-image::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: #123;
+  display: inline;
+  content: "";
+  z-index: 2;
+  opacity: .5
+}
+.profile-content .block.achievements .cc-achievements .c-image::after,
+.profile-content .block.achievements .cc-authors .c-image::after,
+.profile-content .block.achievements .cc-franchises .c-image::after {
+  top: unset;
+  left: -10px;
+  bottom: 0;
+  background-color: #4cb5e5;
+  height: 20px;
+  display: inline;
+  z-index: 3;
+  --end: calc(100% - var(--progress, 0) * 1%);
+  --cut: 20px;
+  clip-path: inset(0 calc(100% - var(--progress,0) * 1%) 0 0)
+}
 .profile-content .block.achievements .cc-achievements .b-achievement,
 .profile-content .block.achievements .cc-achievements .b-badge,
 .profile-content .block.achievements .cc-authors .b-achievement,
@@ -591,13 +962,55 @@
   width: 100%;
   height: 100%
 }
+.profile-content .block.achievements .cc-achievements .b-achievement[data-progress="100"]::after,
+.profile-content .block.achievements .cc-achievements .b-badge[data-progress="100"]::after,
+.profile-content .block.achievements .cc-authors .b-achievement[data-progress="100"]::after,
+.profile-content .block.achievements .cc-authors .b-badge[data-progress="100"]::after,
+.profile-content .block.achievements .cc-franchises .b-achievement[data-progress="100"]::after,
+.profile-content .block.achievements .cc-franchises .b-badge[data-progress="100"]::after {
+  color: #e9bd4d!important
+}
+.profile-content .block.achievements .cc-achievements .b-achievement[data-progress="100"] .c-image::after,
+.profile-content .block.achievements .cc-achievements .b-badge[data-progress="100"] .c-image::after,
+.profile-content .block.achievements .cc-authors .b-achievement[data-progress="100"] .c-image::after,
+.profile-content .block.achievements .cc-authors .b-badge[data-progress="100"] .c-image::after,
+.profile-content .block.achievements .cc-franchises .b-achievement[data-progress="100"] .c-image::after,
+.profile-content .block.achievements .cc-franchises .b-badge[data-progress="100"] .c-image::after {
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
+  transform: scale(-1);
+  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#f4c651 40px,#f4c651 80px)!important;
+  background-color: #e9bd4d!important
+}
+.profile-content .block.achievements .cc-achievements .b-achievement.level-0::after,
+.profile-content .block.achievements .cc-achievements .b-badge.level-0::after,
+.profile-content .block.achievements .cc-authors .b-achievement.level-0::after,
+.profile-content .block.achievements .cc-authors .b-badge.level-0::after,
+.profile-content .block.achievements .cc-franchises .b-achievement.level-0::after,
+.profile-content .block.achievements .cc-franchises .b-badge.level-0::after {
+  color: #c1c1c1!important
+}
+.profile-content .block.achievements .cc-achievements .b-achievement.level-0 .c-image::after,
+.profile-content .block.achievements .cc-achievements .b-badge.level-0 .c-image::after,
+.profile-content .block.achievements .cc-authors .b-achievement.level-0 .c-image::after,
+.profile-content .block.achievements .cc-authors .b-badge.level-0 .c-image::after,
+.profile-content .block.achievements .cc-franchises .b-achievement.level-0 .c-image::after,
+.profile-content .block.achievements .cc-franchises .b-badge.level-0 .c-image::after {
+  background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#cecece 40px,#cecece 80px)!important;
+  background-color: #c1c1c1!important
+}
 .profile-content .block.achievements .cc-achievements .b-achievement::before,
 .profile-content .block.achievements .cc-achievements .b-badge::before,
 .profile-content .block.achievements .cc-authors .b-achievement::before,
 .profile-content .block.achievements .cc-authors .b-badge::before,
 .profile-content .block.achievements .cc-franchises .b-achievement::before,
 .profile-content .block.achievements .cc-franchises .b-badge::before {
-  bottom: 0
+  bottom: 0;
+  background: 0 0!important;
+  z-index: 4;
+  -webkit-filter: drop-shadow(0 0 1px rgb(17, 34, 51));
+  filter: drop-shadow(0 0 1px rgb(17, 34, 51));
+  content: attr(data-hint) " | " attr(data-title)
 }
 .profile-content .block.achievements .cc-achievements .b-achievement .c-image,
 .profile-content .block.achievements .cc-achievements .b-badge .c-image,
@@ -627,9 +1040,20 @@
 .profile-content .block.achievements .cc-franchises .b-badge::after {
   top: 4px;
   right: 4px;
-  opacity: 1;
-  color: #000;
-  background: #fff
+  color: #4cb5e5;
+  background: rgba(17,34,51,.6);
+  z-index: 4;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out
+}
+.profile-content .block.achievements .cc-achievements .b-achievement:hover::after,
+.profile-content .block.achievements .cc-achievements .b-badge:hover::after,
+.profile-content .block.achievements .cc-authors .b-achievement:hover::after,
+.profile-content .block.achievements .cc-authors .b-badge:hover::after,
+.profile-content .block.achievements .cc-franchises .b-achievement:hover::after,
+.profile-content .block.achievements .cc-franchises .b-badge:hover::after {
+  opacity: 1
 }
 .profile-content .block.achievements .cc-achievements .b-achievement:only-child,
 .profile-content .block.achievements .cc-achievements .b-badge:only-child,
@@ -1051,22 +1475,6 @@
   padding: 8px;
   font-weight: 700
 }
-@-webkit-keyframes slide-pg {
-  from {
-    background-position-x: 0
-  }
-  to {
-    background-position-x: 113.1370849898px
-  }
-}
-@keyframes slide-pg {
-  from {
-    background-position-x: 0
-  }
-  to {
-    background-position-x: 113.1370849898px
-  }
-}
 .profile-content .cc-2.block .c-left {
   width: 100%!important;
   display: grid;
@@ -1097,6 +1505,22 @@
   overflow: hidden;
   position: relative
 }
+@-webkit-keyframes slide-pg-lifetime {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
+@keyframes slide-pg-lifetime {
+  from {
+    background-position-x: 0
+  }
+  to {
+    background-position-x: 113.1370849898px
+  }
+}
 .profile-content .cc-2.block .c-left .lifetime .bar .first::after {
   content: "";
   position: absolute;
@@ -1104,11 +1528,13 @@
   top: 0;
   height: 100%;
   width: 678.8225099391px;
-  background-color: #cf4e4e;
   background-image: repeating-linear-gradient(135deg,transparent,transparent 40px,#f45151 40px,#f45151 80px);
-  -webkit-animation: slide-pg 4s linear infinite;
-  animation: slide-pg 4s linear infinite;
+  -webkit-animation: slide-pg-lifetime 4s linear infinite;
+  animation: slide-pg-lifetime 4s linear infinite;
   will-change: background-position
+}
+.profile-content .cc-2.block .c-left .lifetime .bar .first::after {
+  background-color: #cf4e4e
 }
 .profile-content .cc-2.block .c-left .lifetime .cuts .cut {
   height: 12px;

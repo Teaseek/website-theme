@@ -1,15 +1,5 @@
 @use "../common" as *;
 
-@keyframes slide-pg {
-    from {
-        background-position-x: 0;
-    }
-
-    to {
-        background-position-x: $lifetime-fundamental-base;
-    }
-}
-
 .profile-content {
     .cc-2.block {
         .c-left {
@@ -52,23 +42,24 @@
                     .first {
                         @extend %border-radius-2;
 
-                        z-index: 10 ;
+                        z-index: 10;
                         overflow: hidden;
                         position: relative;
+
+                        @include slide-bg-anim(
+                            'lifetime',
+                            $lifetime-speed,
+                            $lifetime-pattern-repeat-width,
+                            $lifetime-stripe-width,
+                            $lifetime-fundamental-base,
+                            6,
+                            $lifetime-gradient-background,
+                        );
 
                         &::after {
                             @extend %border-radius-2;
 
-                            content: '';
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            height: 100%;
-                            width: calc($lifetime-fundamental-base * 6);
-                            background-color: $bar-background;
-                            background-image: $lifetime-gradient-background;
-                            animation: slide-pg $lifetime-speed linear infinite;
-                            will-change: background-position;
+                            background-color: $lifetime-background;
                         }
                     }
 

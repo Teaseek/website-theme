@@ -1,6 +1,7 @@
 @use "colors" as *;
 @use "data" as *;
 @use "sass:math";
+@use "sass:list";
 
 @keyframes slide {
     to {
@@ -237,4 +238,60 @@
             }
         }
     }
+}
+
+@mixin slide-bg-anim(
+    $name,
+    $speed,
+    $pattern-repeat-width,
+    $stripe-width,
+    $fundamental-base,
+    $fundamental-base-count: 6,
+    $gradient-background,
+    $direction: 1
+) {
+    @keyframes slide-pg-#{$name} {
+        from {
+            background-position-x: 0;
+        }
+
+        to {
+            background-position-x: $fundamental-base * $direction;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: calc($fundamental-base * $fundamental-base-count);
+        background-image: $gradient-background;
+        animation: slide-pg-#{$name} $speed linear infinite;
+        will-change: background-position;
+    }
+}
+
+@mixin extract-data-progress() {
+    @for $progress from 100 through 0 {
+        [data-progress="#{$progress}"] {
+            --progress: #{$progress};
+        }
+    }
+}
+
+@mixin get-subelement-content($contents, $separator: '') {
+    $content: '';
+    $length: list.length($contents);
+
+    @for $i from 1 through $length {
+        $content: #{$content} '#{list.nth($contents, $i)}';
+
+        @if $i < $length {
+            $content: #{$content} '" #{$separator} "';
+        }
+    }
+
+    content: #{$content};
 }

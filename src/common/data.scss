@@ -6,7 +6,6 @@ $shadow-transition: filter 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 $history-entry-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
 // Animation settings
-$bar-lifetime-first-animation-time: 50s;
 $text-animation-time: 4s;
 
 // Shadow settings
@@ -32,6 +31,19 @@ $lifetime-pattern-repeat-width: 80;
 $lifetime-stripe-width: calc($lifetime-pattern-repeat-width * 1px);
 $lifetime-fundamental-base: calc(1px * sqrt(2 * pow($lifetime-pattern-repeat-width, 2)));
 $lifetime-gradient-background: repeating-linear-gradient(135deg, transparent, transparent calc($lifetime-stripe-width / 2), #f45151 calc($lifetime-stripe-width / 2), #f45151 $lifetime-stripe-width);
+$lifetime-background: #cf4e4e;
+
+// achievements settings
+$achievements-speed: 4s;
+$achievements-pattern-repeat-width: 80;
+$achievements-stripe-width: calc($achievements-pattern-repeat-width * 1px);
+$achievements-fundamental-base: calc(1px * sqrt(2 * pow($achievements-pattern-repeat-width, 2)));
+$achievements-gradient-background: repeating-linear-gradient(135deg, transparent, transparent calc($achievements-stripe-width / 2), #50c2f6 calc($achievements-stripe-width / 2), #50c2f6 $achievements-stripe-width);
+$achievements-background: #4cb5e5;
+$achievements-100-gradient-background: repeating-linear-gradient(135deg, transparent, transparent calc($achievements-stripe-width / 2), #f4c651 calc($achievements-stripe-width / 2), #f4c651 $achievements-stripe-width);
+$achievements-100-background: #e9bd4d;
+$achievements-none-gradient-background: repeating-linear-gradient(135deg, transparent, transparent calc($achievements-stripe-width / 2), #cecece calc($achievements-stripe-width / 2), #cecece $achievements-stripe-width);
+$achievements-none-background: #c1c1c1;
 
 // Profile settings
 $head-height: 91px;
